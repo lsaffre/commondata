@@ -8,8 +8,10 @@ to maintain and share structured common knowledge.
 The package itself contains just some utilities and defines the Python
 ``commondata`` namespace. It is the base for packages like 
 
-- commondata.be : Common knowledge about Belgium
-- commondata.ee : Common knowledge about Estonia
+- `commondata.be <https://github.com/lsaffre/commondata-be>`_ : 
+  Common knowledge about Belgium
+- `commondata.ee <https://github.com/lsaffre/commondata-ee>`_: 
+  Common knowledge about Estonia
 
 The ``commondata`` vision
 =========================

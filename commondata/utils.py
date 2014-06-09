@@ -23,16 +23,20 @@ linn are the same object while Võru maakond is a separat object.
 class Place(object):
     value = None
 
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, pg, parent, *args, **kwargs):
         self.children = []
         self.parent = parent
         if parent is not None:
             parent.children.append(self)
-        self.setup(*args, **kwargs)
-        
-    def setup(self):
-        pass
-        
+        for i, v in enumerate(args):
+            k = pg.args[i]
+            if k in kwargs:
+                raise Exception("Multiple values for %s" % k)
+            kwargs[k] = v
+
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+
     @classmethod
     def factory(self, pg):
         def create(*args, **kwargs):
@@ -45,7 +49,7 @@ class Place(object):
                 parent = prev.parent
                 while parent and not self.can_be_child(parent):
                     parent = parent.parent
-            i = self(parent, *args, **kwargs)
+            i = self(pg, parent, *args, **kwargs)
             pg.current = i
             return i
         return create
@@ -55,6 +59,23 @@ class Place(object):
         if p.value < self.value:
             return True
         return False
+
+    def match(self, **kwargs):
+        for k, v in kwargs.items():
+            if getattr(self, k) != v:
+                return False
+        return True
+
+    def find(self, **kwargs):
+        def f(i):
+            return i.match(**kwargs)
+        return filter(f, self.children)
+
+    def get(self, **kwargs):
+        q = self.find(**kwargs)
+        if len(q) != 1:
+            raise Exception("Found %d items!" % len(q))
+        return q[0]
 
 
 class PlaceGenerator(object):
@@ -67,14 +88,10 @@ class PlaceGenerator(object):
             if hasattr(self, k):
                 raise Exception("Attempt to redefine name %r" % k)
             setattr(self, k, c.factory(self))
-        # self.country = Country.factory(self)
-        # self.county = County.factory(self)
-        # self.town = Town.factory(self)
-        # self.township = Township.factory(self)
-        # self.municipality = Municipality.factory(self)
-        # self.borough = Borough.factory(self)
-        # self.smallborough = SmallBorough.factory(self)
-        # self.village = Village.factory(self)
+
+    def set_args(self, args):
+        self.args = tuple(args.split())
+
 
 
 
