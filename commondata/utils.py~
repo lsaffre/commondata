@@ -1,0 +1,73 @@
+
+class Place(object):
+    current = None
+    value = None
+
+    def __init__(self, parent, name, zip_code=None):
+        self.name = name
+        self.zip_code = zip_code
+        self.children = []
+        self.parent = parent
+        if parent is not None:
+            parent.children.append(self)
+        Place.current = self
+
+    @classmethod
+    def create(self, name, zip_code=None):
+        prev = Place.current
+        if prev is None:
+            parent = None
+        elif prev.value < self.value:
+            parent = prev
+        else:
+            parent = prev.parent
+            while parent and not self.can_be_child(parent):
+                parent = parent.parent
+        self(parent, name, zip_code)
+
+    @classmethod
+    def can_be_child(self, p):
+        if p.value < self.value:
+            return True
+        return False
+
+    def __unicode__(self):
+        return self.name
+
+
+class Country(Place):
+    value = 0
+
+class County(Place):
+    value = 1
+
+class Municipality(Place):
+    value = 2
+
+class Township(Municipality):
+    pass
+
+class Town(Municipality):
+    value = 2
+
+class Borough(Place):
+    value = 5
+
+class SmallBorough(Place):
+    value = 5
+
+class Village(Place):
+    value = 5
+
+
+
+Place.county = County.create
+Place.town = Town.create
+Place.township = Township.create
+Place.municipality = Municipality.create
+Place.borough = Borough.create
+Place.smallborough = SmallBorough.create
+Place.village = Village.create
+
+
+
