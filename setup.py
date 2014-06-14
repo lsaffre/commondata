@@ -28,4 +28,5 @@ commondata
 
 SETUP_INFO.update(namespace_packages=['commondata'])
 
-setup(**SETUP_INFO)
+if __name__ == '__main__':
+    setup(**SETUP_INFO)

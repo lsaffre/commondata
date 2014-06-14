@@ -2,6 +2,13 @@
 The ``commondata`` namespace package
 ====================================
 
+.. note::
+
+  This package is no longer maintained.
+  See http://lino-framework.org/tickets/109.html
+
+.. module:: commondata
+
 This package is the heart of "common data", a new and sustainable way
 to maintain and share structured common knowledge.
 
@@ -21,19 +28,15 @@ capitals, the currencies or the languages of the world? Or the
 chemical elements, the books of the Bible or the text of the Human
 Rights declaration?
 
-These things are considered common knowledge.  You can find them on
-Wikipedia where they are freely available for everybody.  But did you
-ever work on a Wikipedia article which handles this kind of data?
-
-And what if you want to use this data in your Python program?
-Fortunately we have `babel.Locale
+These things are considered "common knowledge".  You can find them on
+Wikipedia where they are `freely available for everybody
+<https://www.mediawiki.org/wiki/API>`_.  There is also `babel.Locale
 <http://babel.pocoo.org/docs/locale/>`_, a Python interface to the
 `CLDR <http://cldr.unicode.org/>`_ (Unicode Common Locale Data
 Repository).
 
-The ``commondata`` project goes a step further: it suggests to write
-and maintain the data itself in Python.
-
+The ``commondata`` project goes a step further: it suggests to also
+*write* and *maintain* the data itself in Python.
 
 Maintained in Python
 --------------------
@@ -53,7 +56,7 @@ Designed to be imported
 -----------------------
 
 The library does **not** provide much querying functionality.  Just
-the basic minimum, used to write test cases.  This is by design. This
-data is meant to be imported into existing systems which offer their
-own querying facilities.
+the basic minimum, used to write test cases.  This is a design
+choice. This data is meant to be imported into existing systems which
+offer their own querying facilities.
 
