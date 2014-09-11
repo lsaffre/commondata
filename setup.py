@@ -28,5 +28,7 @@ commondata
 
 SETUP_INFO.update(namespace_packages=['commondata'])
 
+SETUP_INFO.update(test_suite='')
+
 if __name__ == '__main__':
     setup(**SETUP_INFO)
