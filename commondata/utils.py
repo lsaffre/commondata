@@ -20,6 +20,7 @@ linn are the same object while Võru maakond is a separat object.
 
 """
 
+
 class Place(object):
     value = None
 
