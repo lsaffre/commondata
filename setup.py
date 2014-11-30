@@ -9,7 +9,7 @@ SETUP_INFO = dict(
     test_suite='tests',
     author='Luc Saffre',
     author_email='luc.saffre@gmail.com',
-    url="http://commondata.lino-framework.org",
+    url="https://github.com/lsaffre/commondata",
     classifiers="""\
 Programming Language :: Python
 Programming Language :: Python :: 2.6

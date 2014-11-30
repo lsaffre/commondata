@@ -1,12 +1,3 @@
-==========================
-commondata README
-==========================
-
-A structured collection of common knowledge
-
-Description
------------
-
 ====================================
 The ``commondata`` namespace package
 ====================================
@@ -69,5 +60,4 @@ Installation
     $ pip install -e commondata.ee
     $ pip install -e commondata.be
 
-
-Read more on http://commondata.lino-framework.org
+Online version of this document on https://github.com/lsaffre/commondata
