@@ -112,3 +112,18 @@ Part 3 : using the data
 >>> kwargia = root.children[0]
 >>> [str(x) for x in kwargia.children]
 ['Kwargia', 'Virts', 'Vinks']
+
+
+Multilingual place names
+-------------------------
+
+You use the `set_args` method to specify the names of the fields of
+subsequent places.
+
+>>> pg = PlaceGenerator()
+>>> pg.install(Kingdom, County, Borough, Village)
+>>> pg.set_args('name name_ar')
+>>> root = pg.kingdom("Egypt", u"مصر")
+>>> root.name_ar
+u'\u0645\u0635\u0631'
+
