@@ -7,7 +7,7 @@ http://lino-framework.org/tickets/109.html
 
 This package is the heart of "common data", a sustainable way of
 maintaining and sharing structured common knowledge.  The Python
-package itself contains just some utilities and defines the
+package itself contains just some utilities_ and defines the
 ``commondata`` namespace. It is the base for packages like
 
 - `commondata.be <https://github.com/lsaffre/commondata-be>`_ : 
@@ -61,3 +61,54 @@ Installation
     $ pip install -e commondata.be
 
 Online version of this document on https://github.com/lsaffre/commondata
+
+
+Utilities
+=========
+
+How to use the Place and PlaceGenerator classes.
+
+You define a subclass of Place for each "type" of place:
+
+>>> from commondata.utils import Place, PlaceGenerator
+>>> class PlaceInFoo(Place):
+...     def __str__(self):
+...        return self.name
+>>> class Kingdom(PlaceInFoo):
+...     value = 1
+>>> class County(PlaceInFoo):
+...     value = 2
+>>> class Borough(PlaceInFoo):
+...     value = 3
+>>> class Village(PlaceInFoo):
+...     value = 3
+
+The PlaceGenerator is used to instantiate to populate
+
+Part 1 : configuration:
+
+>>> pg = PlaceGenerator()
+>>> pg.install(Kingdom, County, Borough, Village)
+>>> pg.set_args('name')
+
+Part 2 : filling data
+
+>>> root = pg.kingdom("Kwargia")
+>>> def fill(pg):
+...    pg.county("Kwargia")
+...    pg.borough("Kwargia")
+...    pg.village("Virts")
+...    pg.village("Vinks")
+...    pg.county("Gorgia")
+...    pg.village("Girts")
+...    pg.village("Ginks")
+
+>>> fill(pg)
+
+Part 3 : using the data
+
+>>> [str(x) for x in root.children]
+['Kwargia', 'Gorgia']
+>>> kwargia = root.children[0]
+>>> [str(x) for x in kwargia.children]
+['Kwargia', 'Virts', 'Vinks']
