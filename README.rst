@@ -14,6 +14,8 @@ package itself contains just some utilities_ and defines the
   Common knowledge about Belgium
 - `commondata.ee <https://github.com/lsaffre/commondata-ee>`_: 
   Common knowledge about Estonia
+- `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_: 
+  Common knowledge about Egypt
 
 Features
 ========
@@ -117,8 +119,8 @@ Part 3 : using the data
 Multilingual place names
 -------------------------
 
-You use the `set_args` method to specify the names of the fields of
-subsequent places.
+You use the `commondata.utils.PlaceGenerator.set_args()` method to
+specify the names of the fields of subsequent places.
 
 >>> pg = PlaceGenerator()
 >>> pg.install(Kingdom, County, Borough, Village)
