@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2014 Luc Saffre
+# Copyright 2014-2016 Luc Saffre
 # This file is part of the commondata library.
 # The commondata library is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License
@@ -70,7 +70,7 @@ class Place(object):
     def find(self, **kwargs):
         def f(i):
             return i.match(**kwargs)
-        return filter(f, self.children)
+        return list(filter(f, self.children))
 
     def get(self, **kwargs):
         q = self.find(**kwargs)
