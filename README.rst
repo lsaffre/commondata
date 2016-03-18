@@ -125,7 +125,7 @@ specify the names of the fields of subsequent places.
 >>> pg = PlaceGenerator()
 >>> pg.install(Kingdom, County, Borough, Village)
 >>> pg.set_args('name name_ar')
->>> root = pg.kingdom("Egypt", u"مصر")
->>> root.name_ar
-u'\u0645\u0635\u0631'
+>>> root = pg.kingdom("Egypt", u'\u0645\u0635\u0631')
+>>> print(root.name_ar)
+مصر
 
