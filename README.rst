@@ -1,9 +1,9 @@
-====================================
-The ``commondata`` namespace package
-====================================
+==========================
+The ``commondata`` package
+==========================
 
-Note: we are discussing whether this package is meaningful.  See
-http://lino-framework.org/tickets/109.html
+
+
 
 This package is the heart of "common data", a sustainable way of
 maintaining and sharing structured common knowledge.  The Python
@@ -16,6 +16,9 @@ package itself contains just some utilities_ and defines the
   Common knowledge about Estonia
 - `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_: 
   Common knowledge about Egypt
+
+Note: we are discussing whether this package is meaningful.  See
+http://lino-framework.org/tickets/109.html
 
 Features
 ========
@@ -125,7 +128,8 @@ specify the names of the fields of subsequent places.
 >>> pg = PlaceGenerator()
 >>> pg.install(Kingdom, County, Borough, Village)
 >>> pg.set_args('name name_ar')
->>> root = pg.kingdom("Egypt", u'\u0645\u0635\u0631')
+>>> root = pg.kingdom("Egypt", u'مصر')
 >>> print(root.name_ar)
 مصر
+
 
