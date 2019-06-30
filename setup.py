@@ -17,7 +17,7 @@ Programming Language :: Python :: 2.6
 Programming Language :: Python :: 2.7
 Development Status :: 4 - Beta
 Intended Audience :: Developers
-License :: OSI Approved :: GNU General Public License (GPL)
+License :: OSI Approved :: BSD License
 Natural Language :: English
 Operating System :: OS Independent""".splitlines())
 
