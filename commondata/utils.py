@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Copyright 2014-2016 Luc Saffre
 # License: GNU Affero General Public License v3 (see file COPYING for details)
-
 """
 
 Note that Town is a subclass of Municipality. E.g. Võru vald and Võru
@@ -29,6 +28,7 @@ class Place(object):
 
     @classmethod
     def factory(self, pg):
+
         def create(*args, **kwargs):
             prev = pg.current
             if prev is None:
@@ -42,6 +42,7 @@ class Place(object):
             i = self(pg, parent, *args, **kwargs)
             pg.current = i
             return i
+
         return create
 
     @classmethod
@@ -57,8 +58,10 @@ class Place(object):
         return True
 
     def find(self, **kwargs):
+
         def f(i):
             return i.match(**kwargs)
+
         return list(filter(f, self.children))
 
     def get(self, **kwargs):
@@ -69,6 +72,7 @@ class Place(object):
 
 
 class PlaceGenerator(object):
+
     def __init__(self):
         self.current = None
 
@@ -81,7 +85,3 @@ class PlaceGenerator(object):
 
     def set_args(self, args):
         self.args = tuple(args.split())
-
-
-
-

@@ -1,17 +1,16 @@
 # -*- coding: UTF-8 -*-
 from setuptools import setup
 
-SETUP_INFO = dict(
-    name='commondata',
-    version='0.0.3',
-    install_requires=[],
-    description="A structured collection of common knowledge",
-    license='GPL',
-    test_suite='tests',
-    author='Luc Saffre',
-    author_email='luc.saffre@gmail.com',
-    url="https://github.com/lsaffre/commondata",
-    classifiers="""\
+SETUP_INFO = dict(name='commondata',
+                  version='0.0.3',
+                  install_requires=[],
+                  description="A structured collection of common knowledge",
+                  license='GPL',
+                  test_suite='tests',
+                  author='Luc Saffre',
+                  author_email='luc.saffre@gmail.com',
+                  url="https://github.com/lsaffre/commondata",
+                  classifiers="""\
 Programming Language :: Python
 Programming Language :: Python :: 2.6
 Programming Language :: Python :: 2.7
@@ -151,7 +150,8 @@ specify the names of the fields of subsequent places.
 
 """)
 
-SETUP_INFO.update(packages=[str(n) for n in """
+SETUP_INFO.update(
+    packages=[str(n) for n in """
 commondata
 """.splitlines() if n])
 
