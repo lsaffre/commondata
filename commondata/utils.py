@@ -8,6 +8,13 @@ linn are the same object while Võru maakond is a separat object.
 
 """
 
+from collections import namedtuple
+
+# FIELDS = ('entity', 'name', 'desc', 'isoCode2', 'isoCode3', 'zipCode')
+FIELDS = ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
+
+Country = namedtuple("Country", FIELDS)
+
 
 class Place(object):
     value = None

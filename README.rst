@@ -2,50 +2,34 @@
 The ``commondata`` package
 ==========================
 
+The main package ``commondata`` defines the ``commondata`` namespace,  some
+utilities and world-wide data such as the list of countries.  Country-specific
+data is contained in individual packages.
+
+- `commondata.be <https://github.com/lsaffre/commondata-be>`_ :
+  Common data about Belgium
+- `commondata.ee <https://github.com/lsaffre/commondata-ee>`_:
+  Common data about Estonia
+- `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_:
+  Common data about Egypt
 
 
+Minimalistic
 
-This package is the heart of "common data", a sustainable way of
-maintaining and sharing structured common knowledge.  The Python
-package itself contains just some utilities_ and defines the
-``commondata`` namespace. It is the base for packages like
+The library does **not** provide querying functionality.  Just the basic minimum
+to write test cases.  This is a design choice. This data is meant to be imported
+into existing systems that use their own preferences for rendering and querying
+data.
 
-- `commondata.be <https://github.com/lsaffre/commondata-be>`_ : 
-  Common knowledge about Belgium
-- `commondata.ee <https://github.com/lsaffre/commondata-ee>`_: 
-  Common knowledge about Estonia
-- `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_: 
-  Common knowledge about Egypt
+Showcase
 
-Note: we are discussing whether this package is meaningful.  See
-http://lino-framework.org/tickets/109.html
-
-Features
-========
-
-
-Maintained in Python
---------------------
-
-The Python programming language brings together two qualities 
-
-- a syntax which makes it easy (or at least possible) to be used by
-  non-programmers
-- a powerful programming language working behind the scenes
-
-
-Freely available under the GPL
-------------------------------
-
-Free software should not depend on non-free material.
-
-Designed to be imported
------------------------
-
-The library does **not** provide much querying functionality.  Just
-the basic minimum, used to write test cases.  This is a design
-choice. This data is meant to be imported into existing systems which
-offer their own querying facilities.
+>>> from commondata.countries import COUNTRIES, FIELDS
+>>> FIELDS
+('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
+>>> COUNTRIES[1]
+Country(entity='http://www.wikidata.org/entity/Q971', name={'en': 'Republic of the Congo', 'de': 'Republik Kongo', 'fr': 'République du Congo', 'nl': 'Congo-Brazzaville', 'et': 'Kongo Vabariik', 'bn': 'কঙ্গো প্রজাতন্ত্র', 'es': 'República del Congo'}, isoCode2='CG', isoCode3='COG', zipCode=None, population='5260750')
+>>> len(COUNTRIES)
+195
 
 
 Installation
@@ -68,8 +52,10 @@ Installation
 Online version of this document on https://github.com/lsaffre/commondata
 
 
-Utilities
-=========
+Don't read on
+=============
+
+The remaining part of this document is obsolete but still valid.
 
 How to use the Place and PlaceGenerator classes.
 
@@ -131,5 +117,3 @@ specify the names of the fields of subsequent places.
 >>> root = pg.kingdom("Egypt", u'مصر')
 >>> print(root.name_ar)
 مصر
-
-
