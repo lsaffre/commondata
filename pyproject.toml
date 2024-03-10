@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = 'commondata'
-version = '24.3.0'
+version = '24.3.1'
 description = "Share structured common data in a pythonic way"
 
 # scripts = ['eidreader.py']
