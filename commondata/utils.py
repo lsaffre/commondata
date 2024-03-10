@@ -4,7 +4,7 @@
 """
 
 Note that Town is a subclass of Municipality. E.g. Võru vald and Võru
-linn are the same object while Võru maakond is a separat object.
+linn are the same object while Võru maakond is a separate object.
 
 """
 
@@ -15,6 +15,16 @@ FIELDS = ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
 
 Country = namedtuple("Country", FIELDS)
 
+def get_name_factory(k):
+    from .demonames import bel, est, ury
+    k = k.upper()
+    if k == 'BE':
+        return bel.NameFactory()
+    if k == 'EE':
+        return est.NameFactory()
+    if k == 'UY':
+        return ury.NameFactory()
+    raise Exception("Invalid region name %r." % k)
 
 class Place(object):
     value = None
