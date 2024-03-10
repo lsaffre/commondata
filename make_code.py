@@ -6,11 +6,11 @@
 Started as a copy of lino_xl.lib.countries.wikidata
 """
 
-import click
 import os
-import requests
 import json
 import datetime
+import requests
+import click
 
 dt = datetime.datetime
 

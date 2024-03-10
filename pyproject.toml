@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = 'commondata'
+version = '24.3.0'
+description = "Share structured common data in a pythonic way"
+
+# scripts = ['eidreader.py']
+
+dependencies = ['requests', 'click']
+
+# scripts=['synodal.py']
+readme = "README.rst"
+# py_modules = ['synodal']
+
+license = {file = "COPYING"}
+authors = [
+  {name='Rumma & Ko Ltd', email="info@saffre-rumma.net"},
+  {name='Luc Saffre', email="luc@lino-framework.org"},
+]
+
+classifiers= [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Natural Language :: English",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://dev.lino-framework.org/topics/commondata.html"
+Repository = "https://github.com/lsaffre/commondata"
