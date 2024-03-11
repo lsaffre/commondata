@@ -115,9 +115,9 @@ contained in individual subpackages. The following packages are now obsolete
 - `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_:
   Common data about Egypt
 
-How to uninstall the old commondata packages:  find your :file:`site-packages`
-directory (e.g. :file:`~/env/lib/python3.10/site-packages`) and manually remove
-all files :file:`commondata*-nspkg.pth`
+How to uninstall the old commondata packages: find your `site-packages`
+directory (e.g. `~/env/lib/python3.10/site-packages`) and manually remove
+all files `commondata*-nspkg.pth`
 
 Don't read on
 =============
