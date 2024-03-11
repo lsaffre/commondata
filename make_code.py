@@ -18,11 +18,7 @@ dt = datetime.datetime
 from pathlib import Path
 from pprint import pprint, pformat
 
-from commondata.utils import Country, FIELDS
-
-
-url = "https://query.wikidata.org/sparql"
-
+from commondata.utils import Country, FIELDS, LANGUAGES, ENTITY_BASE
 
 class WD:
 
@@ -78,13 +74,14 @@ def read_wdqs_json(file):
 
 
 def query_wdqs(query):
+    url = "https://query.wikidata.org/sparql"
     resp = requests.get(url, params={'format': 'json', 'query': query})
     if resp.status_code == 429:
         return []
     return resp.json()['results']['bindings']
 
 
-def parse_object(obj, languages=[]):
+def parse_object(obj):
     # if 'en' in languages:
     #     languages.remove('en')
 
@@ -92,7 +89,13 @@ def parse_object(obj, languages=[]):
     # c = dict(name=name,
     #          entity=obj['entity']['value'].split('entity')[1].split('/')[1])
 
-    c = dict(entity=obj['entity']['value'])
+    entity = obj['entity']['value']
+    if entity.startswith(ENTITY_BASE):
+        entity = entity[len(ENTITY_BASE):]
+    else:
+        raise Exception("Unexpected entity base {}".format(entity))
+
+    c = dict(entity=entity)
     # for k in ("isoCode2", "isoCode3", "zipCode", "entityDescription"):
     for k in ("isoCode2", "isoCode3", "zipCode", "population"):
         if (v := obj.get(k, None)) is not None:
@@ -116,7 +119,7 @@ def parse_object(obj, languages=[]):
 
     name = dict(en=obj['entityLabel']['value'])
     desc = dict()
-    for lang in languages:
+    for lang in LANGUAGES:
         v = obj.get('entity_' + lang, None)
         if v is not None:
             name[lang] = v['value']
@@ -129,9 +132,9 @@ def parse_object(obj, languages=[]):
     return c
 
 
-def build_query(languages=[], entity='country', of=None, **kw):
-    if 'en' in languages:
-        languages.remove('en')
+def build_query(entity='country', of=None, **kw):
+    # if 'en' in languages:
+    #     languages.remove('en')
 
     select = "SELECT ?entity ?entityLabel ?entityDescription ?population"
 
@@ -140,7 +143,9 @@ def build_query(languages=[], entity='country', of=None, **kw):
     if entity in ['human_settlement', 'admin_entity_contains']:
         select += " ?zipCode"
 
-    for lang in languages:
+    other_langs = [lang for lang in LANGUAGES if lang != "en"]
+
+    for lang in other_langs:
         select += " ?entity_" + lang + " ?entityDesc_" + lang
 
     select += "\n"
@@ -180,9 +185,9 @@ def build_query(languages=[], entity='country', of=None, **kw):
 
     where += "\tSERVICE wikibase:label { bd:serviceParam wikibase:language 'en'. }\n"
 
-    if languages:
+    if len(other_langs) > 1:
         where += "\tOPTIONAL {\n"
-        for lang in languages:
+        for lang in other_langs:
             where += ("\t\tSERVICE wikibase:label {\n" +
                       "\t\t\tbd:serviceParam wikibase:language '" + lang +
                       "'.\n" + "\t\t\t?entity rdfs:label ?entity_" + lang +
@@ -195,10 +200,11 @@ def build_query(languages=[], entity='country', of=None, **kw):
     return select + where
 
 
-def get_countries(languages):
+
+def get_countries():
     # languages = [lang.split('-')[0] for lang in languages]
     # print("Getting countries data from WDQS server.")
-    q = build_query(languages=languages, entity='country')
+    q = build_query(entity='country')
     # print("="*20)
     # print(q)
     # print("="*20)
@@ -214,7 +220,7 @@ def get_countries(languages):
 
     for country in resp:
     #     isoCode2 = country['isoCode2']['value'].lower()
-        p = parse_object(country, languages)
+        p = parse_object(country)
         country = Country(*[p.get(k, None) for k in FIELDS])
         if country.isoCode2 in iso2:
             # raise Exception(
@@ -237,22 +243,20 @@ def get_countries(languages):
 # from collections import namedtuple
 # Place = namedtuple("Place", FIELDS)
 
-def _query_cities(entity, languages=[]):
-    q = build_query(languages=languages, entity='city', of=entity)
+def _query_cities(entity):
+    q = build_query(entity='city', of=entity)
     resp = query_wdqs(q)
 
     cities = dict()
     for city in resp:
-        name, c = parse_object(city, languages)
+        name, c = parse_object(city)
         cities[name.lower().replace(" ", '_')] = c
     return cities
 
 
 def get_cities(of=[],
-               languages=[],
                filename='cities.json',
                force_update=False):
-    languages = [lang.split('-')[0] for lang in languages]
     filepath = WD.file_dir / filename
     results = dict()
     if not force_update and os.path.isfile(filepath):
@@ -311,12 +315,12 @@ def get_cities(of=[],
         return obj
 
 
-def _query_subdivisions(country, languages=[], query_by='bulk'):
+def _query_subdivisions(country, query_by='bulk'):
     subdivisions = dict()
     subdivisionLevelMap = dict()
     if query_by in ['bulk', 'subdivision']:
         for i in range(1, 7):
-            q = build_query(languages=languages,
+            q = build_query(
                             entity='country_subdivision',
                             of=country,
                             series_ordinal=i - 1)
@@ -325,7 +329,7 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
                 continue
             else:
                 if len(resp) == 1:
-                    _, subdivision = parse_object(resp[0], languages=languages)
+                    _, subdivision = parse_object(resp[0])
                 else:
                     subdivision = dict(name='Unknown', entity='Unknown')
                 arias = dict()
@@ -333,16 +337,16 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
                        "within subdivision: {name: " + subdivision['name'] +
                        ", level: " + str(i) + "} from WDQS server."))
                 for sd in resp:
-                    name, sda = parse_object(sd, languages=languages)
+                    name, sda = parse_object(sd)
                     if len(resp) > 1:
                         arias[name.lower().replace(' ', '_')] = sda
-                    q = build_query(languages=languages,
+                    q = build_query(
                                     entity='human_settlement',
                                     of=country,
                                     subdivision=sda['entity'])
                     rsp = query_wdqs(q)
                     for aria in rsp:
-                        name, a = parse_object(aria, languages=languages)
+                        name, a = parse_object(aria)
                         arias[name.lower().replace(' ', '_')] = a
                 subdivision['data'] = arias
                 subdivisions[str(i)] = subdivision
@@ -352,7 +356,7 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
     if query_by in ['bulk', 'admin_entity']:  # This is expensive
 
         def query_ad_ety(ety, name, controller):
-            q = build_query(languages=languages,
+            q = build_query(
                             entity='admin_entity_contains',
                             of=ety)
             print(("Getting places by 'administrative entity containing' " +
@@ -369,7 +373,7 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
                                    name='Unknown',
                                    entity='Unknown')
             for adety in resp:
-                name, ety = parse_object(adety, languages=languages)
+                name, ety = parse_object(adety)
                 subdivision['data'][name.lower().replace(' ', '_')] = ety
                 if controller_child[
                         'not_found_threshold'] != 0 and WD.max_depth > controller[
@@ -386,10 +390,7 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
         query_ad_ety(country, 'country', controller)
         WD.max_depth = 100
 
-    if 'en' not in languages:
-        languages += ['en']
     obj = dict(title='human_settlements',
-               languages=languages,
                updated=dt.timestamp(dt.utcnow()),
                timeZone='UTC',
                data=subdivisions,
@@ -399,12 +400,10 @@ def _query_subdivisions(country, languages=[], query_by='bulk'):
 
 def get_human_settlements(of,
                           series_ordinal=-1,
-                          languages=[],
                           filename=None,
                           force_update=False):
 
-    languages = [lang.split('-')[0] for lang in languages]
-    country = country_lookup(of, languages)
+    country = country_lookup(of)
 
     if filename is None:
         filepath = WD.file_dir / ("human_settlements_in_" + of + ".json")
@@ -422,7 +421,7 @@ def get_human_settlements(of,
     if not force_update and os.path.isfile(filepath):
         obj = read_wdqs_json(filepath)
         new_langs = [
-            lang for lang in languages if lang not in obj['languages']
+            lang for lang in LANGUAGES if lang not in obj['languages']
         ]
         if new_langs:
             languages = obj['languages'] + new_langs
@@ -451,18 +450,27 @@ def write_countries_py(batch):
             return
     click.echo(f"Write {filename}...")
 
-    languages = ['en', 'de', 'fr', 'nl', 'et', 'bn', 'es']
-    COUNTRIES = pformat(list(get_countries(languages)))
     __version__ = importlib.metadata.version("commondata")
+    # countries = list(get_countries())
+    countries = sorted(get_countries(), key=lambda c:c.isoCode2)
+    iso2entity = {c.isoCode2: c.entity for c in countries}
 
+    countries = pformat(countries)
+    iso2entity = pformat(iso2entity)
     with open(filename, encoding='utf-8', mode='w') as f:
         f.write(f"""\
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 # code generated by commondata {__version__} make_code.py
-# Supported languages: {languages}
+
 from commondata.utils import Country, FIELDS
-COUNTRIES = {COUNTRIES}
+
+LANGUAGES = {LANGUAGES}
+
+COUNTRIES = {countries}
+
+ISO2ENTITY = {iso2entity}
+
 # end of generated code
 """)
 
@@ -472,10 +480,10 @@ COUNTRIES = {COUNTRIES}
 @click.option("--batch", "-b", default=False, help="Whether to suppress any interactive questions.")
 def main(batch):
     write_countries_py(batch)
-    # get_cities(['bd', 'de'], languages=languages)
+    # get_cities(['bd', 'de'])
     # for iso_code in ['bd', 'de', 'ee', 'be']:
-    #     get_human_settlements(iso_code, languages=languages)
-    # get_human_settlements('be', languages=languages)
+    #     get_human_settlements(iso_code)
+    # get_human_settlements('be')
     # _query_subdivisions(country_lookup('ee'), query_by='admin_entity')
 
 if __name__ == '__main__':

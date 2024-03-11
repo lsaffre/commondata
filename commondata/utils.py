@@ -10,6 +10,9 @@ linn are the same object while Võru maakond is a separate object.
 
 from collections import namedtuple
 
+LANGUAGES = ['en', 'de', 'fr', 'nl', 'et', 'bn', 'es']
+ENTITY_BASE = "http://www.wikidata.org/entity/"
+
 # FIELDS = ('entity', 'name', 'desc', 'isoCode2', 'isoCode3', 'zipCode')
 FIELDS = ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
 
