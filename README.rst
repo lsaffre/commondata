@@ -27,8 +27,48 @@ Country(entity='Q228', name={'en': 'Andorra', 'de': 'Andorra', 'fr': 'Andorre', 
 These are the countries of the world:
 
 >>> lst = ["{} ({})".format(c.name['en'], c.isoCode2) for c in COUNTRIES]
->>> print(", ".join(lst))  #doctest: +REPORT_UDIFF
-Andorra (AD), United Arab Emirates (AE), Afghanistan (AF), Antigua and Barbuda (AG), Albania (AL), Armenia (AM), Angola (AO), Argentina (AR), Austria (AT), Australia (AU), Azerbaijan (AZ), Bosnia and Herzegovina (BA), Barbados (BB), Bangladesh (BD), Belgium (BE), Burkina Faso (BF), Bulgaria (BG), Bahrain (BH), Burundi (BI), Benin (BJ), Brunei (BN), Bolivia (BO), Brazil (BR), The Bahamas (BS), Bhutan (BT), Botswana (BW), Belarus (BY), Belize (BZ), Canada (CA), Democratic Republic of the Congo (CD), Central African Republic (CF), Republic of the Congo (CG), Switzerland (CH), Ivory Coast (CI), Chile (CL), Cameroon (CM), People's Republic of China (CN), Colombia (CO), Costa Rica (CR), Cuba (CU), Cape Verde (CV), Cyprus (CY), Czech Republic (CZ), Germany (DE), Djibouti (DJ), Dominica (DM), Dominican Republic (DO), Algeria (DZ), Ecuador (EC), Estonia (EE), Egypt (EG), Eritrea (ER), Spain (ES), Ethiopia (ET), Finland (FI), Fiji (FJ), Federated States of Micronesia (FM), France (FR), Gabon (GA), United Kingdom (GB), Grenada (GD), Georgia (GE), Ghana (GH), the Gambia (GM), Guinea (GN), Equatorial Guinea (GQ), Greece (GR), Guatemala (GT), Guinea-Bissau (GW), Guyana (GY), Honduras (HN), Croatia (HR), Haiti (HT), Hungary (HU), Indonesia (ID), Republic of Ireland (IE), Israel (IL), India (IN), Iraq (IQ), Iran (IR), Iceland (IS), Italy (IT), Jamaica (JM), Jordan (JO), Japan (JP), Kenya (KE), Kyrgyzstan (KG), Cambodia (KH), Kiribati (KI), Comoros (KM), Saint Kitts and Nevis (KN), North Korea (KP), South Korea (KR), Kuwait (KW), Kazakhstan (KZ), Laos (LA), Lebanon (LB), Saint Lucia (LC), Liechtenstein (LI), Sri Lanka (LK), Liberia (LR), Lesotho (LS), Lithuania (LT), Luxembourg (LU), Latvia (LV), Libya (LY), Morocco (MA), Monaco (MC), Moldova (MD), Montenegro (ME), Madagascar (MG), Marshall Islands (MH), North Macedonia (MK), Mali (ML), Myanmar (MM), Mongolia (MN), Mauritania (MR), Malta (MT), Mauritius (MU), Maldives (MV), Malawi (MW), Mexico (MX), Malaysia (MY), Mozambique (MZ), Namibia (NA), Niger (NE), Nigeria (NG), Nicaragua (NI), Kingdom of the Netherlands (NL), Norway (NO), Nepal (NP), Nauru (NR), New Zealand (NZ), Oman (OM), Panama (PA), Peru (PE), Papua New Guinea (PG), Philippines (PH), Pakistan (PK), Poland (PL), State of Palestine (PS), Portugal (PT), Palau (PW), Paraguay (PY), Qatar (QA), Romania (RO), Serbia (RS), Russia (RU), Rwanda (RW), Saudi Arabia (SA), Solomon Islands (SB), Seychelles (SC), Sudan (SD), Sweden (SE), Singapore (SG), Slovenia (SI), Slovakia (SK), Sierra Leone (SL), San Marino (SM), Senegal (SN), Somalia (SO), Suriname (SR), South Sudan (SS), São Tomé and Príncipe (ST), El Salvador (SV), Syria (SY), Eswatini (SZ), Chad (TD), Togo (TG), Thailand (TH), Tajikistan (TJ), East Timor (TL), Turkmenistan (TM), Tunisia (TN), Tonga (TO), Turkey (TR), Trinidad and Tobago (TT), Tuvalu (TV), Taiwan (TW), Tanzania (TZ), Ukraine (UA), Uganda (UG), United States of America (US), Uruguay (UY), Uzbekistan (UZ), Vatican City (VA), Saint Vincent and the Grenadines (VC), Venezuela (VE), Vietnam (VN), Vanuatu (VU), Samoa (WS), Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
+>>> print(", ".join(lst))  #doctest: +REPORT_UDIFF +NORMALIZE_WHITESPACE
+Andorra (AD), United Arab Emirates (AE), Afghanistan (AF), Antigua and Barbuda
+(AG), Albania (AL), Armenia (AM), Angola (AO), Argentina (AR), Austria (AT),
+Australia (AU), Azerbaijan (AZ), Bosnia and Herzegovina (BA), Barbados (BB),
+Bangladesh (BD), Belgium (BE), Burkina Faso (BF), Bulgaria (BG), Bahrain (BH),
+Burundi (BI), Benin (BJ), Brunei (BN), Bolivia (BO), Brazil (BR), The Bahamas
+(BS), Bhutan (BT), Botswana (BW), Belarus (BY), Belize (BZ), Canada (CA),
+Democratic Republic of the Congo (CD), Central African Republic (CF), Republic
+of the Congo (CG), Switzerland (CH), Ivory Coast (CI), Chile (CL), Cameroon
+(CM), People's Republic of China (CN), Colombia (CO), Costa Rica (CR), Cuba
+(CU), Cape Verde (CV), Cyprus (CY), Czech Republic (CZ), Germany (DE), Djibouti
+(DJ), Dominica (DM), Dominican Republic (DO), Algeria (DZ), Ecuador (EC),
+Estonia (EE), Egypt (EG), Eritrea (ER), Spain (ES), Ethiopia (ET), Finland (FI),
+Fiji (FJ), Federated States of Micronesia (FM), France (FR), Gabon (GA), United
+Kingdom (GB), Grenada (GD), Georgia (GE), Ghana (GH), the Gambia (GM), Guinea
+(GN), Equatorial Guinea (GQ), Greece (GR), Guatemala (GT), Guinea-Bissau (GW),
+Guyana (GY), Honduras (HN), Croatia (HR), Haiti (HT), Hungary (HU), Indonesia
+(ID), Republic of Ireland (IE), Israel (IL), India (IN), Iraq (IQ), Iran (IR),
+Iceland (IS), Italy (IT), Jamaica (JM), Jordan (JO), Japan (JP), Kenya (KE),
+Kyrgyzstan (KG), Cambodia (KH), Kiribati (KI), Comoros (KM), Saint Kitts and
+Nevis (KN), North Korea (KP), South Korea (KR), Kuwait (KW), Kazakhstan (KZ),
+Laos (LA), Lebanon (LB), Saint Lucia (LC), Liechtenstein (LI), Sri Lanka (LK),
+Liberia (LR), Lesotho (LS), Lithuania (LT), Luxembourg (LU), Latvia (LV), Libya
+(LY), Morocco (MA), Monaco (MC), Moldova (MD), Montenegro (ME), Madagascar (MG),
+Marshall Islands (MH), North Macedonia (MK), Mali (ML), Myanmar (MM), Mongolia
+(MN), Mauritania (MR), Malta (MT), Mauritius (MU), Maldives (MV), Malawi (MW),
+Mexico (MX), Malaysia (MY), Mozambique (MZ), Namibia (NA), Niger (NE), Nigeria
+(NG), Nicaragua (NI), Kingdom of the Netherlands (NL), Norway (NO), Nepal (NP),
+Nauru (NR), New Zealand (NZ), Oman (OM), Panama (PA), Peru (PE), Papua New
+Guinea (PG), Philippines (PH), Pakistan (PK), Poland (PL), State of Palestine
+(PS), Portugal (PT), Palau (PW), Paraguay (PY), Qatar (QA), Romania (RO), Serbia
+(RS), Russia (RU), Rwanda (RW), Saudi Arabia (SA), Solomon Islands (SB),
+Seychelles (SC), Sudan (SD), Sweden (SE), Singapore (SG), Slovenia (SI),
+Slovakia (SK), Sierra Leone (SL), San Marino (SM), Senegal (SN), Somalia (SO),
+Suriname (SR), South Sudan (SS), São Tomé and Príncipe (ST), El Salvador (SV),
+Syria (SY), Eswatini (SZ), Chad (TD), Togo (TG), Thailand (TH), Tajikistan (TJ),
+East Timor (TL), Turkmenistan (TM), Tunisia (TN), Tonga (TO), Turkey (TR),
+Trinidad and Tobago (TT), Tuvalu (TV), Taiwan (TW), Tanzania (TZ), Ukraine (UA),
+Uganda (UG), United States of America (US), Uruguay (UY), Uzbekistan (UZ),
+Vatican City (VA), Saint Vincent and the Grenadines (VC), Venezuela (VE),
+Vietnam (VN), Vanuatu (VU), Samoa (WS), Yemen (YE), South Africa (ZA), Zambia
+(ZM), Zimbabwe (ZW)
 
 Place names in Estonia
 ======================
