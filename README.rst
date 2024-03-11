@@ -97,8 +97,8 @@ Valga : Valga, Tõrva, Otepää, Puka, Õru, Tõlliste, Sangaste, Karula, Helme,
 Viljandi : Suure-Jaani, Abja, Abja-Paluoja, Viljandi, Võhma, Mõisaküla, Viiratsi, Halliste, Karksi, Karksi-Nuia, Kolga-Jaani, Pärsti, Tarvastu, Saarepeedi, Paistu, Kõpu, Kõo, Soe
 Võru : Vastseliina, Võru, Antsla, Varstu, Sõmerpalu, Rõuge, Mõniste, Haanja, Urvaste, Lasva, Misso, Meremäe, Kirumpää, Navi, Meegomäe
 
-NB: The data about Estonian places is currently obsolete. We plan to maintenance
-it in collaboration with
+Note: The data about Estonian places is currently obsolete by several years. We
+plan to maintain it in collaboration with
 https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister
 
 
@@ -115,6 +115,9 @@ contained in individual subpackages. The following packages are now obsolete
 - `commondata.eg <https://github.com/ExcellentServ/commondata-eg>`_:
   Common data about Egypt
 
+How to uninstall the old commondata packages:  find your :file:`site-packages`
+directory (e.g. :file:`~/env/lib/python3.10/site-packages`) and manually remove
+all files :file:`commondata*-nspkg.pth`
 
 Don't read on
 =============
