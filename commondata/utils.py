@@ -18,6 +18,7 @@ FIELDS = ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
 
 Country = namedtuple("Country", FIELDS)
 
+
 def get_name_factory(k):
     from .demonames import bel, est, ury
     k = k.upper()
@@ -28,6 +29,7 @@ def get_name_factory(k):
     if k == 'UY':
         return ury.NameFactory()
     raise Exception("Invalid region name %r." % k)
+
 
 class Place(object):
     value = None
