@@ -41,7 +41,7 @@ of the Congo (CG), Switzerland (CH), Ivory Coast (CI), Chile (CL), Cameroon
 (DJ), Dominica (DM), Dominican Republic (DO), Algeria (DZ), Ecuador (EC),
 Estonia (EE), Egypt (EG), Eritrea (ER), Spain (ES), Ethiopia (ET), Finland (FI),
 Fiji (FJ), Federated States of Micronesia (FM), France (FR), Gabon (GA), United
-Kingdom (GB), Grenada (GD), Georgia (GE), Ghana (GH), the Gambia (GM), Guinea
+Kingdom (GB), Grenada (GD), Georgia (GE), Ghana (GH), The Gambia (GM), Guinea
 (GN), Equatorial Guinea (GQ), Greece (GR), Guatemala (GT), Guinea-Bissau (GW),
 Guyana (GY), Honduras (HN), Croatia (HR), Haiti (HT), Hungary (HU), Indonesia
 (ID), Republic of Ireland (IE), Israel (IL), India (IN), Iraq (IQ), Iran (IR),
