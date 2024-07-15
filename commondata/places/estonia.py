@@ -3,7 +3,7 @@
 # License: GNU Affero General Public License v3 (see file COPYING for details)
 """
 
-Here is the script that was used in cosi_ee to generate the following code::
+Here is the script that was used in cosi3 to generate the following code::
 
     from lino.api.shell import *
     from pprint import pprint
