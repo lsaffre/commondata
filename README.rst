@@ -11,6 +11,9 @@ querying data.
 
 Online version of this document on https://github.com/lsaffre/commondata
 
+.. contents::
+  :local:
+
 
 Countries of the world
 ======================
@@ -68,6 +71,37 @@ Turkmenistan (TM), Tunisia (TN), Tonga (TO), Turkey (TR), Trinidad and Tobago
 States (US), Uruguay (UY), Uzbekistan (UZ), Vatican City (VA), Saint Vincent and
 the Grenadines (VC), Venezuela (VE), Vietnam (VN), Vanuatu (VU), Samoa (WS),
 Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
+
+Peppol codes
+============
+
+The ``commondata.peppol`` module defines a dict ``COUNTRY2SCHEME``, which maps
+country codes to the EAS number of their *VAT office*.
+
+This module has been generated from https://docs.peppol.eu/edelivery/codelists
+
+>>> from commondata.peppolcodes import COUNTRY2SCHEME
+
+>>> COUNTRY2SCHEME['BE']
+'9925'
+>>> COUNTRY2SCHEME['EE']
+'9931'
+
+Not every country has an Electronic Address Scheme:
+
+>>> COUNTRY2SCHEME['US']
+Traceback (most recent call last):
+...
+KeyError: 'US'
+
+Here is a list of the Peppol countries:
+
+>>> " ".join(sorted(COUNTRY2SCHEME.keys()))
+'AD AL AT BA BE BG CH CY CZ DE EE ES FI FR GB GR HR HU IE IT LI LT LU LV MC ME MK MT NL NO PL PT RO RS SE SI SK SM TR VA international'
+
+This is used by Lino, see
+https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
+
 
 Place names in Estonia
 ======================
@@ -183,34 +217,3 @@ specify the names of the fields of subsequent places.
 >>> root = pg.kingdom("Egypt", u'مصر')
 >>> print(root.name_ar)
 مصر
-
-
-Peppol codes
-============
-
-The ``commondata.peppol`` module defines a dict ``COUNTRY2SCHEME``, which maps
-country codes to the EAS number of their *VAT office*.
-
-This module has been generated from https://docs.peppol.eu/edelivery/codelists
-
->>> from commondata.peppolcodes import COUNTRY2SCHEME
-
->>> COUNTRY2SCHEME['BE']
-'9925'
->>> COUNTRY2SCHEME['EE']
-'9931'
-
-Not every country has an Electronic Address Scheme:
-
->>> COUNTRY2SCHEME['US']
-Traceback (most recent call last):
-...
-KeyError: 'US'
-
-Here is a list of the Peppol countries:
-
->>> " ".join(sorted(COUNTRY2SCHEME.keys()))
-'AD AL AT BA BE BG CH CY CZ DE EE ES FI FR GB GR HR HU IE IT LI LT LU LV MC ME MK MT NL NO PL PT RO RS SE SI SK SM TR VA international'
-
-This is used by Lino, see
-https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
