@@ -188,8 +188,8 @@ specify the names of the fields of subsequent places.
 Peppol codes
 ============
 
-The :mod:`commondata.peppol` module defines a dict :data:`COUNTRY2SCHEME`, which
-maps country codes to the EAS number of the *VAT office* of that country.
+The ``commondata.peppol`` module defines a dict ``COUNTRY2SCHEME``, which maps
+country codes to the EAS number of their *VAT office*.
 
 This module has been generated from https://docs.peppol.eu/edelivery/codelists
 
