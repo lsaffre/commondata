@@ -19,7 +19,7 @@ Countries of the world
 >>> FIELDS
 ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
 >>> COUNTRIES[0]
-Country(entity='Q228', name={'en': 'Andorra', 'de': 'Andorra', 'fr': 'Andorre', 'nl': 'Andorra', 'et': 'Andorra', 'bn': 'অ্যান্ডোরা', 'es': 'Andorra'}, isoCode2='AD', isoCode3='AND', zipCode=None, population='85101')
+Country(entity='Q228', name={'en': 'Andorra', 'de': 'Andorra', 'fr': 'Andorre', 'nl': 'Andorra', 'et': 'Andorra', 'bn': 'অ্যান্ডোরা', 'es': 'Andorra'}, isoCode2='AD', isoCode3='AND', zipCode=None, population='87097')
 
 >>> len(COUNTRIES)
 195
@@ -44,31 +44,30 @@ Fiji (FJ), Federated States of Micronesia (FM), France (FR), Gabon (GA), United
 Kingdom (GB), Grenada (GD), Georgia (GE), Ghana (GH), The Gambia (GM), Guinea
 (GN), Equatorial Guinea (GQ), Greece (GR), Guatemala (GT), Guinea-Bissau (GW),
 Guyana (GY), Honduras (HN), Croatia (HR), Haiti (HT), Hungary (HU), Indonesia
-(ID), Republic of Ireland (IE), Israel (IL), India (IN), Iraq (IQ), Iran (IR),
-Iceland (IS), Italy (IT), Jamaica (JM), Jordan (JO), Japan (JP), Kenya (KE),
-Kyrgyzstan (KG), Cambodia (KH), Kiribati (KI), Comoros (KM), Saint Kitts and
-Nevis (KN), North Korea (KP), South Korea (KR), Kuwait (KW), Kazakhstan (KZ),
-Laos (LA), Lebanon (LB), Saint Lucia (LC), Liechtenstein (LI), Sri Lanka (LK),
-Liberia (LR), Lesotho (LS), Lithuania (LT), Luxembourg (LU), Latvia (LV), Libya
-(LY), Morocco (MA), Monaco (MC), Moldova (MD), Montenegro (ME), Madagascar (MG),
-Marshall Islands (MH), North Macedonia (MK), Mali (ML), Myanmar (MM), Mongolia
-(MN), Mauritania (MR), Malta (MT), Mauritius (MU), Maldives (MV), Malawi (MW),
-Mexico (MX), Malaysia (MY), Mozambique (MZ), Namibia (NA), Niger (NE), Nigeria
-(NG), Nicaragua (NI), Kingdom of the Netherlands (NL), Norway (NO), Nepal (NP),
-Nauru (NR), New Zealand (NZ), Oman (OM), Panama (PA), Peru (PE), Papua New
-Guinea (PG), Philippines (PH), Pakistan (PK), Poland (PL), State of Palestine
-(PS), Portugal (PT), Palau (PW), Paraguay (PY), Qatar (QA), Romania (RO), Serbia
-(RS), Russia (RU), Rwanda (RW), Saudi Arabia (SA), Solomon Islands (SB),
-Seychelles (SC), Sudan (SD), Sweden (SE), Singapore (SG), Slovenia (SI),
-Slovakia (SK), Sierra Leone (SL), San Marino (SM), Senegal (SN), Somalia (SO),
-Suriname (SR), South Sudan (SS), São Tomé and Príncipe (ST), El Salvador (SV),
-Syria (SY), Eswatini (SZ), Chad (TD), Togo (TG), Thailand (TH), Tajikistan (TJ),
-East Timor (TL), Turkmenistan (TM), Tunisia (TN), Tonga (TO), Turkey (TR),
-Trinidad and Tobago (TT), Tuvalu (TV), Taiwan (TW), Tanzania (TZ), Ukraine (UA),
-Uganda (UG), United States of America (US), Uruguay (UY), Uzbekistan (UZ),
-Vatican City (VA), Saint Vincent and the Grenadines (VC), Venezuela (VE),
-Vietnam (VN), Vanuatu (VU), Samoa (WS), Yemen (YE), South Africa (ZA), Zambia
-(ZM), Zimbabwe (ZW)
+(ID), Ireland (IE), Israel (IL), India (IN), Iraq (IQ), Iran (IR), Iceland (IS),
+Italy (IT), Jamaica (JM), Jordan (JO), Japan (JP), Kenya (KE), Kyrgyzstan (KG),
+Cambodia (KH), Kiribati (KI), Comoros (KM), Saint Kitts and Nevis (KN), North
+Korea (KP), South Korea (KR), Kuwait (KW), Kazakhstan (KZ), Laos (LA), Lebanon
+(LB), Saint Lucia (LC), Liechtenstein (LI), Sri Lanka (LK), Liberia (LR),
+Lesotho (LS), Lithuania (LT), Luxembourg (LU), Latvia (LV), Libya (LY), Morocco
+(MA), Monaco (MC), Moldova (MD), Montenegro (ME), Madagascar (MG), Marshall
+Islands (MH), North Macedonia (MK), Mali (ML), Myanmar (MM), Mongolia (MN),
+Mauritania (MR), Malta (MT), Mauritius (MU), Maldives (MV), Malawi (MW), Mexico
+(MX), Malaysia (MY), Mozambique (MZ), Namibia (NA), Niger (NE), Nigeria (NG),
+Nicaragua (NI), Kingdom of the Netherlands (NL), Norway (NO), Nepal (NP), Nauru
+(NR), New Zealand (NZ), Oman (OM), Panama (PA), Peru (PE), Papua New Guinea
+(PG), Philippines (PH), Pakistan (PK), Poland (PL), Palestine (PS), Portugal
+(PT), Palau (PW), Paraguay (PY), Qatar (QA), Romania (RO), Serbia (RS), Russia
+(RU), Rwanda (RW), Saudi Arabia (SA), Solomon Islands (SB), Seychelles (SC),
+Sudan (SD), Sweden (SE), Singapore (SG), Slovenia (SI), Slovakia (SK), Sierra
+Leone (SL), San Marino (SM), Senegal (SN), Somalia (SO), Suriname (SR), South
+Sudan (SS), São Tomé and Príncipe (ST), El Salvador (SV), Syria (SY), Eswatini
+(SZ), Chad (TD), Togo (TG), Thailand (TH), Tajikistan (TJ), Timor-Leste (TL),
+Turkmenistan (TM), Tunisia (TN), Tonga (TO), Turkey (TR), Trinidad and Tobago
+(TT), Tuvalu (TV), Taiwan (TW), Tanzania (TZ), Ukraine (UA), Uganda (UG), United
+States (US), Uruguay (UY), Uzbekistan (UZ), Vatican City (VA), Saint Vincent and
+the Grenadines (VC), Venezuela (VE), Vietnam (VN), Vanuatu (VU), Samoa (WS),
+Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
 
 Place names in Estonia
 ======================
@@ -184,3 +183,34 @@ specify the names of the fields of subsequent places.
 >>> root = pg.kingdom("Egypt", u'مصر')
 >>> print(root.name_ar)
 مصر
+
+
+Peppol codes
+============
+
+The :mod:`commondata.peppol` module defines a dict :data:`COUNTRY2SCHEME`, which
+maps country codes to the EAS number of the *VAT office* of that country.
+
+This module has been generated from https://docs.peppol.eu/edelivery/codelists
+
+>>> from commondata.peppolcodes import COUNTRY2SCHEME
+
+>>> COUNTRY2SCHEME['BE']
+'9925'
+>>> COUNTRY2SCHEME['EE']
+'9931'
+
+Not every country has an Electronic Address Scheme:
+
+>>> COUNTRY2SCHEME['US']
+Traceback (most recent call last):
+...
+KeyError: 'US'
+
+Here is a list of the Peppol countries:
+
+>>> " ".join(sorted(COUNTRY2SCHEME.keys()))
+'AD AL AT BA BE BG CH CY CZ DE EE ES FI FR GB GR HR HU IE IT LI LT LU LV MC ME MK MT NL NO PL PT RO RS SE SI SK SM TR VA international'
+
+This is used by Lino, see
+https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
