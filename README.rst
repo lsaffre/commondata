@@ -12,6 +12,7 @@ querying data.
 Online version of this document on https://github.com/lsaffre/commondata
 
 .. contents::
+  :depth: 1
   :local:
 
 
