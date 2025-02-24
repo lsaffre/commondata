@@ -157,8 +157,8 @@ How to uninstall the old commondata packages: find your `site-packages`
 directory (e.g. `~/env/lib/python3.10/site-packages`) and manually remove
 all files `commondata*-nspkg.pth`
 
-Don't read on
-=============
+Don't read this
+===============
 
 The remaining part of this document is obsolete but still valid.
 
