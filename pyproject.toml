@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = 'commondata'
-version = '25.2.0'
+dynamic = ["version"]
 description = "Share structured common data in a pythonic way"
 
 # scripts = ['eidreader.py']
@@ -34,3 +34,6 @@ classifiers= [
 [project.urls]
 Homepage = "https://dev.lino-framework.org/topics/commondata.html"
 Repository = "https://github.com/lsaffre/commondata"
+
+[tool.hatch.version]
+path = "commondata/__init__.py"
