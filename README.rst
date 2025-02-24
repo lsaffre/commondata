@@ -80,8 +80,10 @@ Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
 Peppol codes
 ============
 
-The ``commondata.peppol`` module defines a dict ``COUNTRY2SCHEME``, which maps
-country codes to the EAS number of their *VAT office*.
+The `commondata.peppol
+<https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
+module defines a dict ``COUNTRY2SCHEME``, which maps country codes to the EAS
+number of their *VAT office*.
 
 This module has been generated from https://docs.peppol.eu/edelivery/codelists
 
