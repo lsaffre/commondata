@@ -116,7 +116,7 @@ Peppol delivery units
 The  ``DELIVERY_UNITS`` dict in the `commondata.peppol
 <https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
 module contains the codes that are allowed in the
-`unitCode<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/unitCode/>`__
+`unitCode <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/unitCode/>`__
 attribute of a  `InvoicedQuantity
 <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/>`__
 element. These codes are specified by `UNECERec20
