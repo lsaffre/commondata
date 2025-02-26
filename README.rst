@@ -77,31 +77,16 @@ States (US), Uruguay (UY), Uzbekistan (UZ), Vatican City (VA), Saint Vincent and
 the Grenadines (VC), Venezuela (VE), Vietnam (VN), Vanuatu (VU), Samoa (WS),
 Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
 
-Peppol codes
-============
+Peppol Participant Identifier Schemes
+=====================================
 
-The `commondata.peppol
+The ``COUNTRY2SCHEME`` dict in the `commondata.peppol
 <https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
-module defines two dicts:
+module  maps country codes to the *Participant Identifier Scheme* of their
+respective *VAT office*. This data has been generated from
+https://docs.peppol.eu/edelivery/codelists
 
-- ``COUNTRY2SCHEME`` maps country codes to the
-  *Participant Identifier Scheme* of their respective *VAT office*.
-  This data has been generated from https://docs.peppol.eu/edelivery/codelists
-
-- ``DELIVERY_UNITS``
-  contains the codes that are allowed in the
-  `unitCode<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/unitCode/>`__
-  attribute of a  `InvoicedQuantity
-  <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/>`__
-  element.
-  These codes are specified by  `UNECERec20
-  <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/codelist/UNECERec20/>`_,
-  which we download from the  `OpenPEPPOL
-  <https://github.com/OpenPEPPOL/peppol-bis-invoice-3/raw/refs/heads/master/structure/codelist/UNECERec20-11e.xml>`__
-  repository.
-
-
->>> from commondata.peppolcodes import COUNTRY2SCHEME, DELIVERY_UNITS
+>>> from commondata.peppolcodes import COUNTRY2SCHEME
 
 >>> COUNTRY2SCHEME['BE']
 '9925'
@@ -123,14 +108,37 @@ Here is a list of the Peppol countries:
 This is used by Lino, see
 https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
 
-The :data:`DELIVERY_UNITS` dict contains *many* codes, and some of them are funny:
+
+
+Peppol delivery units
+=====================
+
+The  ``DELIVERY_UNITS`` dict in the `commondata.peppol
+<https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
+module contains the codes that are allowed in the
+`unitCode<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/unitCode/>`__
+attribute of a  `InvoicedQuantity
+<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/>`__
+element. These codes are specified by `UNECERec20
+<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/codelist/UNECERec20/>`_. We
+download them from the  `OpenPEPPOL
+<https://github.com/OpenPEPPOL/peppol-bis-invoice-3/raw/refs/heads/master/structure/codelist/UNECERec20-11e.xml>`__
+repository.
+
+>>> from commondata.peppolcodes import DELIVERY_UNITS
+
+
+The ``DELIVERY_UNITS`` dict contains *many* codes:
 
 >>> len(DELIVERY_UNITS)
 2162
+
+And some of them are funny:
+
 >>> DELIVERY_UNITS['14']
 ('shot', 'A unit of liquid measure, especially related to spirits.')
 
-What's the code for "hour"?
+I wondered what's the code for "hour":
 
 >>> for k, v in DELIVERY_UNITS.items():
 ...     if v[0].lower() == "hour":
