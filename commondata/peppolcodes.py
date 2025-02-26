@@ -47,4 +47,4037 @@ COUNTRY2SCHEME = {'AD': '9922',
  'VA': '9953',
  'international': '9912'}
 
+DELIVERY_UNITS = {'10': ('group',
+        'A unit of count defining the number of groups (group: set of items '
+        'classified\n'
+        '            together).'),
+ '11': ('outfit',
+        'A unit of count defining the number of outfits (outfit: a complete '
+        'set of\n'
+        '            equipment / materials / objects used for a specific '
+        'purpose).'),
+ '13': ('ration',
+        'A unit of count defining the number of rations (ration: a single '
+        'portion of\n'
+        '            provisions).'),
+ '14': ('shot', 'A unit of liquid measure, especially related to spirits.'),
+ '15': ('stick, military',
+        'A unit of count defining the number of military sticks (military '
+        'stick: bombs\n'
+        '            or paratroops released in rapid succession from an '
+        'aircraft).'),
+ '1I': ('fixed rate',
+        'A unit of quantity expressed as a predetermined or set rate for usage '
+        'of a\n'
+        '            facility or service.'),
+ '20': ('twenty foot container',
+        'A unit of count defining the number of shipping containers that '
+        'measure 20 foot\n'
+        '            in length.'),
+ '21': ('forty foot container',
+        'A unit of count defining the number of shipping containers that '
+        'measure 40 foot\n'
+        '            in length.'),
+ '22': ('decilitre per gram', None),
+ '23': ('gram per cubic centimetre', None),
+ '24': ('theoretical pound',
+        'A unit of mass defining the expected mass of material expressed as '
+        'the number\n'
+        '            of pounds.'),
+ '25': ('gram per square centimetre', None),
+ '27': ('theoretical ton',
+        'A unit of mass defining the expected mass of material, expressed as '
+        'the number\n'
+        '            of tons.'),
+ '28': ('kilogram per square metre', None),
+ '2A': ('radian per second', 'Refer ISO/TC12 SI Guide'),
+ '2B': ('radian per second squared', 'Refer ISO/TC12 SI Guide'),
+ '2C': ('roentgen', None),
+ '2G': ('volt AC',
+        'A unit of electric potential in relation to alternating current\n'
+        '            (AC).'),
+ '2H': ('volt DC',
+        'A unit of electric potential in relation to direct current (DC).'),
+ '2I': ('British thermal unit (international table) per hour', None),
+ '2J': ('cubic centimetre per second', None),
+ '2K': ('cubic foot per hour', None),
+ '2L': ('cubic foot per minute', None),
+ '2M': ('centimetre per second', None),
+ '2N': ('decibel', None),
+ '2P': ('kilobyte', 'A unit of information equal to 10³ (1000) bytes.'),
+ '2Q': ('kilobecquerel', None),
+ '2R': ('kilocurie', None),
+ '2U': ('megagram', None),
+ '2X': ('metre per minute', None),
+ '2Y': ('milliroentgen', None),
+ '2Z': ('millivolt', None),
+ '33': ('kilopascal square metre per gram', None),
+ '34': ('kilopascal per millimetre', None),
+ '35': ('millilitre per square centimetre second', None),
+ '37': ('ounce per square foot', None),
+ '38': ('ounce per square foot per 0,01inch', None),
+ '3B': ('megajoule', None),
+ '3C': ('manmonth',
+        'A unit of count defining the number of months for a person or persons '
+        'to\n'
+        '            perform an undertaking.'),
+ '40': ('millilitre per second', None),
+ '41': ('millilitre per minute', None),
+ '4C': ('centistokes', None),
+ '4G': ('microlitre', None),
+ '4H': ('micrometre (micron)', None),
+ '4K': ('milliampere', None),
+ '4L': ('megabyte', 'A unit of information equal to 10⁶ (1000000) bytes.'),
+ '4M': ('milligram per hour', None),
+ '4N': ('megabecquerel', None),
+ '4O': ('microfarad', None),
+ '4P': ('newton per metre', None),
+ '4Q': ('ounce inch', None),
+ '4R': ('ounce foot', None),
+ '4T': ('picofarad', None),
+ '4U': ('pound per hour', None),
+ '4W': ('ton (US) per hour', None),
+ '4X': ('kilolitre per hour', None),
+ '56': ('sitas',
+        'A unit of area for tin plate equal to a surface area of 100 square\n'
+        '            metres.'),
+ '57': ('mesh',
+        'A unit of count defining the number of strands per inch as a measure '
+        'of the\n'
+        '            fineness of a woven product.'),
+ '58': ('net kilogram',
+        'A unit of mass defining the total number of kilograms after\n'
+        '            deductions.'),
+ '59': ('part per million', 'A unit of proportion equal to 10⁻⁶.'),
+ '5A': ('barrel (US) per minute', None),
+ '5B': ('batch',
+        'A unit of count defining the number of batches (batch: quantity of '
+        'material\n'
+        '            produced in one operation or number of animals or persons '
+        'coming at once).'),
+ '5E': ('MMSCF/day',
+        'A unit of volume equal to one million (1000000) cubic feet of gas '
+        'per\n'
+        '            day.'),
+ '5J': ('hydraulic horse power',
+        'A unit of power defining the\xa0hydraulic horse power delivered by a '
+        'fluid pump\n'
+        '            depending on\xa0the viscosity of the fluid.'),
+ '60': ('percent weight', 'A unit of proportion equal to 10⁻².'),
+ '61': ('part per billion (US)', 'A unit of proportion equal to 10⁻⁹.'),
+ '74': ('millipascal', None),
+ '77': ('milli-inch', None),
+ '80': ('pound per square inch absolute', None),
+ '81': ('henry', None),
+ '85': ('foot pound-force', None),
+ '87': ('pound per cubic foot', None),
+ '89': ('poise', None),
+ '91': ('stokes', None),
+ 'A10': ('ampere square metre per joule second', None),
+ 'A11': ('angstrom', None),
+ 'A12': ('astronomical unit', None),
+ 'A13': ('attojoule', None),
+ 'A14': ('barn', None),
+ 'A15': ('barn per electronvolt', None),
+ 'A16': ('barn per steradian electronvolt', None),
+ 'A17': ('barn per steradian', None),
+ 'A18': ('becquerel per kilogram', None),
+ 'A19': ('becquerel per cubic metre', None),
+ 'A2': ('ampere per centimetre', None),
+ 'A20': ('British thermal unit (international table) per second square foot '
+         'degree\n'
+         '            Rankine',
+         None),
+ 'A21': ('British thermal unit (international table) per pound degree Rankine',
+         None),
+ 'A22': ('British thermal unit (international table) per second foot degree '
+         'Rankine',
+         None),
+ 'A23': ('British thermal unit (international table) per hour square foot '
+         'degree Rankine',
+         None),
+ 'A24': ('candela per square metre', None),
+ 'A26': ('coulomb metre', None),
+ 'A27': ('coulomb metre squared per volt', None),
+ 'A28': ('coulomb per cubic centimetre', None),
+ 'A29': ('coulomb per cubic metre', None),
+ 'A3': ('ampere per millimetre', None),
+ 'A30': ('coulomb per cubic millimetre', None),
+ 'A31': ('coulomb per kilogram second', None),
+ 'A32': ('coulomb per mole', None),
+ 'A33': ('coulomb per square centimetre', None),
+ 'A34': ('coulomb per square metre', None),
+ 'A35': ('coulomb per square millimetre', None),
+ 'A36': ('cubic centimetre per mole', None),
+ 'A37': ('cubic decimetre per mole', None),
+ 'A38': ('cubic metre per coulomb', None),
+ 'A39': ('cubic metre per kilogram', None),
+ 'A4': ('ampere per square centimetre', None),
+ 'A40': ('cubic metre per mole', None),
+ 'A41': ('ampere per square metre', None),
+ 'A42': ('curie per kilogram', None),
+ 'A43': ('deadweight tonnage',
+         'A unit of mass defining the difference between the weight of a ship '
+         'when\n'
+         '            completely empty and its weight when completely loaded, '
+         'expressed as the number of\n'
+         '            tons.'),
+ 'A44': ('decalitre', None),
+ 'A45': ('decametre', None),
+ 'A47': ('decitex',
+         'A unit of yarn density. One decitex equals a mass of 1 gram per 10 '
+         'kilometres\n'
+         '            of length.'),
+ 'A48': ('degree Rankine',
+         'Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics)'),
+ 'A49': ('denier',
+         'A unit of yarn density. One denier equals a mass of 1 gram per 9 '
+         'kilometres of\n'
+         '            length.'),
+ 'A5': ('ampere square metre', None),
+ 'A53': ('electronvolt', None),
+ 'A54': ('electronvolt per metre', None),
+ 'A55': ('electronvolt square metre', None),
+ 'A56': ('electronvolt square metre per kilogram', None),
+ 'A59': ('8-part cloud cover',
+         'A unit of count defining the number of eighth-parts as a measure of '
+         'the\n'
+         '            celestial dome cloud coverage. Synonym: OKTA , OCTA'),
+ 'A6': ('ampere per square metre kelvin squared', None),
+ 'A68': ('exajoule', None),
+ 'A69': ('farad per metre', None),
+ 'A7': ('ampere per square millimetre', None),
+ 'A70': ('femtojoule', None),
+ 'A71': ('femtometre', None),
+ 'A73': ('foot per second squared', None),
+ 'A74': ('foot pound-force per second', None),
+ 'A75': ('freight ton',
+         'A unit of information typically used for billing purposes, defined '
+         'as either\n'
+         '            the number of metric tons or the number of cubic metres, '
+         'whichever is the\n'
+         '            larger.'),
+ 'A76': ('gal', None),
+ 'A8': ('ampere second', None),
+ 'A84': ('gigacoulomb per cubic metre', None),
+ 'A85': ('gigaelectronvolt', None),
+ 'A86': ('gigahertz', None),
+ 'A87': ('gigaohm', None),
+ 'A88': ('gigaohm metre', None),
+ 'A89': ('gigapascal', None),
+ 'A9': ('rate',
+        'A unit of quantity expressed as a rate for usage of a facility or\n'
+        '            service.'),
+ 'A90': ('gigawatt', None),
+ 'A91': ('gon', 'Synonym: grade'),
+ 'A93': ('gram per cubic metre', None),
+ 'A94': ('gram per mole', None),
+ 'A95': ('gray', None),
+ 'A96': ('gray per second', None),
+ 'A97': ('hectopascal', None),
+ 'A98': ('henry per metre', None),
+ 'A99': ('bit', 'A unit of information equal to one binary digit.'),
+ 'AA': ('ball',
+        'A unit of count defining the number of balls (ball: object formed in '
+        'the shape\n'
+        '            of sphere).'),
+ 'AB': ('bulk pack',
+        'A unit of count defining the number of items per bulk pack.'),
+ 'ACR': ('acre', None),
+ 'ACT': ('activity',
+         'A unit of count defining the number of activities (activity: a unit '
+         'of work or\n'
+         '            action).'),
+ 'AD': ('byte', 'A unit of information equal to 8 bits.'),
+ 'AE': ('ampere per metre', None),
+ 'AH': ('additional minute',
+        'A unit of time defining the number of minutes in addition to the '
+        'referenced\n'
+        '            minutes.'),
+ 'AI': ('average minute per call',
+        'A unit of count defining the number of minutes for the average '
+        'interval of a\n'
+        '            call.'),
+ 'AK': ('fathom', None),
+ 'AL': ('access line',
+        'A unit of count defining the number of telephone access lines.'),
+ 'AMH': ('ampere hour',
+         'A unit of electric charge defining the amount of charge accumulated '
+         'by a steady\n'
+         '            flow of one ampere for one hour.'),
+ 'AMP': ('ampere', None),
+ 'ANN': ('year', 'Unit of time equal to 365,25 days. Synonym: Julian year'),
+ 'APZ': ('troy ounce or apothecary ounce', None),
+ 'AQ': ('anti-hemophilic factor (AHF) unit',
+        'A unit of measure for blood potency (US).'),
+ 'AS': ('assortment',
+        'A unit of count defining the number of assortments (assortment: set '
+        'of items\n'
+        '            grouped in a mixed collection).'),
+ 'ASM': ('alcoholic strength by mass',
+         'A unit of mass defining the alcoholic strength of a liquid.'),
+ 'ASU': ('alcoholic strength by volume',
+         'A unit of volume defining the alcoholic strength of a liquid (e.g. '
+         'spirit,\n'
+         '            wine, beer, etc), often at a specific temperature.'),
+ 'ATM': ('standard atmosphere', None),
+ 'AWG': ('american wire gauge',
+         'A unit of distance used for measuring the diameter of small tubes or '
+         'wires such\n'
+         '            as the outer diameter of hypotermic or suture needles.'),
+ 'AY': ('assembly',
+        'A unit of count defining the number of assemblies (assembly: items '
+        'that consist\n'
+        '            of component parts).'),
+ 'AZ': ('British thermal unit (international table) per pound', None),
+ 'B1': ('barrel (US) per day', None),
+ 'B10': ('bit per second',
+         'A unit of information equal to one binary digit per second.'),
+ 'B11': ('joule per kilogram kelvin', None),
+ 'B12': ('joule per metre', None),
+ 'B13': ('joule per square metre', 'Synonym: joule per metre squared'),
+ 'B14': ('joule per metre to the fourth power', None),
+ 'B15': ('joule per mole', None),
+ 'B16': ('joule per mole kelvin', None),
+ 'B17': ('credit',
+         'A unit of count defining the number of entries made to the credit '
+         'side of an\n'
+         '            account.'),
+ 'B18': ('joule second', None),
+ 'B19': ('digit',
+         'A unit of information defining the quantity of numerals used to form '
+         'a\n'
+         '            number.'),
+ 'B20': ('joule square metre per kilogram', None),
+ 'B21': ('kelvin per watt', None),
+ 'B22': ('kiloampere', None),
+ 'B23': ('kiloampere per square metre', None),
+ 'B24': ('kiloampere per metre', None),
+ 'B25': ('kilobecquerel per kilogram', None),
+ 'B26': ('kilocoulomb', None),
+ 'B27': ('kilocoulomb per cubic metre', None),
+ 'B28': ('kilocoulomb per square metre', None),
+ 'B29': ('kiloelectronvolt', None),
+ 'B3': ('batting pound',
+        'A unit of mass defining the number of pounds of wadded fibre.'),
+ 'B30': ('gibibit', 'A unit of information equal to 2³⁰ bits (binary digits).'),
+ 'B31': ('kilogram metre per second', None),
+ 'B32': ('kilogram metre squared', None),
+ 'B33': ('kilogram metre squared per second', None),
+ 'B34': ('kilogram per cubic decimetre', None),
+ 'B35': ('kilogram per litre', None),
+ 'B4': ('barrel, imperial',
+        'A unit of volume used to measure beer. One beer barrel equals 36 '
+        'imperial\n'
+        '            gallons.'),
+ 'B41': ('kilojoule per kelvin', None),
+ 'B42': ('kilojoule per kilogram', None),
+ 'B43': ('kilojoule per kilogram kelvin', None),
+ 'B44': ('kilojoule per mole', None),
+ 'B45': ('kilomole', None),
+ 'B46': ('kilomole per cubic metre', None),
+ 'B47': ('kilonewton', None),
+ 'B48': ('kilonewton metre', None),
+ 'B49': ('kiloohm', None),
+ 'B50': ('kiloohm metre', None),
+ 'B52': ('kilosecond', None),
+ 'B53': ('kilosiemens', None),
+ 'B54': ('kilosiemens per metre', None),
+ 'B55': ('kilovolt per metre', None),
+ 'B56': ('kiloweber per metre', None),
+ 'B57': ('light year',
+         'A unit of length defining the distance that light travels in a '
+         'vacuum in one\n'
+         '            year.'),
+ 'B58': ('litre per mole', None),
+ 'B59': ('lumen hour', None),
+ 'B60': ('lumen per square metre', None),
+ 'B61': ('lumen per watt', None),
+ 'B62': ('lumen second', None),
+ 'B63': ('lux hour', None),
+ 'B64': ('lux second', None),
+ 'B66': ('megaampere per square metre', None),
+ 'B67': ('megabecquerel per kilogram', None),
+ 'B68': ('gigabit', 'A unit of information equal to 10⁹ bits (binary digits).'),
+ 'B69': ('megacoulomb per cubic metre', None),
+ 'B7': ('cycle',
+        'A unit of count defining the number of cycles (cycle: a recurrent '
+        'period of\n'
+        '            definite duration).'),
+ 'B70': ('megacoulomb per square metre', None),
+ 'B71': ('megaelectronvolt', None),
+ 'B72': ('megagram per cubic metre', None),
+ 'B73': ('meganewton', None),
+ 'B74': ('meganewton metre', None),
+ 'B75': ('megaohm', None),
+ 'B76': ('megaohm metre', None),
+ 'B77': ('megasiemens per metre', None),
+ 'B78': ('megavolt', None),
+ 'B79': ('megavolt per metre', None),
+ 'B8': ('joule per cubic metre', None),
+ 'B80': ('gigabit per second',
+         'A unit of information equal to 10⁹ bits (binary digits) per\n'
+         '            second.'),
+ 'B81': ('reciprocal metre squared reciprocal second', None),
+ 'B82': ('inch per linear foot',
+         'A unit of length defining the number of inches per linear foot.'),
+ 'B83': ('metre to the fourth power', None),
+ 'B84': ('microampere', None),
+ 'B85': ('microbar', None),
+ 'B86': ('microcoulomb', None),
+ 'B87': ('microcoulomb per cubic metre', None),
+ 'B88': ('microcoulomb per square metre', None),
+ 'B89': ('microfarad per metre', None),
+ 'B90': ('microhenry', None),
+ 'B91': ('microhenry per metre', None),
+ 'B92': ('micronewton', None),
+ 'B93': ('micronewton metre', None),
+ 'B94': ('microohm', None),
+ 'B95': ('microohm metre', None),
+ 'B96': ('micropascal', None),
+ 'B97': ('microradian', None),
+ 'B98': ('microsecond', None),
+ 'B99': ('microsiemens', None),
+ 'BAR': ('bar [unit of pressure]', None),
+ 'BB': ('base box',
+        'A unit of area of 112 sheets of tin mil products (tin plate, tin free '
+        'steel or\n'
+        '            black plate) 14 by 20 inches, or 31,360 square inches.'),
+ 'BFT': ('board foot',
+         'A unit of volume defining the number of cords (cord: a stack of '
+         'firewood of 128\n'
+         '            cubic feet).'),
+ 'BHP': ('brake horse power', None),
+ 'BIL': ('billion (EUR)', 'Synonym: trillion (US)'),
+ 'BLD': ('dry barrel (US)', None),
+ 'BLL': ('barrel (US)', None),
+ 'BP': ('hundred board foot',
+        'A unit of volume equal to one hundred board foot.'),
+ 'BPM': ('beats per minute', 'The number of beats per minute.'),
+ 'BQL': ('becquerel', None),
+ 'BTU': ('British thermal unit (international table)', None),
+ 'BUA': ('bushel (US)', None),
+ 'BUI': ('bushel (UK)', None),
+ 'C0': ('call',
+        'A unit of count defining the number of calls (call: communication '
+        'session or\n'
+        '            visitation).'),
+ 'C10': ('millifarad', None),
+ 'C11': ('milligal', None),
+ 'C12': ('milligram per metre', None),
+ 'C13': ('milligray', None),
+ 'C14': ('millihenry', None),
+ 'C15': ('millijoule', None),
+ 'C16': ('millimetre per second', None),
+ 'C17': ('millimetre squared per second', None),
+ 'C18': ('millimole', None),
+ 'C19': ('mole per kilogram', None),
+ 'C20': ('millinewton', None),
+ 'C21': ('kibibit',
+         'A unit of information equal to 2¹⁰ (1024) bits (binary digits).'),
+ 'C22': ('millinewton per metre', None),
+ 'C23': ('milliohm metre', None),
+ 'C24': ('millipascal second', None),
+ 'C25': ('milliradian', None),
+ 'C26': ('millisecond', None),
+ 'C27': ('millisiemens', None),
+ 'C28': ('millisievert', None),
+ 'C29': ('millitesla', None),
+ 'C3': ('microvolt per metre', None),
+ 'C30': ('millivolt per metre', None),
+ 'C31': ('milliwatt', None),
+ 'C32': ('milliwatt per square metre', None),
+ 'C33': ('milliweber', None),
+ 'C34': ('mole', None),
+ 'C35': ('mole per cubic decimetre', None),
+ 'C36': ('mole per cubic metre', None),
+ 'C37': ('kilobit',
+         'A unit of information equal to 10³ (1000) bits (binary digits).'),
+ 'C38': ('mole per litre', None),
+ 'C39': ('nanoampere', None),
+ 'C40': ('nanocoulomb', None),
+ 'C41': ('nanofarad', None),
+ 'C42': ('nanofarad per metre', None),
+ 'C43': ('nanohenry', None),
+ 'C44': ('nanohenry per metre', None),
+ 'C45': ('nanometre', None),
+ 'C46': ('nanoohm metre', None),
+ 'C47': ('nanosecond', None),
+ 'C48': ('nanotesla', None),
+ 'C49': ('nanowatt', None),
+ 'C50': ('neper', None),
+ 'C51': ('neper per second', None),
+ 'C52': ('picometre', None),
+ 'C53': ('newton metre second', None),
+ 'C54': ('newton metre squared per kilogram squared', None),
+ 'C55': ('newton per square metre', None),
+ 'C56': ('newton per square millimetre', None),
+ 'C57': ('newton second', None),
+ 'C58': ('newton second per metre', None),
+ 'C59': ('octave',
+         'A unit used in music to describe the ratio in frequency between\n'
+         '            notes.'),
+ 'C60': ('ohm centimetre', None),
+ 'C61': ('ohm metre', None),
+ 'C62': ('one', 'Synonym: unit'),
+ 'C63': ('parsec', None),
+ 'C64': ('pascal per kelvin', None),
+ 'C65': ('pascal second', None),
+ 'C66': ('pascal second per cubic metre', None),
+ 'C67': ('pascal second per metre', None),
+ 'C68': ('petajoule', None),
+ 'C69': ('phon',
+         'A unit of subjective sound loudness. A sound has loudness p phons if '
+         'it seems\n'
+         '            to the listener to be equal in loudness to the sound of '
+         'a pure tone of frequency 1\n'
+         '            kilohertz and strength p decibels.'),
+ 'C7': ('centipoise', None),
+ 'C70': ('picoampere', None),
+ 'C71': ('picocoulomb', None),
+ 'C72': ('picofarad per metre', None),
+ 'C73': ('picohenry', None),
+ 'C74': ('kilobit per second',
+         'A unit of information equal to 10³ (1000) bits (binary digits) per\n'
+         '            second.'),
+ 'C75': ('picowatt', None),
+ 'C76': ('picowatt per square metre', None),
+ 'C78': ('pound-force', None),
+ 'C79': ('kilovolt ampere hour',
+         'A unit of accumulated energy of 1000 volt amperes over a period of '
+         'one\n'
+         '            hour.'),
+ 'C8': ('millicoulomb per kilogram', None),
+ 'C80': ('rad', None),
+ 'C81': ('radian', None),
+ 'C82': ('radian square metre per mole', None),
+ 'C83': ('radian square metre per kilogram', None),
+ 'C84': ('radian per metre', None),
+ 'C85': ('reciprocal angstrom', None),
+ 'C86': ('reciprocal cubic metre', None),
+ 'C87': ('reciprocal cubic metre per second',
+         'Synonym: reciprocal second per cubic metre'),
+ 'C88': ('reciprocal electron volt per cubic metre', None),
+ 'C89': ('reciprocal henry', None),
+ 'C9': ('coil group',
+        'A unit of count defining the number of coil groups (coil group: '
+        'groups of items\n'
+        '            arranged by lengths of those items placed in a joined '
+        'sequence of concentric\n'
+        '            circles).'),
+ 'C90': ('reciprocal joule per cubic metre', None),
+ 'C91': ('reciprocal kelvin or kelvin to the power minus one', None),
+ 'C92': ('reciprocal metre', None),
+ 'C93': ('reciprocal square metre', 'Synonym: reciprocal metre squared'),
+ 'C94': ('reciprocal minute', None),
+ 'C95': ('reciprocal mole', None),
+ 'C96': ('reciprocal pascal or pascal to the power minus one', None),
+ 'C97': ('reciprocal second', None),
+ 'C99': ('reciprocal second per metre squared', None),
+ 'CCT': ('carrying capacity in metric ton',
+         'A unit of mass defining the carrying capacity, expressed as the '
+         'number of\n'
+         '            metric tons.'),
+ 'CDL': ('candela', None),
+ 'CEL': ('degree Celsius',
+         'Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics)'),
+ 'CEN': ('hundred',
+         'A unit of count defining the number of units in multiples of 100.'),
+ 'CG': ('card',
+        'A unit of count defining the number of units of card (card: thick '
+        'stiff paper\n'
+        '            or cardboard).'),
+ 'CGM': ('centigram', None),
+ 'CKG': ('coulomb per kilogram', None),
+ 'CLF': ('hundred leave',
+         'A unit of count defining the number of leaves, expressed in units of '
+         'one\n'
+         '            hundred leaves.'),
+ 'CLT': ('centilitre', None),
+ 'CMK': ('square centimetre', None),
+ 'CMQ': ('cubic centimetre', None),
+ 'CMT': ('centimetre', None),
+ 'CNP': ('hundred pack',
+         'A unit of count defining the number of hundred-packs (hundred-pack: '
+         'set of one\n'
+         '            hundred items packaged together).'),
+ 'CNT': ('cental (UK)', 'A unit of mass equal to one hundred weight (US).'),
+ 'COU': ('coulomb', None),
+ 'CTG': ('content gram',
+         'A unit of mass defining the number of grams of a named item in a\n'
+         '            product.'),
+ 'CTM': ('metric carat', None),
+ 'CTN': ('content ton (metric)',
+         'A unit of mass defining the number of metric tons of a named item in '
+         'a\n'
+         '            product.'),
+ 'CUR': ('curie', None),
+ 'CWA': ('hundred pound (cwt) / hundred weight (US)', None),
+ 'CWI': ('hundred weight (UK)', None),
+ 'D03': ('kilowatt hour per hour',
+         'A unit of accumulated energy of a thousand watts over a period of '
+         'one\n'
+         '            hour.'),
+ 'D04': ('lot [unit of weight]',
+         'A unit of weight equal to about 1/2 ounce or 15 grams.'),
+ 'D1': ('reciprocal second per steradian', None),
+ 'D10': ('siemens per metre', None),
+ 'D11': ('mebibit',
+         'A unit of information equal to 2²⁰ (1048576) bits (binary\n'
+         '            digits).'),
+ 'D12': ('siemens square metre per mole', None),
+ 'D13': ('sievert', None),
+ 'D15': ('sone',
+         'A unit of subjective sound loudness. One sone is the loudness of a '
+         'pure tone of\n'
+         '            frequency one kilohertz and strength 40 decibels.'),
+ 'D16': ('square centimetre per erg', None),
+ 'D17': ('square centimetre per steradian erg', None),
+ 'D18': ('metre kelvin', None),
+ 'D19': ('square metre kelvin per watt', None),
+ 'D2': ('reciprocal second per steradian metre squared', None),
+ 'D20': ('square metre per joule', None),
+ 'D21': ('square metre per kilogram', None),
+ 'D22': ('square metre per mole', None),
+ 'D23': ('pen gram (protein)',
+         'A unit of count defining the number of grams of amino acid '
+         'prescribed for\n'
+         '            parenteral/enteral therapy.'),
+ 'D24': ('square metre per steradian', None),
+ 'D25': ('square metre per steradian joule', None),
+ 'D26': ('square metre per volt second', None),
+ 'D27': ('steradian', None),
+ 'D29': ('terahertz', None),
+ 'D30': ('terajoule', None),
+ 'D31': ('terawatt', None),
+ 'D32': ('terawatt hour', None),
+ 'D33': ('tesla', None),
+ 'D34': ('tex',
+         'A unit of yarn density. One decitex equals a mass of 1 gram per 1 '
+         'kilometre of\n'
+         '            length.'),
+ 'D36': ('megabit',
+         'A unit of information equal to 10⁶ (1000000) bits (binary\n'
+         '            digits).'),
+ 'D41': ('tonne per cubic metre', None),
+ 'D42': ('tropical year', None),
+ 'D43': ('unified atomic mass unit', None),
+ 'D44': ('var', 'The name of the unit is an acronym for volt-ampere-reactive.'),
+ 'D45': ('volt squared per kelvin squared', None),
+ 'D46': ('volt - ampere', None),
+ 'D47': ('volt per centimetre', None),
+ 'D48': ('volt per kelvin', None),
+ 'D49': ('millivolt per kelvin', None),
+ 'D5': ('kilogram per square centimetre', None),
+ 'D50': ('volt per metre', None),
+ 'D51': ('volt per millimetre', None),
+ 'D52': ('watt per kelvin', None),
+ 'D53': ('watt per metre kelvin', None),
+ 'D54': ('watt per square metre', None),
+ 'D55': ('watt per square metre kelvin', None),
+ 'D56': ('watt per square metre kelvin to the fourth power', None),
+ 'D57': ('watt per steradian', None),
+ 'D58': ('watt per steradian square metre', None),
+ 'D59': ('weber per metre', None),
+ 'D6': ('roentgen per second', None),
+ 'D60': ('weber per millimetre', None),
+ 'D61': ('minute [unit of angle]', None),
+ 'D62': ('second [unit of angle]', None),
+ 'D63': ('book',
+         'A unit of count defining the number of books (book: set of items '
+         'bound together\n'
+         '            or written document of a material whole).'),
+ 'D65': ('round',
+         'A unit of count defining the number of rounds (round: A circular or '
+         'cylindrical\n'
+         '            object).'),
+ 'D68': ('number of words', 'A unit of count defining the number of words.'),
+ 'D69': ('inch to the fourth power', None),
+ 'D73': ('joule square metre', None),
+ 'D74': ('kilogram per mole', None),
+ 'D77': ('megacoulomb', None),
+ 'D78': ('megajoule per second',
+         'A unit of accumulated energy equal to one million joules per\n'
+         '            second.'),
+ 'D80': ('microwatt', None),
+ 'D81': ('microtesla', None),
+ 'D82': ('microvolt', None),
+ 'D83': ('millinewton metre', None),
+ 'D85': ('microwatt per square metre', None),
+ 'D86': ('millicoulomb', None),
+ 'D87': ('millimole per kilogram', None),
+ 'D88': ('millicoulomb per cubic metre', None),
+ 'D89': ('millicoulomb per square metre', None),
+ 'D91': ('rem', None),
+ 'D93': ('second per cubic metre', None),
+ 'D94': ('second per cubic metre radian', None),
+ 'D95': ('joule per gram', None),
+ 'DAA': ('decare', None),
+ 'DAD': ('ten day',
+         'A unit of time defining the number of days in multiples of 10.'),
+ 'DAY': ('day', None),
+ 'DB': ('dry pound',
+        'A unit of mass defining the number of pounds of a product, '
+        'disregarding the\n'
+        '            water content of the product.'),
+ 'DBM': ('Decibel-milliwatts', None),
+ 'DBW': ('Decibel watt', None),
+ 'DD': ('degree [unit of angle]', None),
+ 'DEC': ('decade',
+         'A unit of count defining the number of decades (decade: quantity '
+         'equal to 10 or\n'
+         '            time equal to 10 years).'),
+ 'DG': ('decigram', None),
+ 'DJ': ('decagram', None),
+ 'DLT': ('decilitre', None),
+ 'DMA': ('cubic decametre', None),
+ 'DMK': ('square decimetre', None),
+ 'DMO': ('standard kilolitre',
+         'A unit of volume defining the number of kilolitres of a product at '
+         'a\n'
+         '            temperature of 15 degrees Celsius, especially in '
+         'relation to hydrocarbon\n'
+         '            oils.'),
+ 'DMQ': ('cubic decimetre', None),
+ 'DMT': ('decimetre', None),
+ 'DN': ('decinewton metre', None),
+ 'DPC': ('dozen piece',
+         'A unit of count defining the number of pieces in multiples of 12 '
+         '(piece: a\n'
+         '            single item, article or exemplar).'),
+ 'DPR': ('dozen pair',
+         'A unit of count defining the number of pairs in multiples of 12 '
+         '(pair: item\n'
+         "            described by two's)."),
+ 'DPT': ('displacement tonnage',
+         'A unit of mass defining the volume of sea water a ship displaces, '
+         'expressed as\n'
+         '            the number of tons.'),
+ 'DRA': ('dram (US)', 'Synonym: drachm (UK), troy dram'),
+ 'DRI': ('dram (UK)', 'Synonym: avoirdupois dram'),
+ 'DRL': ('dozen roll',
+         'A unit of count defining the number of rolls, expressed in twelve '
+         'roll\n'
+         '            units.'),
+ 'DT': ('dry ton',
+        'A unit of mass defining the number of tons of a product, disregarding '
+        'the water\n'
+        '            content of the product.'),
+ 'DTN': ('decitonne',
+         'Synonym: centner, metric\xa0100 kg; quintal, metric\xa0100 kg'),
+ 'DWT': ('pennyweight', None),
+ 'DZN': ('dozen',
+         'A unit of count defining the number of units in multiples of 12.'),
+ 'DZP': ('dozen pack',
+         'A unit of count defining the number of packs in multiples of 12 '
+         '(pack: standard\n'
+         '            packaging unit).'),
+ 'E01': ('newton per square centimetre',
+         'A measure of pressure expressed in newtons per square centimetre.'),
+ 'E07': ('megawatt hour per hour',
+         'A unit of accumulated energy of a million watts over a period of '
+         'one\n'
+         '            hour.'),
+ 'E08': ('megawatt per hertz',
+         'A unit of energy expressed as the load change in million watts that '
+         'will cause\n'
+         '            a frequency shift of one hertz.'),
+ 'E09': ('milliampere hour',
+         'A unit of power load delivered at the rate of one thousandth of an '
+         'ampere over\n'
+         '            a period of one hour.'),
+ 'E10': ('degree day',
+         'A unit of measure used in meteorology and engineering to measure the '
+         'demand for\n'
+         '            heating or cooling over a given period of days.'),
+ 'E12': ('mille',
+         'A unit of count defining the number of cigarettes in units of\n'
+         '            1000.'),
+ 'E14': ('kilocalorie (international table)',
+         'A unit of heat energy equal to one thousand calories.'),
+ 'E15': ('kilocalorie (thermochemical) per hour',
+         'A unit of energy equal to one thousand calories per hour.'),
+ 'E16': ('million Btu(IT) per hour',
+         'A unit of power equal to one million British thermal units per\n'
+         '            hour.'),
+ 'E17': ('cubic foot per second',
+         'A unit of volume equal to one cubic foot passing a given point in a '
+         'period of\n'
+         '            one second.'),
+ 'E18': ('tonne per hour',
+         'A unit of weight or mass equal to one tonne per hour.'),
+ 'E19': ('ping', 'A unit of area equal to 3.3 square metres.'),
+ 'E20': ('megabit per second',
+         'A unit of information equal to 10⁶ (1000000) bits (binary digits) '
+         'per\n'
+         '            second.'),
+ 'E21': ('shares',
+         'A unit of count defining the number of shares (share: a total or '
+         'portion of the\n'
+         '            parts into which a business entity’s capital is '
+         'divided).'),
+ 'E22': ('TEU',
+         'A unit of count defining the number of twenty-foot equivalent units '
+         '(TEUs) as a\n'
+         '            measure of containerized cargo capacity.'),
+ 'E23': ('tyre',
+         'A unit of count defining the number of tyres (a solid or air-filled '
+         'covering\n'
+         '            placed around a wheel rim to form a soft contact with '
+         'the road, absorb shock and provide\n'
+         '            traction).'),
+ 'E25': ('active unit',
+         'A unit of count defining the number of active units within a\n'
+         '            substance.'),
+ 'E27': ('dose',
+         'A unit of count defining the number of doses (dose: a definite '
+         'quantity of a\n'
+         '            medicine or drug).'),
+ 'E28': ('air dry ton',
+         'A unit of mass defining the number of tons of a product, '
+         'disregarding the water\n'
+         '            content of the product.'),
+ 'E30': ('strand',
+         'A unit of count defining the number of strands (strand: long, thin, '
+         'flexible,\n'
+         '            single thread, strip of fibre, constituent filament or '
+         'multiples of the same, twisted\n'
+         '            together).'),
+ 'E31': ('square metre per litre',
+         'A unit of count defining the number of square metres per litre.'),
+ 'E32': ('litre per hour',
+         'A unit of count defining the number of litres per hour.'),
+ 'E33': ('foot per thousand',
+         'A unit of count defining the number of feet per thousand units.'),
+ 'E34': ('gigabyte', 'A unit of information equal to 10⁹ bytes.'),
+ 'E35': ('terabyte', 'A unit of information equal to 10¹² bytes.'),
+ 'E36': ('petabyte', 'A unit of information equal to 10¹⁵ bytes.'),
+ 'E37': ('pixel',
+         'A unit of count defining the number of pixels (pixel: picture\n'
+         '            element).'),
+ 'E38': ('megapixel',
+         'A unit of count equal to 10⁶ (1000000) pixels (picture elements).'),
+ 'E39': ('dots per inch',
+         'A unit of information defining the number of dots per linear inch as '
+         'a measure\n'
+         '            of the resolution or sharpness of a graphic image.'),
+ 'E4': ('gross kilogram',
+        'A unit of mass defining the total number of kilograms before\n'
+        '            deductions.'),
+ 'E40': ('part per hundred thousand', 'A unit of proportion equal to 10⁻⁵.'),
+ 'E41': ('kilogram-force per square millimetre',
+         'A unit of pressure defining the number of kilograms force per '
+         'square\n'
+         '            millimetre.'),
+ 'E42': ('kilogram-force per square centimetre',
+         'A unit of pressure defining the number of kilograms force per '
+         'square\n'
+         '            centimetre.'),
+ 'E43': ('joule per square centimetre',
+         'A unit of energy defining the number of joules per square\n'
+         '            centimetre.'),
+ 'E44': ('kilogram-force metre per square centimetre',
+         'A unit of torsion defining the torque kilogram-force metre per '
+         'square\n'
+         '            centimetre.'),
+ 'E45': ('milliohm', None),
+ 'E46': ('kilowatt hour per cubic metre',
+         'A unit of energy consumption expressed as kilowatt hour per cubic\n'
+         '            metre.'),
+ 'E47': ('kilowatt hour per kelvin',
+         'A unit of energy consumption expressed as kilowatt hour per\n'
+         '            kelvin.'),
+ 'E48': ('service unit',
+         'A unit of count defining the number of service units (service unit: '
+         'defined\n'
+         '            period / property / facility / utility of supply).'),
+ 'E49': ('working day',
+         'A unit of count defining the number of working days (working day: a '
+         'day on\n'
+         '            which work is ordinarily performed).'),
+ 'E50': ('accounting unit',
+         'A unit of count defining the number of accounting units.'),
+ 'E51': ('job', 'A unit of count defining the number of jobs.'),
+ 'E52': ('run foot', 'A unit of count defining the number feet per run.'),
+ 'E53': ('test', 'A unit of count defining the number of tests.'),
+ 'E54': ('trip', 'A unit of count defining the number of trips.'),
+ 'E55': ('use',
+         'A unit of count defining the number of times an object is used.'),
+ 'E56': ('well', 'A unit of count defining the number of wells.'),
+ 'E57': ('zone', 'A unit of count defining the number of zones.'),
+ 'E58': ('exabit per second',
+         'A unit of information equal to 10¹⁸ bits (binary digits) per\n'
+         '            second.'),
+ 'E59': ('exbibyte', 'A unit of information equal to 2⁶⁰ bytes.'),
+ 'E60': ('pebibyte', 'A unit of information equal to 2⁵⁰ bytes.'),
+ 'E61': ('tebibyte', 'A unit of information equal to 2⁴⁰ bytes.'),
+ 'E62': ('gibibyte', 'A unit of information equal to 2³⁰ bytes.'),
+ 'E63': ('mebibyte', 'A unit of information equal to 2²⁰ bytes.'),
+ 'E64': ('kibibyte', 'A unit of information equal to 2¹⁰ bytes.'),
+ 'E65': ('exbibit per metre',
+         'A unit of information equal to 2⁶⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E66': ('exbibit per square metre',
+         'A unit of information equal to 2⁶⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E67': ('exbibit per cubic metre',
+         'A unit of information equal to 2⁶⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E68': ('gigabyte per second',
+         'A unit of information equal to 10⁹ bytes per second.'),
+ 'E69': ('gibibit per metre',
+         'A unit of information equal to 2³⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E70': ('gibibit per square metre',
+         'A unit of information equal to 2³⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E71': ('gibibit per cubic metre',
+         'A unit of information equal to 2³⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E72': ('kibibit per metre',
+         'A unit of information equal to 2¹⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E73': ('kibibit per square metre',
+         'A unit of information equal to 2¹⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E74': ('kibibit per cubic metre',
+         'A unit of information equal to 2¹⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E75': ('mebibit per metre',
+         'A unit of information equal to 2²⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E76': ('mebibit per square metre',
+         'A unit of information equal to 2²⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E77': ('mebibit per cubic metre',
+         'A unit of information equal to 2²⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E78': ('petabit',
+         'A unit of information equal to 10¹⁵ bits (binary digits).'),
+ 'E79': ('petabit per second',
+         'A unit of information equal to 10¹⁵ bits (binary digits) per\n'
+         '            second.'),
+ 'E80': ('pebibit per metre',
+         'A unit of information equal to 2⁵⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E81': ('pebibit per square metre',
+         'A unit of information equal to 2⁵⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E82': ('pebibit per cubic metre',
+         'A unit of information equal to 2⁵⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E83': ('terabit',
+         'A unit of information equal to 10¹² bits (binary digits).'),
+ 'E84': ('terabit per second',
+         'A unit of information equal to 10¹² bits (binary digits) per\n'
+         '            second.'),
+ 'E85': ('tebibit per metre',
+         'A unit of information equal to 2⁴⁰ bits (binary digits) per\n'
+         '            metre.'),
+ 'E86': ('tebibit per cubic metre',
+         'A unit of information equal to 2⁴⁰ bits (binary digits) per cubic\n'
+         '            metre.'),
+ 'E87': ('tebibit per square metre',
+         'A unit of information equal to 2⁴⁰ bits (binary digits) per square\n'
+         '            metre.'),
+ 'E88': ('bit per metre',
+         'A unit of information equal to 1 bit (binary digit) per metre.'),
+ 'E89': ('bit per square metre',
+         'A unit of information equal to 1 bit (binary digit) per square\n'
+         '            metre.'),
+ 'E90': ('reciprocal centimetre', None),
+ 'E91': ('reciprocal day', None),
+ 'E92': ('cubic decimetre per hour', None),
+ 'E93': ('kilogram per hour', None),
+ 'E94': ('kilomole per second', None),
+ 'E95': ('mole per second', None),
+ 'E96': ('degree per second', None),
+ 'E97': ('millimetre per degree Celcius metre', None),
+ 'E98': ('degree Celsius per kelvin', None),
+ 'E99': ('hectopascal per bar', None),
+ 'EA': ('each',
+        'A unit of count defining the number of items regarded as separate\n'
+        '            units.'),
+ 'EB': ('electronic mail box',
+        'A unit of count defining the number of electronic mail boxes.'),
+ 'EQ': ('equivalent gallon',
+        'A unit of volume defining the number of gallons of product produced '
+        'from\n'
+        '            concentrate.'),
+ 'F01': ('bit per cubic metre',
+         'A unit of information equal to 1 bit (binary digit) per cubic\n'
+         '            metre.'),
+ 'F02': ('kelvin per kelvin', None),
+ 'F03': ('kilopascal per bar', None),
+ 'F04': ('millibar per bar', None),
+ 'F05': ('megapascal per bar', None),
+ 'F06': ('poise per bar', None),
+ 'F07': ('pascal per bar', None),
+ 'F08': ('milliampere per inch', None),
+ 'F10': ('kelvin per hour', None),
+ 'F11': ('kelvin per minute', None),
+ 'F12': ('kelvin per second', None),
+ 'F13': ('slug',
+         'A unit of mass. One slug is the mass accelerated at 1 foot per '
+         'second per\n'
+         '            second by a force of 1 pound.'),
+ 'F14': ('gram per kelvin', None),
+ 'F15': ('kilogram per kelvin', None),
+ 'F16': ('milligram per kelvin', None),
+ 'F17': ('pound-force per foot', None),
+ 'F18': ('kilogram square centimetre', None),
+ 'F19': ('kilogram square millimetre', None),
+ 'F20': ('pound inch squared', None),
+ 'F21': ('pound-force inch', None),
+ 'F22': ('pound-force foot per ampere', None),
+ 'F23': ('gram per cubic decimetre', None),
+ 'F24': ('kilogram per kilomol', None),
+ 'F25': ('gram per hertz', None),
+ 'F26': ('gram per day', None),
+ 'F27': ('gram per hour', None),
+ 'F28': ('gram per minute', None),
+ 'F29': ('gram per second', None),
+ 'F30': ('kilogram per day', None),
+ 'F31': ('kilogram per minute', None),
+ 'F32': ('milligram per day', None),
+ 'F33': ('milligram per minute', None),
+ 'F34': ('milligram per second', None),
+ 'F35': ('gram per day kelvin', None),
+ 'F36': ('gram per hour kelvin', None),
+ 'F37': ('gram per minute kelvin', None),
+ 'F38': ('gram per second kelvin', None),
+ 'F39': ('kilogram per day kelvin', None),
+ 'F40': ('kilogram per hour kelvin', None),
+ 'F41': ('kilogram per minute kelvin', None),
+ 'F42': ('kilogram per second kelvin', None),
+ 'F43': ('milligram per day kelvin', None),
+ 'F44': ('milligram per hour kelvin', None),
+ 'F45': ('milligram per minute kelvin', None),
+ 'F46': ('milligram per second kelvin', None),
+ 'F47': ('newton per millimetre', None),
+ 'F48': ('pound-force per inch', None),
+ 'F49': ('rod [unit of distance]',
+         'A unit of distance equal to 5.5 yards (16 feet 6 inches).'),
+ 'F50': ('micrometre per kelvin', None),
+ 'F51': ('centimetre per kelvin', None),
+ 'F52': ('metre per kelvin', None),
+ 'F53': ('millimetre per kelvin', None),
+ 'F54': ('milliohm per metre', None),
+ 'F55': ('ohm per mile (statute mile)', None),
+ 'F56': ('ohm per kilometre', None),
+ 'F57': ('milliampere per pound-force per square inch', None),
+ 'F58': ('reciprocal bar', None),
+ 'F59': ('milliampere per bar', None),
+ 'F60': ('degree Celsius per bar', None),
+ 'F61': ('kelvin per bar', None),
+ 'F62': ('gram per day bar', None),
+ 'F63': ('gram per hour bar', None),
+ 'F64': ('gram per minute bar', None),
+ 'F65': ('gram per second bar', None),
+ 'F66': ('kilogram per day bar', None),
+ 'F67': ('kilogram per hour bar', None),
+ 'F68': ('kilogram per minute bar', None),
+ 'F69': ('kilogram per second bar', None),
+ 'F70': ('milligram per day bar', None),
+ 'F71': ('milligram per hour bar', None),
+ 'F72': ('milligram per minute bar', None),
+ 'F73': ('milligram per second bar', None),
+ 'F74': ('gram per bar', None),
+ 'F75': ('milligram per bar', None),
+ 'F76': ('milliampere per millimetre', None),
+ 'F77': ('pascal second per kelvin', None),
+ 'F78': ('inch of water', None),
+ 'F79': ('inch of mercury', None),
+ 'F80': ('water horse power',
+         'A unit of power defining the amount of power required to move a '
+         'given volume of\n'
+         '            water against acceleration of gravity to a specified '
+         'elevation (pressure\n'
+         '            head).'),
+ 'F81': ('bar per kelvin', None),
+ 'F82': ('hectopascal per kelvin', None),
+ 'F83': ('kilopascal per kelvin', None),
+ 'F84': ('millibar per kelvin', None),
+ 'F85': ('megapascal per kelvin', None),
+ 'F86': ('poise per kelvin', None),
+ 'F87': ('volt per litre minute', None),
+ 'F88': ('newton centimetre', None),
+ 'F89': ('newton metre per degree', None),
+ 'F90': ('newton metre per ampere', None),
+ 'F91': ('bar litre per second', None),
+ 'F92': ('bar cubic metre per second', None),
+ 'F93': ('hectopascal litre per second', None),
+ 'F94': ('hectopascal cubic metre per second', None),
+ 'F95': ('millibar litre per second', None),
+ 'F96': ('millibar cubic metre per second', None),
+ 'F97': ('megapascal litre per second', None),
+ 'F98': ('megapascal cubic metre per second', None),
+ 'F99': ('pascal litre per second', None),
+ 'FAH': ('degree Fahrenheit',
+         'Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics)'),
+ 'FAR': ('farad', None),
+ 'FBM': ('fibre metre',
+         'A unit of length defining the number of metres of individual\n'
+         '            fibre.'),
+ 'FC': ('thousand cubic foot',
+        'A unit of volume equal to one thousand cubic foot.'),
+ 'FF': ('hundred cubic metre',
+        'A unit of volume equal to one hundred cubic metres.'),
+ 'FH': ('micromole', None),
+ 'FIT': ('failures in time',
+         'A unit of count defining the number of failures that can be expected '
+         'over a\n'
+         '            specified time interval. Failure rates of semiconductor '
+         'components are often specified\n'
+         '            as FIT (failures in time unit) where 1 FIT = 10⁻⁹ /h.'),
+ 'FL': ('flake ton',
+        'A unit of mass defining the number of tons of a flaked substance '
+        '(flake: a\n'
+        '            small flattish fragment).'),
+ 'FNU': ('Formazin nephelometric unit', None),
+ 'FOT': ('foot', None),
+ 'FP': ('pound per square foot', None),
+ 'FR': ('foot per minute', None),
+ 'FS': ('foot per second', None),
+ 'FTK': ('square foot', None),
+ 'FTQ': ('cubic foot', None),
+ 'G01': ('pascal cubic metre per second', None),
+ 'G04': ('centimetre per bar', None),
+ 'G05': ('metre per bar', None),
+ 'G06': ('millimetre per bar', None),
+ 'G08': ('square inch per second', None),
+ 'G09': ('square metre per second kelvin', None),
+ 'G10': ('stokes per kelvin', None),
+ 'G11': ('gram per cubic centimetre bar', None),
+ 'G12': ('gram per cubic decimetre bar', None),
+ 'G13': ('gram per litre bar', None),
+ 'G14': ('gram per cubic metre bar', None),
+ 'G15': ('gram per millilitre bar', None),
+ 'G16': ('kilogram per cubic centimetre bar', None),
+ 'G17': ('kilogram per litre bar', None),
+ 'G18': ('kilogram per cubic metre bar', None),
+ 'G19': ('newton metre per kilogram', None),
+ 'G2': ('US gallon per minute', None),
+ 'G20': ('pound-force foot per pound', None),
+ 'G21': ('cup [unit of volume]', None),
+ 'G23': ('peck', None),
+ 'G24': ('tablespoon (US)', None),
+ 'G25': ('teaspoon (US)', None),
+ 'G26': ('stere', None),
+ 'G27': ('cubic centimetre per kelvin', None),
+ 'G28': ('litre per kelvin', None),
+ 'G29': ('cubic metre per kelvin', None),
+ 'G3': ('Imperial gallon per minute', None),
+ 'G30': ('millilitre per kelvin', None),
+ 'G31': ('kilogram per cubic centimetre', None),
+ 'G32': ('ounce (avoirdupois) per cubic yard', None),
+ 'G33': ('gram per cubic centimetre kelvin', None),
+ 'G34': ('gram per cubic decimetre kelvin', None),
+ 'G35': ('gram per litre kelvin', None),
+ 'G36': ('gram per cubic metre kelvin', None),
+ 'G37': ('gram per millilitre kelvin', None),
+ 'G38': ('kilogram per cubic centimetre kelvin', None),
+ 'G39': ('kilogram per litre kelvin', None),
+ 'G40': ('kilogram per cubic metre kelvin', None),
+ 'G41': ('square metre per second bar', None),
+ 'G42': ('microsiemens per centimetre', None),
+ 'G43': ('microsiemens per metre', None),
+ 'G44': ('nanosiemens per centimetre', None),
+ 'G45': ('nanosiemens per metre', None),
+ 'G46': ('stokes per bar', None),
+ 'G47': ('cubic centimetre per day', None),
+ 'G48': ('cubic centimetre per hour', None),
+ 'G49': ('cubic centimetre per minute', None),
+ 'G50': ('gallon (US) per hour', None),
+ 'G51': ('litre per second', None),
+ 'G52': ('cubic metre per day', None),
+ 'G53': ('cubic metre per minute', None),
+ 'G54': ('millilitre per day', None),
+ 'G55': ('millilitre per hour', None),
+ 'G56': ('cubic inch per hour', None),
+ 'G57': ('cubic inch per minute', None),
+ 'G58': ('cubic inch per second', None),
+ 'G59': ('milliampere per litre minute', None),
+ 'G60': ('volt per bar', None),
+ 'G61': ('cubic centimetre per day kelvin', None),
+ 'G62': ('cubic centimetre per hour kelvin', None),
+ 'G63': ('cubic centimetre per minute kelvin', None),
+ 'G64': ('cubic centimetre per second kelvin', None),
+ 'G65': ('litre per day kelvin', None),
+ 'G66': ('litre per hour kelvin', None),
+ 'G67': ('litre per minute kelvin', None),
+ 'G68': ('litre per second kelvin', None),
+ 'G69': ('cubic metre per day kelvin', None),
+ 'G70': ('cubic metre per hour kelvin', None),
+ 'G71': ('cubic metre per minute kelvin', None),
+ 'G72': ('cubic metre per second kelvin', None),
+ 'G73': ('millilitre per day kelvin', None),
+ 'G74': ('millilitre per hour kelvin', None),
+ 'G75': ('millilitre per minute kelvin', None),
+ 'G76': ('millilitre per second kelvin', None),
+ 'G77': ('millimetre to the fourth power', None),
+ 'G78': ('cubic centimetre per day bar', None),
+ 'G79': ('cubic centimetre per hour bar', None),
+ 'G80': ('cubic centimetre per minute bar', None),
+ 'G81': ('cubic centimetre per second bar', None),
+ 'G82': ('litre per day bar', None),
+ 'G83': ('litre per hour bar', None),
+ 'G84': ('litre per minute bar', None),
+ 'G85': ('litre per second bar', None),
+ 'G86': ('cubic metre per day bar', None),
+ 'G87': ('cubic metre per hour bar', None),
+ 'G88': ('cubic metre per minute bar', None),
+ 'G89': ('cubic metre per second bar', None),
+ 'G90': ('millilitre per day bar', None),
+ 'G91': ('millilitre per hour bar', None),
+ 'G92': ('millilitre per minute bar', None),
+ 'G93': ('millilitre per second bar', None),
+ 'G94': ('cubic centimetre per bar', None),
+ 'G95': ('litre per bar', None),
+ 'G96': ('cubic metre per bar', None),
+ 'G97': ('millilitre per bar', None),
+ 'G98': ('microhenry per kiloohm', None),
+ 'G99': ('microhenry per ohm', None),
+ 'GB': ('gallon (US) per day', None),
+ 'GBQ': ('gigabecquerel', None),
+ 'GDW': ('gram, dry weight',
+         'A unit of mass defining the number of grams of a product, '
+         'disregarding the\n'
+         '            water content of the product.'),
+ 'GE': ('pound per gallon (US)', None),
+ 'GF': ('gram per metre (gram per 100 centimetres)', None),
+ 'GFI': ('gram of fissile isotope',
+         'A unit of mass defining the number of grams of a fissile isotope '
+         '(fissile\n'
+         '            isotope: an isotope whose nucleus is able to be split '
+         'when irradiated with low energy\n'
+         '            neutrons).'),
+ 'GGR': ('great gross',
+         'A unit of count defining the number of units in multiples of 1728 '
+         '(12 x 12 x\n'
+         '            12).'),
+ 'GIA': ('gill (US)', None),
+ 'GIC': ('gram, including container',
+         'A unit of mass defining the number of grams of a product, including '
+         'its\n'
+         '            container.'),
+ 'GII': ('gill (UK)', None),
+ 'GIP': ('gram, including inner packaging',
+         'A unit of mass defining the number of grams of a product, including '
+         'its inner\n'
+         '            packaging materials.'),
+ 'GJ': ('gram per millilitre', None),
+ 'GL': ('gram per litre', None),
+ 'GLD': ('dry gallon (US)', None),
+ 'GLI': ('gallon (UK)', None),
+ 'GLL': ('gallon (US)', None),
+ 'GM': ('gram per square metre', None),
+ 'GO': ('milligram per square metre', None),
+ 'GP': ('milligram per cubic metre', None),
+ 'GQ': ('microgram per cubic metre', None),
+ 'GRM': ('gram', None),
+ 'GRN': ('grain', None),
+ 'GRO': ('gross',
+         'A unit of count defining the number of units in multiples of 144 (12 '
+         'x\n'
+         '            12).'),
+ 'GV': ('gigajoule', None),
+ 'GWH': ('gigawatt hour', None),
+ 'H03': ('henry per kiloohm', None),
+ 'H04': ('henry per ohm', None),
+ 'H05': ('millihenry per kiloohm', None),
+ 'H06': ('millihenry per ohm', None),
+ 'H07': ('pascal second per bar', None),
+ 'H08': ('microbecquerel', None),
+ 'H09': ('reciprocal year', None),
+ 'H10': ('reciprocal hour', None),
+ 'H11': ('reciprocal month', None),
+ 'H12': ('degree Celsius per hour', None),
+ 'H13': ('degree Celsius per minute', None),
+ 'H14': ('degree Celsius per second', None),
+ 'H15': ('square centimetre per gram', None),
+ 'H16': ('square decametre', 'Synonym: are'),
+ 'H18': ('square hectometre', 'Synonym:\xa0hectare'),
+ 'H19': ('cubic hectometre', None),
+ 'H20': ('cubic kilometre', None),
+ 'H21': ('blank', 'A unit of count defining the number of blanks.'),
+ 'H22': ('volt square inch per pound-force', None),
+ 'H23': ('volt per inch', None),
+ 'H24': ('volt per microsecond', None),
+ 'H25': ('percent per kelvin',
+         'A unit of proportion, equal to 0.01, in relation to the SI base '
+         'unit\n'
+         '            Kelvin.'),
+ 'H26': ('ohm per metre', None),
+ 'H27': ('degree per metre', None),
+ 'H28': ('microfarad per kilometre', None),
+ 'H29': ('microgram per litre', None),
+ 'H30': ('square micrometre (square micron)', None),
+ 'H31': ('ampere per kilogram', None),
+ 'H32': ('ampere squared second', None),
+ 'H33': ('farad per kilometre', None),
+ 'H34': ('hertz metre', None),
+ 'H35': ('kelvin metre per watt', None),
+ 'H36': ('megaohm per kilometre', None),
+ 'H37': ('megaohm per metre', None),
+ 'H38': ('megaampere', None),
+ 'H39': ('megahertz kilometre', None),
+ 'H40': ('newton per ampere', None),
+ 'H41': ('newton metre watt to the power minus 0,5', None),
+ 'H42': ('pascal per metre', None),
+ 'H43': ('siemens per centimetre', None),
+ 'H44': ('teraohm', None),
+ 'H45': ('volt second per metre', None),
+ 'H46': ('volt per second', None),
+ 'H47': ('watt per cubic metre', None),
+ 'H48': ('attofarad', None),
+ 'H49': ('centimetre per hour', None),
+ 'H50': ('reciprocal cubic centimetre', None),
+ 'H51': ('decibel per kilometre', None),
+ 'H52': ('decibel per metre', None),
+ 'H53': ('kilogram per bar', None),
+ 'H54': ('kilogram per cubic decimetre kelvin', None),
+ 'H55': ('kilogram per cubic decimetre bar', None),
+ 'H56': ('kilogram per square metre second', None),
+ 'H57': ('inch per two pi radiant', None),
+ 'H58': ('metre per volt second', None),
+ 'H59': ('square metre per newton', None),
+ 'H60': ('cubic metre per cubic metre', None),
+ 'H61': ('millisiemens per centimetre', None),
+ 'H62': ('millivolt per minute', None),
+ 'H63': ('milligram per square centimetre', None),
+ 'H64': ('milligram per gram', None),
+ 'H65': ('millilitre per cubic metre', None),
+ 'H66': ('millimetre per year', None),
+ 'H67': ('millimetre per hour', None),
+ 'H68': ('millimole per gram', None),
+ 'H69': ('picopascal per kilometre', None),
+ 'H70': ('picosecond', None),
+ 'H71': ('percent per month',
+         'A unit of proportion, equal to 0.01, in relation to a month.'),
+ 'H72': ('percent per hectobar',
+         'A unit of proportion, equal to 0.01, in relation to 100-fold of the '
+         'unit\n'
+         '            bar.'),
+ 'H73': ('percent per decakelvin',
+         'A unit of proportion, equal to 0.01, in relation to 10-fold of the '
+         'SI base unit\n'
+         '            Kelvin.'),
+ 'H74': ('watt per metre', None),
+ 'H75': ('decapascal', None),
+ 'H76': ('gram per millimetre', None),
+ 'H77': ('module width',
+         'A unit of measure used to describe the breadth of electronic '
+         'assemblies as\n'
+         '            an\xa0installation standard\xa0or mounting dimension.'),
+ 'H79': ('French gauge',
+         'A unit of distance used for measuring the diameter of small tubes '
+         'such as\n'
+         '            urological instruments and catheters. Synonym: French, '
+         'Charrière, Charrière\n'
+         '            gauge'),
+ 'H80': ('rack unit',
+         'A unit of measure used to describe the height in rack units of '
+         'equipment\n'
+         '            intended for mounting in a 19-inch rack or a 23-inch '
+         'rack. One rack unit is 1.75 inches\n'
+         '            (44.45 mm) high.'),
+ 'H81': ('millimetre per minute', None),
+ 'H82': ('big point',
+         'A unit of length defining the number of big points (big point: '
+         'Adobe\n'
+         '            software(US) defines the big point to be exactly 1/72 '
+         'inch (0.013 888 9 inch or 0.352\n'
+         '            777 8 millimeters))'),
+ 'H83': ('litre per kilogram', None),
+ 'H84': ('gram millimetre', None),
+ 'H85': ('reciprocal week', None),
+ 'H87': ('piece',
+         'A unit of count defining the number of pieces (piece: a single item, '
+         'article or\n'
+         '            exemplar).'),
+ 'H88': ('megaohm kilometre', None),
+ 'H89': ('percent per ohm',
+         'A unit of proportion, equal to 0.01, in relation to the SI derived '
+         'unit\n'
+         '            ohm.'),
+ 'H90': ('percent per degree',
+         'A unit of proportion, equal to 0.01, in relation to an angle of one\n'
+         '            degree.'),
+ 'H91': ('percent per ten thousand',
+         'A unit of proportion, equal to 0.01, in relation to multiples of '
+         'ten\n'
+         '            thousand.'),
+ 'H92': ('percent per one hundred thousand',
+         'A unit of proportion, equal to 0.01, in relation to multiples of one '
+         'hundred\n'
+         '            thousand.'),
+ 'H93': ('percent per hundred',
+         'A unit of proportion, equal to 0.01, in relation to multiples of '
+         'one\n'
+         '            hundred.'),
+ 'H94': ('percent per thousand',
+         'A unit of proportion, equal to 0.01, in relation to multiples of '
+         'one\n'
+         '            thousand.'),
+ 'H95': ('percent per volt',
+         'A unit of proportion, equal to 0.01, in relation to the SI derived '
+         'unit\n'
+         '            volt.'),
+ 'H96': ('percent per bar',
+         'A unit of proportion, equal to 0.01, in relation to an atmospheric '
+         'pressure of\n'
+         '            one bar.'),
+ 'H98': ('percent per inch',
+         'A unit of proportion, equal to 0.01, in relation to an inch.'),
+ 'H99': ('percent per metre',
+         'A unit of proportion, equal to 0.01, in relation to a metre.'),
+ 'HA': ('hank', 'A unit of length, typically for yarn.'),
+ 'HAD': ('Piece Day', None),
+ 'HBA': ('hectobar', None),
+ 'HBX': ('hundred boxes',
+         'A unit of count defining the number of boxes in multiples of one '
+         'hundred box\n'
+         '            units.'),
+ 'HC': ('hundred count',
+        'A unit of count defining the number of units counted in multiples of\n'
+        '            100.'),
+ 'HDW': ('hundred kilogram, dry weight',
+         'A unit of mass defining the number of hundred kilograms of a '
+         'product,\n'
+         '            disregarding the water content of the product.'),
+ 'HEA': ('head',
+         'A unit of count defining the number of heads (head: a person or '
+         'animal\n'
+         '            considered as one of a number).'),
+ 'HGM': ('hectogram', None),
+ 'HH': ('hundred cubic foot',
+        'A unit of volume equal to one hundred cubic foot.'),
+ 'HIU': ('hundred international unit',
+         'A unit of count defining the number of international units in '
+         'multiples of\n'
+         '            100.'),
+ 'HKM': ('hundred kilogram, net mass',
+         'A unit of mass defining the number of hundred kilograms of a '
+         'product, after\n'
+         '            deductions.'),
+ 'HLT': ('hectolitre', None),
+ 'HM': ('mile per hour (statute mile)', None),
+ 'HMO': ('Piece Month', None),
+ 'HMQ': ('million cubic metre',
+         'A unit of volume equal to one million cubic metres.'),
+ 'HMT': ('hectometre', None),
+ 'HPA': ('hectolitre of pure alcohol',
+         'A unit of volume equal to one hundred litres of pure alcohol.'),
+ 'HTZ': ('hertz', None),
+ 'HUR': ('hour', None),
+ 'HWE': ('Piece Week', None),
+ 'IA': ('inch pound (pound inch)', None),
+ 'IE': ('person', 'A unit of count defining the number of persons.'),
+ 'INH': ('inch', None),
+ 'INK': ('square inch', None),
+ 'INQ': ('cubic inch', 'Synonym: inch cubed'),
+ 'ISD': ('international sugar degree',
+         'A unit of measure defining the sugar content of a solution, '
+         'expressed in\n'
+         '            degrees.'),
+ 'IU': ('inch per second', None),
+ 'IUG': ('international unit per gram', None),
+ 'IV': ('inch per second squared', None),
+ 'J10': ('percent per millimetre',
+         'A unit of proportion, equal to 0.01, in relation to a millimetre.'),
+ 'J12': ('per mille per psi',
+         'A unit of pressure equal to one thousandth of a psi (pound-force per '
+         'square\n'
+         '            inch).'),
+ 'J13': ('degree API',
+         'A unit of relative density as a measure of how heavy or light a '
+         'petroleum\n'
+         '            liquid is compared to water (API: American Petroleum '
+         'Institute).'),
+ 'J14': ('degree Baume (origin scale)',
+         'A traditional unit of relative density for liquids. Named after '
+         'Antoine\n'
+         '            Baumé.'),
+ 'J15': ('degree Baume (US heavy)',
+         'A unit of relative density for liquids heavier than water.'),
+ 'J16': ('degree Baume (US light)',
+         'A unit of relative density for liquids lighter than water.'),
+ 'J17': ('degree Balling',
+         'A unit of density as a measure of sugar content, especially of beer '
+         'wort. Named\n'
+         '            after Karl Balling.'),
+ 'J18': ('degree Brix',
+         'A unit of proportion used in measuring the dissolved sugar-to-water '
+         'mass ratio\n'
+         '            of a liquid. Named after Adolf Brix.'),
+ 'J19': ('degree Fahrenheit hour square foot per British thermal unit '
+         '(thermochemical)',
+         None),
+ 'J2': ('joule per kilogram', None),
+ 'J20': ('degree Fahrenheit per kelvin', None),
+ 'J21': ('degree Fahrenheit per bar', None),
+ 'J22': ('degree Fahrenheit hour square foot per British thermal unit '
+         '(international\n'
+         '            table)',
+         None),
+ 'J23': ('degree Fahrenheit per hour', None),
+ 'J24': ('degree Fahrenheit per minute', None),
+ 'J25': ('degree Fahrenheit per second', None),
+ 'J26': ('reciprocal degree Fahrenheit', None),
+ 'J27': ('degree Oechsle',
+         'A unit of density as a measure of sugar content of must, the '
+         'unfermented\n'
+         '            liqueur from which wine is made. Named after Ferdinand '
+         'Oechsle.'),
+ 'J28': ('degree Rankine per hour', None),
+ 'J29': ('degree Rankine per minute', None),
+ 'J30': ('degree Rankine per second', None),
+ 'J31': ('degree Twaddell',
+         'A unit of density for liquids that are heavier than water. 1 degree '
+         'Twaddle\n'
+         '            represents a difference in specific gravity of 0.005.'),
+ 'J32': ('micropoise', None),
+ 'J33': ('microgram per kilogram', None),
+ 'J34': ('microgram per cubic metre kelvin', None),
+ 'J35': ('microgram per cubic metre bar', None),
+ 'J36': ('microlitre per litre', None),
+ 'J38': ('baud',
+         'A unit of signal transmission speed equal to one signalling event '
+         'per\n'
+         '            second.'),
+ 'J39': ('British thermal unit (mean)', None),
+ 'J40': ('British thermal unit (international table) foot per hour\xa0square '
+         'foot degree\n'
+         '            Fahrenheit',
+         None),
+ 'J41': ('British thermal unit (international table) inch per hour square\xa0'
+         'foot degree\n'
+         '            Fahrenheit',
+         None),
+ 'J42': ('British thermal unit (international table) inch per second square\xa0'
+         'foot degree\n'
+         '            Fahrenheit',
+         None),
+ 'J43': ('British thermal unit (international table) per pound degree '
+         'Fahrenheit',
+         None),
+ 'J44': ('British thermal unit (international table) per minute', None),
+ 'J45': ('British thermal unit (international table) per second', None),
+ 'J46': ('British thermal unit (thermochemical) foot per hour square\xa0foot '
+         'degree\n'
+         '            Fahrenheit',
+         None),
+ 'J47': ('British thermal unit (thermochemical) per hour', None),
+ 'J48': ('British thermal unit (thermochemical) inch per hour square\xa0foot '
+         'degree\n'
+         '            Fahrenheit',
+         None),
+ 'J49': ('British thermal unit (thermochemical) inch per second\xa0square foot '
+         'degree\n'
+         '            Fahrenheit',
+         None),
+ 'J50': ('British thermal unit (thermochemical) per pound degree Fahrenheit',
+         None),
+ 'J51': ('British thermal unit (thermochemical) per minute', None),
+ 'J52': ('British thermal unit (thermochemical) per second', None),
+ 'J53': ('coulomb square metre per kilogram', None),
+ 'J54': ('megabaud',
+         'A unit of signal transmission speed equal to 10⁶ (1000000) signaling '
+         'events per\n'
+         '            second.'),
+ 'J55': ('watt second', None),
+ 'J56': ('bar per bar', None),
+ 'J57': ('barrel (UK petroleum)', None),
+ 'J58': ('barrel (UK petroleum) per minute', None),
+ 'J59': ('barrel (UK petroleum) per day', None),
+ 'J60': ('barrel (UK petroleum) per hour', None),
+ 'J61': ('barrel (UK petroleum) per second', None),
+ 'J62': ('barrel (US petroleum) per hour', None),
+ 'J63': ('barrel (US petroleum) per second', None),
+ 'J64': ('bushel (UK) per day', None),
+ 'J65': ('bushel (UK) per hour', None),
+ 'J66': ('bushel (UK) per minute', None),
+ 'J67': ('bushel (UK) per second', None),
+ 'J68': ('bushel (US dry) per day', None),
+ 'J69': ('bushel (US dry) per hour', None),
+ 'J70': ('bushel (US dry) per minute', None),
+ 'J71': ('bushel (US dry) per second', None),
+ 'J72': ('centinewton metre', None),
+ 'J73': ('centipoise per kelvin', None),
+ 'J74': ('centipoise per bar', None),
+ 'J75': ('calorie (mean)', None),
+ 'J76': ('calorie (international table) per gram degree Celsius', None),
+ 'J78': ('calorie (thermochemical) per centimetre second degree Celsius', None),
+ 'J79': ('calorie (thermochemical) per gram degree Celsius', None),
+ 'J81': ('calorie (thermochemical) per minute', None),
+ 'J82': ('calorie (thermochemical) per second', None),
+ 'J83': ('clo', None),
+ 'J84': ('centimetre per second kelvin', None),
+ 'J85': ('centimetre per second bar', None),
+ 'J87': ('cubic centimetre per cubic metre', None),
+ 'J90': ('cubic decimetre per day', None),
+ 'J91': ('cubic decimetre per cubic metre', None),
+ 'J92': ('cubic decimetre per minute', None),
+ 'J93': ('cubic decimetre per second', None),
+ 'J95': ('ounce (UK fluid) per day', None),
+ 'J96': ('ounce (UK fluid) per hour', None),
+ 'J97': ('ounce (UK fluid) per minute', None),
+ 'J98': ('ounce (UK fluid) per second', None),
+ 'J99': ('ounce (US fluid) per day', None),
+ 'JE': ('joule per kelvin', None),
+ 'JK': ('megajoule per kilogram', None),
+ 'JM': ('megajoule per cubic metre', None),
+ 'JNT': ('pipeline joint', 'A count of the number of pipeline joints.'),
+ 'JOU': ('joule', None),
+ 'JPS': ('hundred metre',
+         'A unit of count defining the number of 100 metre lengths.'),
+ 'JWL': ('number of jewels',
+         'A unit of count defining the number of jewels (jewel: precious\n'
+         '            stone).'),
+ 'K1': ('kilowatt demand',
+        'A unit of measure defining the power load measured at predetermined\n'
+        '            intervals.'),
+ 'K10': ('ounce (US fluid) per hour', None),
+ 'K11': ('ounce (US fluid) per minute', None),
+ 'K12': ('ounce (US fluid) per second', None),
+ 'K13': ('foot per degree Fahrenheit', None),
+ 'K14': ('foot per hour', None),
+ 'K15': ('foot pound-force per hour', None),
+ 'K16': ('foot pound-force per minute', None),
+ 'K17': ('foot per psi', None),
+ 'K18': ('foot per second degree Fahrenheit', None),
+ 'K19': ('foot per second psi', None),
+ 'K2': ('kilovolt ampere reactive demand',
+        'A unit of measure defining the reactive power demand equal to one '
+        'kilovolt\n'
+        '            ampere of reactive power.'),
+ 'K20': ('reciprocal cubic foot', None),
+ 'K21': ('cubic foot per degree Fahrenheit', None),
+ 'K22': ('cubic foot per day', None),
+ 'K23': ('cubic foot per psi', None),
+ 'K26': ('gallon (UK) per day', None),
+ 'K27': ('gallon (UK) per hour', None),
+ 'K28': ('gallon (UK) per second', None),
+ 'K3': ('kilovolt ampere reactive hour',
+        'A unit of measure defining the accumulated reactive energy equal to '
+        'one\n'
+        '            kilovolt ampere of reactive power per hour.'),
+ 'K30': ('gallon (US liquid) per second', None),
+ 'K31': ('gram-force per square centimetre', None),
+ 'K32': ('gill (UK) per day', None),
+ 'K33': ('gill (UK) per hour', None),
+ 'K34': ('gill (UK) per minute', None),
+ 'K35': ('gill (UK) per second', None),
+ 'K36': ('gill (US) per day', None),
+ 'K37': ('gill (US) per hour', None),
+ 'K38': ('gill (US) per minute', None),
+ 'K39': ('gill (US) per second', None),
+ 'K40': ('standard acceleration of free fall', None),
+ 'K41': ('grain per gallon (US)', None),
+ 'K42': ('horsepower (boiler)', None),
+ 'K43': ('horsepower (electric)', None),
+ 'K45': ('inch per degree Fahrenheit', None),
+ 'K46': ('inch per psi', None),
+ 'K47': ('inch per second degree Fahrenheit', None),
+ 'K48': ('inch per second psi', None),
+ 'K49': ('reciprocal cubic inch', None),
+ 'K50': ('kilobaud',
+         'A unit of signal transmission speed equal to 10³ (1000) signaling '
+         'events per\n'
+         '            second.'),
+ 'K51': ('kilocalorie (mean)', None),
+ 'K52': ('kilocalorie (international table) per hour metre degree Celsius',
+         None),
+ 'K53': ('kilocalorie (thermochemical)', None),
+ 'K54': ('kilocalorie (thermochemical) per minute', None),
+ 'K55': ('kilocalorie (thermochemical) per second', None),
+ 'K58': ('kilomole per hour', None),
+ 'K59': ('kilomole per cubic metre kelvin', None),
+ 'K6': ('kilolitre', None),
+ 'K60': ('kilomole per cubic metre bar', None),
+ 'K61': ('kilomole per minute', None),
+ 'K62': ('litre per litre', None),
+ 'K63': ('reciprocal litre', None),
+ 'K64': ('pound (avoirdupois) per degree Fahrenheit', None),
+ 'K65': ('pound (avoirdupois) square foot', None),
+ 'K66': ('pound (avoirdupois) per day', None),
+ 'K67': ('pound per foot hour', None),
+ 'K68': ('pound per foot second', None),
+ 'K69': ('pound (avoirdupois) per cubic foot degree Fahrenheit', None),
+ 'K70': ('pound (avoirdupois) per cubic foot psi', None),
+ 'K71': ('pound (avoirdupois) per gallon (UK)', None),
+ 'K73': ('pound (avoirdupois) per hour degree Fahrenheit', None),
+ 'K74': ('pound (avoirdupois) per hour psi', None),
+ 'K75': ('pound (avoirdupois) per cubic inch degree Fahrenheit', None),
+ 'K76': ('pound (avoirdupois) per cubic inch psi', None),
+ 'K77': ('pound (avoirdupois) per psi', None),
+ 'K78': ('pound (avoirdupois) per minute', None),
+ 'K79': ('pound (avoirdupois) per minute degree Fahrenheit', None),
+ 'K80': ('pound (avoirdupois) per minute psi', None),
+ 'K81': ('pound (avoirdupois) per second', None),
+ 'K82': ('pound (avoirdupois) per second degree Fahrenheit', None),
+ 'K83': ('pound (avoirdupois) per second psi', None),
+ 'K84': ('pound per cubic yard', None),
+ 'K85': ('pound-force per square foot', None),
+ 'K86': ('pound-force per square inch degree Fahrenheit', None),
+ 'K87': ('psi cubic inch per second', None),
+ 'K88': ('psi litre per second', None),
+ 'K89': ('psi cubic metre per second', None),
+ 'K90': ('psi cubic yard per second', None),
+ 'K91': ('pound-force second per square foot', None),
+ 'K92': ('pound-force second per square inch', None),
+ 'K93': ('reciprocal psi', None),
+ 'K94': ('quart (UK liquid) per day', None),
+ 'K95': ('quart (UK liquid) per hour', None),
+ 'K96': ('quart (UK liquid) per minute', None),
+ 'K97': ('quart (UK liquid) per second', None),
+ 'K98': ('quart (US liquid) per day', None),
+ 'K99': ('quart (US liquid) per hour', None),
+ 'KA': ('cake',
+        'A unit of count defining the number of cakes (cake: object shaped '
+        'into a flat,\n'
+        '            compact mass).'),
+ 'KAT': ('katal',
+         'A unit of catalytic activity defining the catalytic activity of '
+         'enzymes and\n'
+         '            other catalysts.'),
+ 'KB': ('kilocharacter',
+        'A unit of information equal to 10³ (1000) characters.'),
+ 'KBA': ('kilobar', None),
+ 'KCC': ('kilogram of choline chloride',
+         'A unit of mass equal to one thousand grams of choline chloride.'),
+ 'KDW': ('kilogram drained net weight',
+         'A unit of mass defining the net number of kilograms of a product, '
+         'disregarding\n'
+         '            the liquid content of the product.'),
+ 'KEL': ('kelvin',
+         'Refer ISO 80000-5 (Quantities and units — Part 5: Thermodynamics)'),
+ 'KGM': ('kilogram', 'A unit of mass equal to one thousand grams.'),
+ 'KGS': ('kilogram per second', None),
+ 'KHY': ('kilogram of hydrogen peroxide',
+         'A unit of mass equal to one thousand grams of hydrogen peroxide.'),
+ 'KHZ': ('kilohertz', None),
+ 'KI': ('kilogram per millimetre width', None),
+ 'KIC': ('kilogram, including container',
+         'A unit of mass defining the number of kilograms of a product, '
+         'including its\n'
+         '            container.'),
+ 'KIP': ('kilogram, including inner packaging',
+         'A unit of mass defining the number of kilograms of a product, '
+         'including its\n'
+         '            inner packaging materials.'),
+ 'KJ': ('kilosegment', 'A unit of information equal to 10³ (1000) segments.'),
+ 'KJO': ('kilojoule', None),
+ 'KL': ('kilogram per metre', None),
+ 'KLK': ('lactic dry material percentage',
+         'A unit of proportion defining the percentage of dry lactic material '
+         'in a\n'
+         '            product.'),
+ 'KLX': ('kilolux', 'A unit of illuminance equal to one thousand lux.'),
+ 'KMA': ('kilogram of methylamine',
+         'A unit of mass equal to one thousand grams of methylamine.'),
+ 'KMH': ('kilometre per hour', None),
+ 'KMK': ('square kilometre', None),
+ 'KMQ': ('kilogram per cubic metre',
+         'A unit of weight expressed in kilograms of a substance that fills a '
+         'volume of\n'
+         '            one cubic metre.'),
+ 'KMT': ('kilometre', None),
+ 'KNI': ('kilogram of nitrogen',
+         'A unit of mass equal to one thousand grams of nitrogen.'),
+ 'KNM': ('kilonewton per square metre', 'Pressure expressed in kN/m2.'),
+ 'KNS': ('kilogram named substance',
+         'A unit of mass equal to one kilogram of a named substance.'),
+ 'KNT': ('knot', None),
+ 'KO': ('milliequivalence caustic potash per gram of product',
+        'A unit of count defining the number of milligrams of potassium '
+        'hydroxide per\n'
+        '            gram of product as a measure of the concentration of '
+        'potassium hydroxide in the\n'
+        '            product.'),
+ 'KPA': ('kilopascal', None),
+ 'KPH': ('kilogram of potassium hydroxide (caustic potash)',
+         'A unit of mass equal to one thousand grams of potassium hydroxide '
+         '(caustic\n'
+         '            potash).'),
+ 'KPO': ('kilogram of potassium oxide',
+         'A unit of mass equal to one thousand grams of potassium oxide.'),
+ 'KPP': ('kilogram of phosphorus pentoxide (phosphoric anhydride)',
+         'A unit of mass equal to one thousand grams of phosphorus pentoxide '
+         'phosphoric\n'
+         '            anhydride.'),
+ 'KR': ('kiloroentgen', None),
+ 'KSD': ('kilogram of substance 90 % dry',
+         'A unit of mass equal to one thousand grams of a named substance that '
+         'is 90%\n'
+         '            dry.'),
+ 'KSH': ('kilogram of sodium hydroxide (caustic soda)',
+         'A unit of mass equal to one thousand grams of sodium hydroxide '
+         '(caustic\n'
+         '            soda).'),
+ 'KT': ('kit',
+        'A unit of count defining the number of kits (kit: tub, barrel or\n'
+        '            pail).'),
+ 'KTN': ('kilotonne', None),
+ 'KUR': ('kilogram of uranium',
+         'A unit of mass equal to one thousand grams of uranium.'),
+ 'KVA': ('kilovolt - ampere', None),
+ 'KVR': ('kilovar', None),
+ 'KVT': ('kilovolt', None),
+ 'KW': ('kilogram per millimetre', None),
+ 'KWH': ('kilowatt hour', None),
+ 'KWN': ('Kilowatt hour per normalized cubic metre', None),
+ 'KWO': ('kilogram of tungsten trioxide',
+         'A unit of mass equal to one thousand grams of tungsten trioxide.'),
+ 'KWS': ('Kilowatt hour per standard cubic metre', None),
+ 'KWT': ('kilowatt', None),
+ 'KWY': ('kilowatt year', None),
+ 'KX': ('millilitre per kilogram', None),
+ 'L10': ('quart (US liquid) per minute', None),
+ 'L11': ('quart (US liquid) per second', None),
+ 'L12': ('metre per second kelvin', None),
+ 'L13': ('metre per second bar', None),
+ 'L14': ('square metre hour degree Celsius per kilocalorie (international '
+         'table)',
+         None),
+ 'L15': ('millipascal second per kelvin', None),
+ 'L16': ('millipascal second per bar', None),
+ 'L17': ('milligram per cubic metre kelvin', None),
+ 'L18': ('milligram per cubic metre bar', None),
+ 'L19': ('millilitre per litre', None),
+ 'L2': ('litre per minute', None),
+ 'L20': ('reciprocal cubic millimetre', None),
+ 'L21': ('cubic millimetre per cubic metre', None),
+ 'L23': ('mole per hour', None),
+ 'L24': ('mole per kilogram kelvin', None),
+ 'L25': ('mole per kilogram bar', None),
+ 'L26': ('mole per litre kelvin', None),
+ 'L27': ('mole per litre bar', None),
+ 'L28': ('mole per cubic metre kelvin', None),
+ 'L29': ('mole per cubic metre bar', None),
+ 'L30': ('mole per minute', None),
+ 'L31': ('milliroentgen aequivalent men', None),
+ 'L32': ('nanogram per kilogram', None),
+ 'L33': ('ounce (avoirdupois) per day', None),
+ 'L34': ('ounce (avoirdupois) per hour', None),
+ 'L35': ('ounce (avoirdupois) per minute', None),
+ 'L36': ('ounce (avoirdupois) per second', None),
+ 'L37': ('ounce (avoirdupois) per gallon (UK)', None),
+ 'L38': ('ounce (avoirdupois) per gallon (US)', None),
+ 'L39': ('ounce (avoirdupois) per cubic inch', None),
+ 'L40': ('ounce (avoirdupois)-force', None),
+ 'L41': ('ounce (avoirdupois)-force inch', None),
+ 'L42': ('picosiemens per metre', None),
+ 'L43': ('peck (UK)', None),
+ 'L44': ('peck (UK) per day', None),
+ 'L45': ('peck (UK) per hour', None),
+ 'L46': ('peck (UK) per minute', None),
+ 'L47': ('peck (UK) per second', None),
+ 'L48': ('peck (US dry) per day', None),
+ 'L49': ('peck (US dry) per hour', None),
+ 'L50': ('peck (US dry) per minute', None),
+ 'L51': ('peck (US dry) per second', None),
+ 'L52': ('psi per psi', None),
+ 'L53': ('pint (UK) per day', None),
+ 'L54': ('pint (UK) per hour', None),
+ 'L55': ('pint (UK) per minute', None),
+ 'L56': ('pint (UK) per second', None),
+ 'L57': ('pint (US liquid) per day', None),
+ 'L58': ('pint (US liquid) per hour', None),
+ 'L59': ('pint (US liquid) per minute', None),
+ 'L60': ('pint (US liquid) per second', None),
+ 'L63': ('slug per day', None),
+ 'L64': ('slug per foot second', None),
+ 'L65': ('slug per cubic foot', None),
+ 'L66': ('slug per hour', None),
+ 'L67': ('slug per minute', None),
+ 'L68': ('slug per second', None),
+ 'L69': ('tonne per kelvin', None),
+ 'L70': ('tonne per bar', None),
+ 'L71': ('tonne per day', None),
+ 'L72': ('tonne per day kelvin', None),
+ 'L73': ('tonne per day bar', None),
+ 'L74': ('tonne per hour kelvin', None),
+ 'L75': ('tonne per hour bar', None),
+ 'L76': ('tonne per cubic metre kelvin', None),
+ 'L77': ('tonne per cubic metre bar', None),
+ 'L78': ('tonne per minute', None),
+ 'L79': ('tonne per minute kelvin', None),
+ 'L80': ('tonne per minute bar', None),
+ 'L81': ('tonne per second', None),
+ 'L82': ('tonne per second kelvin', None),
+ 'L83': ('tonne per second bar', None),
+ 'L84': ('ton (UK shipping)', None),
+ 'L85': ('ton long per day', None),
+ 'L86': ('ton (US shipping)', None),
+ 'L87': ('ton short per degree Fahrenheit', None),
+ 'L88': ('ton short per day', None),
+ 'L89': ('ton short per hour degree Fahrenheit', None),
+ 'L90': ('ton short per hour psi', None),
+ 'L91': ('ton short per psi', None),
+ 'L92': ('ton (UK long) per cubic yard', None),
+ 'L93': ('ton (US short) per cubic yard', None),
+ 'L94': ('ton-force (US short)', None),
+ 'L95': ('common year', None),
+ 'L96': ('sidereal year', None),
+ 'L98': ('yard per degree Fahrenheit', None),
+ 'L99': ('yard per psi', None),
+ 'LA': ('pound per cubic inch', None),
+ 'LAC': ('lactose excess percentage',
+         'A unit of proportion defining the percentage of lactose in a product '
+         'that\n'
+         '            exceeds a defined percentage level.'),
+ 'LBR': ('pound', None),
+ 'LBT': ('troy pound (US)', None),
+ 'LD': ('litre per day', None),
+ 'LEF': ('leaf', 'A unit of count defining the number of leaves.'),
+ 'LF': ('linear foot',
+        'A unit of count defining the number of feet (12-inch) in length of a '
+        'uniform\n'
+        '            width object.'),
+ 'LH': ('labour hour', 'A unit of time defining the number of labour hours.'),
+ 'LK': ('link', 'A unit of distance equal to 0.01 chain.'),
+ 'LM': ('linear metre',
+        'A unit of count defining the number of metres in length of a uniform '
+        'width\n'
+        '            object.'),
+ 'LN': ('length',
+        'A unit of distance defining the linear extent of an item measured '
+        'from end to\n'
+        '            end.'),
+ 'LO': ('lot [unit of procurement]',
+        'A unit of count defining the number of lots (lot: a collection of '
+        'associated\n'
+        '            items).'),
+ 'LP': ('liquid pound',
+        'A unit of mass defining the number of pounds of a liquid\n'
+        '            substance.'),
+ 'LPA': ('litre of pure alcohol',
+         'A unit of volume equal to one litre of pure alcohol.'),
+ 'LR': ('layer', 'A unit of count defining the number of layers.'),
+ 'LS': ('lump sum',
+        'A unit of count defining the number of whole or a complete monetary\n'
+        '            amounts.'),
+ 'LTN': ('ton (UK) or long ton (US)', 'Synonym: gross ton (2240 lb)'),
+ 'LTR': ('litre', None),
+ 'LUB': ('metric ton, lubricating oil',
+         'A unit of mass defining the number of metric tons of lubricating\n'
+         '            oil.'),
+ 'LUM': ('lumen', None),
+ 'LUX': ('lux', None),
+ 'LY': ('linear yard',
+        'A unit of count defining the number of 36-inch units in length of a '
+        'uniform\n'
+        '            width object.'),
+ 'M1': ('milligram per litre', None),
+ 'M10': ('reciprocal cubic yard', None),
+ 'M11': ('cubic yard per degree Fahrenheit', None),
+ 'M12': ('cubic yard per day', None),
+ 'M13': ('cubic yard per hour', None),
+ 'M14': ('cubic yard per psi', None),
+ 'M15': ('cubic yard per minute', None),
+ 'M16': ('cubic yard per second', None),
+ 'M17': ('kilohertz metre', None),
+ 'M18': ('gigahertz metre', None),
+ 'M19': ('Beaufort',
+         'An empirical measure for describing wind speed based mainly on '
+         'observed sea\n'
+         '            conditions. The Beaufort scale indicates the wind speed '
+         'by numbers that typically range\n'
+         '            from 0 for calm, to 12 for hurricane.'),
+ 'M20': ('reciprocal megakelvin or megakelvin to the power minus one', None),
+ 'M21': ('reciprocal kilovolt - ampere reciprocal hour', None),
+ 'M22': ('millilitre per square centimetre minute', None),
+ 'M23': ('newton per centimetre', None),
+ 'M24': ('ohm kilometre', None),
+ 'M25': ('percent per degree Celsius',
+         'A unit of proportion, equal to 0.01, in relation to a temperature of '
+         'one\n'
+         '            degree.'),
+ 'M26': ('gigaohm per metre', None),
+ 'M27': ('megahertz metre', None),
+ 'M29': ('kilogram per kilogram', None),
+ 'M30': ('reciprocal volt - ampere reciprocal second', None),
+ 'M31': ('kilogram per kilometre', None),
+ 'M32': ('pascal second per litre', None),
+ 'M33': ('millimole per litre', None),
+ 'M34': ('newton metre per square metre', None),
+ 'M35': ('millivolt - ampere', None),
+ 'M36': ('30-day month',
+         'A unit of count defining the number of months expressed in multiples '
+         'of 30\n'
+         '            days, one day equals 24 hours.'),
+ 'M37': ('actual/360',
+         'A unit of count defining the number of years expressed in multiples '
+         'of 360\n'
+         '            days, one day equals 24 hours.'),
+ 'M38': ('kilometre per second squared',
+         '1000-fold of the SI base unit metre divided by the power of the SI '
+         'base unit\n'
+         '            second by exponent 2.'),
+ 'M39': ('centimetre per second squared',
+         '0,01-fold of the SI base unit metre divided by the power of the SI '
+         'base unit\n'
+         '            second by exponent 2.'),
+ 'M4': ('monetary value', 'A unit of measure expressed as a monetary amount.'),
+ 'M40': ('yard per second squared',
+         'Unit of the length according to the Anglo-American and Imperial '
+         'system of units\n'
+         '            divided by the power of the SI base unit second by '
+         'exponent 2.'),
+ 'M41': ('millimetre per second squared',
+         '0,001-fold of the SI base unit metre divided by the power of the SI '
+         'base unit\n'
+         '            second by exponent 2.'),
+ 'M42': ('mile (statute mile) per second squared',
+         'Unit of the length according to the Imperial system of units divided '
+         'by the\n'
+         '            power of the SI base unit second by exponent 2.'),
+ 'M43': ('mil',
+         'Unit to indicate an angle at military zone, equal to the 6400th part '
+         'of the\n'
+         '            full circle of the 360° or 2·p·rad.'),
+ 'M44': ('revolution',
+         'Unit to identify an angle of the full circle of 360° or 2·p·rad '
+         '(Refer ISO/TC12\n'
+         '            SI Guide).'),
+ 'M45': ('degree [unit of angle] per second squared',
+         '360 part of a full circle divided by the power of the SI base unit '
+         'second and\n'
+         '            the exponent 2.'),
+ 'M46': ('revolution per minute', 'Unit of the angular velocity.'),
+ 'M47': ('circular mil',
+         'Unit of an area, of which the size is given by a diameter of length '
+         'of 1 mm\n'
+         '            (0,001 in) based on the formula: area = '
+         'p·(diameter/2)².'),
+ 'M48': ('square mile (based on U.S. survey foot)',
+         'Unit of the area, which is mainly common in the agriculture and\n'
+         '            forestry.'),
+ 'M49': ('chain (based on U.S. survey foot)',
+         'Unit of the length according the Anglo-American system of units.'),
+ 'M5': ('microcurie', None),
+ 'M50': ('furlong',
+         'Unit commonly used in Great Britain at rural distances: 1 furlong = '
+         '40 rods =\n'
+         '            10 chains (UK) = 1/8 mile = 1/10 furlong = 220 yards = '
+         '660 foot.'),
+ 'M51': ('foot (U.S. survey)',
+         'Unit commonly used in the United States for ordnance survey.'),
+ 'M52': ('mile (based on U.S. survey foot)',
+         'Unit commonly used in the United States for ordnance survey.'),
+ 'M53': ('metre per pascal',
+         'SI base unit metre divided by the derived SI unit pascal.'),
+ 'M55': ('metre per radiant',
+         'Unit of the translation factor for implementation from rotation to '
+         'linear\n'
+         '            movement.'),
+ 'M56': ('shake', 'Unit for a very short period.'),
+ 'M57': ('mile per minute',
+         'Unit of velocity from the Imperial system of units.'),
+ 'M58': ('mile per second',
+         'Unit of the velocity from the Imperial system of units.'),
+ 'M59': ('metre per second pascal',
+         'SI base unit meter divided by the product of SI base unit second and '
+         'the\n'
+         '            derived SI unit pascal.'),
+ 'M60': ('metre per hour', 'SI base unit metre divided by the unit hour.'),
+ 'M61': ('inch per year',
+         'Unit of the length according to the Anglo-American and Imperial '
+         'system of units\n'
+         '            divided by the unit common year with 365 days.'),
+ 'M62': ('kilometre per second',
+         '1000-fold of the SI base unit metre divided by the SI base unit\n'
+         '            second.'),
+ 'M63': ('inch per minute',
+         'Unit inch according to the Anglo-American and Imperial system of '
+         'units divided\n'
+         '            by the unit minute.'),
+ 'M64': ('yard per second',
+         'Unit yard according to the Anglo-American and Imperial system of '
+         'units divided\n'
+         '            by the SI base unit second.'),
+ 'M65': ('yard per minute',
+         'Unit yard according to the Anglo-American and Imperial system of '
+         'units divided\n'
+         '            by the unit minute.'),
+ 'M66': ('yard per hour',
+         'Unit yard according to the Anglo-American and Imperial system of '
+         'units divided\n'
+         '            by the unit hour.'),
+ 'M67': ('acre-foot (based on U.S. survey foot)',
+         'Unit of the volume, which is used in the United States to '
+         'measure/gauge the\n'
+         '            capacity of reservoirs.'),
+ 'M68': ('cord (128 ft3)',
+         'Traditional unit of the volume of stacked firewood which has been '
+         'measured with\n'
+         '            a cord.'),
+ 'M69': ('cubic mile (UK statute)',
+         'Unit of volume according to the Imperial system of units.'),
+ 'M7': ('micro-inch', None),
+ 'M70': ('ton, register', 'Traditional unit of the cargo capacity.'),
+ 'M71': ('cubic metre per pascal',
+         'Power of the SI base unit meter by exponent 3 divided by the derived '
+         'SI base\n'
+         '            unit pascal.'),
+ 'M72': ('bel', 'Logarithmic relationship to base 10.'),
+ 'M73': ('kilogram per cubic metre pascal',
+         'SI base unit kilogram divided by the product of the power of the SI '
+         'base unit\n'
+         '            metre with exponent 3 and the derived SI unit pascal.'),
+ 'M74': ('kilogram per pascal',
+         'SI base unit kilogram divided by the derived SI unit pascal.'),
+ 'M75': ('kilopound-force',
+         '1000-fold of the unit of the force pound-force (lbf) according to '
+         'the\n'
+         '            Anglo-American system of units with the relationship.'),
+ 'M76': ('poundal',
+         'Non SI-conforming unit of the power, which corresponds to a mass of '
+         'a pound\n'
+         '            multiplied with the acceleration of a foot per square '
+         'second.'),
+ 'M77': ('kilogram metre per second squared',
+         'Product of the SI base unit kilogram and the SI base unit metre '
+         'divided by the\n'
+         '            power of the SI base unit second by exponent 2.'),
+ 'M78': ('pond',
+         '0,001-fold of the unit of the weight, defined as a mass of 1 kg '
+         'which finds out\n'
+         '            about a weight strength from 1 kp by the gravitational '
+         'force at sea level which\n'
+         '            corresponds to a strength of 9,806 65 newton.'),
+ 'M79': ('square foot per hour',
+         'Power of the unit foot according to the Anglo-American and Imperial '
+         'system of\n'
+         '            units by exponent 2 divided by the unit of time hour.'),
+ 'M80': ('stokes per pascal',
+         'CGS (Centimetre-Gram-Second system) unit stokes divided by the '
+         'derived SI unit\n'
+         '            pascal.'),
+ 'M81': ('square centimetre per second',
+         '0,000 1-fold of the power of the SI base unit metre by exponent 2 '
+         'divided by\n'
+         '            the SI base unit second.'),
+ 'M82': ('square metre per second pascal',
+         'Power of the SI base unit metre with the exponent 2 divided by the '
+         'SI base unit\n'
+         '            second and the derived SI unit pascal.'),
+ 'M83': ('denier',
+         'Traditional unit for the indication of the linear mass of textile '
+         'fibers and\n'
+         '            yarns.'),
+ 'M84': ('pound per yard',
+         'Unit for linear mass according to avoirdupois system of units.'),
+ 'M85': ('ton, assay',
+         'Non SI-conforming unit of the mass used in the mineralogy to '
+         'determine the\n'
+         '            concentration of precious metals in ore according to the '
+         'mass of the precious metal in\n'
+         '            milligrams in a sample of the mass of an assay sound '
+         '(number of troy ounces in a short\n'
+         '            ton (1 000 lb)).'),
+ 'M86': ('pfund', 'Outdated unit of the mass used in Germany.'),
+ 'M87': ('kilogram per second pascal',
+         'SI base unit kilogram divided by the product of the SI base unit '
+         'second and the\n'
+         '            derived SI unit pascal.'),
+ 'M88': ('tonne per month', 'Unit tonne divided by the unit month.'),
+ 'M89': ('tonne per year',
+         'Unit tonne divided by the unit year with 365 days.'),
+ 'M9': ('million Btu per 1000 cubic foot', None),
+ 'M90': ('kilopound per hour',
+         '1000-fold of the unit of the mass avoirdupois pound according to '
+         'the\n'
+         '            avoirdupois unit system divided by the unit hour.'),
+ 'M91': ('pound per pound',
+         'Proportion of the mass consisting of the avoirdupois pound according '
+         'to the\n'
+         '            avoirdupois unit system divided by the avoirdupois pound '
+         'according to the avoirdupois\n'
+         '            unit system.'),
+ 'M92': ('pound-force foot',
+         'Product of the unit pound-force according to the Anglo-American '
+         'system of units\n'
+         '            and the unit foot according to the Anglo-American and '
+         'the Imperial system of\n'
+         '            units.'),
+ 'M93': ('newton metre per radian',
+         'Product of the derived SI unit newton and the SI base unit metre '
+         'divided by the\n'
+         '            unit radian.'),
+ 'M94': ('kilogram metre',
+         'Unit of imbalance as a product of the SI base unit kilogram and the '
+         'SI base\n'
+         '            unit metre.'),
+ 'M95': ('poundal foot',
+         'Product of the non SI-conforming unit of the force poundal and the '
+         'unit foot\n'
+         '            according to the Anglo-American and Imperial system of '
+         'units .'),
+ 'M96': ('poundal inch',
+         'Product of the non SI-conforming unit of the force poundal and the '
+         'unit inch\n'
+         '            according to the Anglo-American and Imperial system of '
+         'units .'),
+ 'M97': ('dyne metre',
+         'CGS (Centimetre-Gram-Second system) unit of the rotational\n'
+         '            moment.'),
+ 'M98': ('kilogram centimetre per second',
+         'Product of the SI base unit kilogram and the 0,01-fold of the SI '
+         'base unit\n'
+         '            metre divided by the SI base unit second.'),
+ 'M99': ('gram centimetre per second',
+         'Product of the 0,001-fold of the SI base unit kilogram and the '
+         '0,01-fold of the\n'
+         '            SI base unit metre divided by the SI base unit second.'),
+ 'MAH': ('megavolt ampere reactive hour',
+         'A unit of electrical reactive power defining the total amount of '
+         'reactive power\n'
+         '            across a power system.'),
+ 'MAL': ('megalitre', None),
+ 'MAM': ('megametre', None),
+ 'MAR': ('megavar',
+         'A unit of electrical reactive power represented by a current of one '
+         'thousand\n'
+         '            amperes flowing due a potential difference of one '
+         'thousand volts where the sine of the\n'
+         '            phase angle between them is 1.'),
+ 'MAW': ('megawatt',
+         'A unit of power defining the rate of energy transferred or consumed '
+         'when a\n'
+         '            current of 1000 amperes flows due to a potential of 1000 '
+         'volts at unity power\n'
+         '            factor.'),
+ 'MBE': ('thousand standard brick equivalent',
+         'A unit of count defining the number of one thousand brick '
+         'equivalent\n'
+         '            units.'),
+ 'MBF': ('thousand board foot',
+         'A unit of volume equal to one thousand board foot.'),
+ 'MBR': ('millibar', None),
+ 'MC': ('microgram', None),
+ 'MCU': ('millicurie', None),
+ 'MD': ('air dry metric ton',
+        'A unit of count defining the number of metric tons of a product, '
+        'disregarding\n'
+        '            the water content of the product.'),
+ 'MGM': ('milligram', None),
+ 'MHZ': ('megahertz', None),
+ 'MIK': ('square mile (statute mile)', None),
+ 'MIL': ('thousand', None),
+ 'MIN': ('minute [unit of time]', None),
+ 'MIO': ('million', None),
+ 'MIU': ('million international unit',
+         'A unit of count defining the number of international units in '
+         'multiples of 10.'),
+ 'MKD': ('Square Metre Day', None),
+ 'MKM': ('Square Metre Month', None),
+ 'MKW': ('Square Metre Week', None),
+ 'MLD': ('milliard', 'Synonym: billion (US)'),
+ 'MLT': ('millilitre', None),
+ 'MMK': ('square millimetre', None),
+ 'MMQ': ('cubic millimetre', None),
+ 'MMT': ('millimetre', None),
+ 'MND': ('kilogram, dry weight',
+         'A unit of mass defining the number of kilograms of a product, '
+         'disregarding the\n'
+         '            water content of the product.'),
+ 'MNJ': ('Mega Joule per Normalised cubic Metre', None),
+ 'MON': ('month', 'Unit of time equal to 1/12 of a year of 365,25 days.'),
+ 'MPA': ('megapascal', None),
+ 'MQD': ('Cubic Metre Day', None),
+ 'MQH': ('cubic metre per hour', None),
+ 'MQM': ('Cubic Metre Month', None),
+ 'MQS': ('cubic metre per second', None),
+ 'MQW': ('Cubic Metre Week', None),
+ 'MRD': ('Metre Day', None),
+ 'MRM': ('Metre Month', None),
+ 'MRW': ('Metre Week', None),
+ 'MSK': ('metre per second squared', None),
+ 'MTK': ('square metre', None),
+ 'MTQ': ('cubic metre', 'Synonym: metre cubed'),
+ 'MTR': ('metre', None),
+ 'MTS': ('metre per second', None),
+ 'MTZ': ('milihertz', None),
+ 'MVA': ('megavolt - ampere', None),
+ 'MWH': ('megawatt hour (1000\xa0kW.h)',
+         'A unit of power defining the total amount of bulk energy transferred '
+         'or\n'
+         '            consumed.'),
+ 'N1': ('pen calorie',
+        'A unit of count defining the number of calories prescribed daily for\n'
+        '            parenteral/enteral therapy.'),
+ 'N10': ('pound foot per second',
+         'Product of the avoirdupois pound according to the avoirdupois unit '
+         'system and\n'
+         '            the unit foot according to the Anglo-American and '
+         'Imperial system of units divided by\n'
+         '            the SI base unit second.'),
+ 'N11': ('pound inch per second',
+         'Product of the avoirdupois pound according to the avoirdupois unit '
+         'system and\n'
+         '            the unit inch according to the Anglo-American and '
+         'Imperial system of units divided by\n'
+         '            the SI base unit second.'),
+ 'N12': ('Pferdestaerke',
+         'Obsolete unit of the power relating to DIN 1301-3:1979: 1 PS = '
+         '735,498 75\n'
+         '            W.'),
+ 'N13': ('centimetre of mercury (0 ºC)',
+         'Non SI-conforming unit of pressure, at which a value of 1 cmHg meets '
+         'the static\n'
+         '            pressure, which is generated by a mercury at a '
+         'temperature of 0 °C with a height of 1\n'
+         '            centimetre .'),
+ 'N14': ('centimetre of water (4 ºC)',
+         'Non SI-conforming unit of pressure, at which a value of 1 cmH2O '
+         'meets the\n'
+         '            static pressure, which is generated by a head of water '
+         'at a temperature of 4 °C with a\n'
+         '            height of 1 centimetre .'),
+ 'N15': ('foot of water (39.2 ºF)',
+         'Non SI-conforming unit of pressure according to the Anglo-American '
+         'and Imperial\n'
+         '            system for units, whereas the value of 1 ftH2O is '
+         'equivalent to the static pressure,\n'
+         '            which is generated by a head of water at a temperature '
+         '39,2°F with a height of 1 foot\n'
+         '            .'),
+ 'N16': ('inch of mercury (32 ºF)',
+         'Non SI-conforming unit of pressure according to the Anglo-American '
+         'and Imperial\n'
+         '            system for units, whereas the value of 1 inHg meets the '
+         'static pressure, which is\n'
+         '            generated by a mercury at a temperature of 32°F with a '
+         'height of 1 inch.'),
+ 'N17': ('inch of mercury (60 ºF)',
+         'Non SI-conforming unit of pressure according to the Anglo-American '
+         'and Imperial\n'
+         '            system for units, whereas the value of 1 inHg meets the '
+         'static pressure, which is\n'
+         '            generated by a mercury at a temperature of 60°F with a '
+         'height of 1 inch.'),
+ 'N18': ('inch of water (39.2 ºF)',
+         'Non SI-conforming unit of pressure according to the Anglo-American '
+         'and Imperial\n'
+         '            system for units, whereas the value of 1 inH2O meets the '
+         'static pressure, which is\n'
+         '            generated by a head of water at a temperature of 39,2°F '
+         'with a height of 1 inch\n'
+         '            .'),
+ 'N19': ('inch of water (60 ºF)',
+         'Non SI-conforming unit of pressure according to the Anglo-American '
+         'and Imperial\n'
+         '            system for units, whereas the value of 1 inH2O meets the '
+         'static pressure, which is\n'
+         '            generated by a head of water at a temperature of 60°F '
+         'with a height of 1 inch\n'
+         '            .'),
+ 'N20': ('kip per square inch',
+         'Non SI-conforming unit of the pressure according to the '
+         'Anglo-American system\n'
+         '            of units as the 1000-fold of the unit of the force '
+         'pound-force divided by the power of\n'
+         '            the unit inch by exponent 2.'),
+ 'N21': ('poundal per square foot',
+         'Non SI-conforming unit of pressure by the Imperial system of units '
+         'according to\n'
+         '            NIST: 1 pdl/ft² = 1,488 164 Pa.'),
+ 'N22': ('ounce (avoirdupois) per square inch',
+         'Unit of the surface specific mass (avoirdupois ounce according to '
+         'the\n'
+         '            avoirdupois system of units according to the surface '
+         'square inch according to the\n'
+         '            Anglo-American and Imperial system of units).'),
+ 'N23': ('conventional metre of water',
+         'Not SI-conforming unit of pressure, whereas a value of 1 mH2O is '
+         'equivalent to\n'
+         '            the static pressure, which is produced by one metre high '
+         'water column .'),
+ 'N24': ('gram per square millimetre',
+         '0,001-fold of the SI base unit kilogram divided by the 0.000 '
+         '001-fold of the\n'
+         '            power of the SI base unit meter by exponent 2.'),
+ 'N25': ('pound per square yard',
+         'Unit for areal-related mass as a unit pound according to the '
+         'avoirdupois unit\n'
+         '            system divided by the power of the unit yard according '
+         'to the Anglo-American and\n'
+         '            Imperial system of units with exponent 2.'),
+ 'N26': ('poundal per square inch',
+         'Non SI-conforming unit of the pressure according to the Imperial '
+         'system of\n'
+         '            units (poundal by square inch).'),
+ 'N27': ('foot to the fourth power',
+         'Power of the unit foot according to the Anglo-American and Imperial '
+         'system of\n'
+         '            units by exponent 4 according to NIST: 1 ft4 = 8,630 975 '
+         'm4.'),
+ 'N28': ('cubic decimetre per kilogram',
+         '0,001 fold of the power of the SI base unit meter by exponent 3 '
+         'divided by the\n'
+         '            SI based unit kilogram.'),
+ 'N29': ('cubic foot per pound',
+         'Power of the unit foot according to the Anglo-American and Imperial '
+         'system of\n'
+         '            units by exponent 3 divided by the unit avoirdupois '
+         'pound according to the avoirdupois\n'
+         '            unit system.'),
+ 'N3': ('print point', None),
+ 'N30': ('cubic inch per pound',
+         'Power of the unit inch according to the Anglo-American and Imperial '
+         'system of\n'
+         '            units by exponent 3 divided by the avoirdupois pound '
+         'according to the avoirdupois unit\n'
+         '            system .'),
+ 'N31': ('kilonewton per metre',
+         '1000-fold of the derived SI unit newton divided by the SI base unit\n'
+         '            metre.'),
+ 'N32': ('poundal per inch',
+         'Non SI-conforming unit of the surface tension according to the '
+         'Imperial unit\n'
+         '            system as quotient poundal by inch.'),
+ 'N33': ('pound-force per yard',
+         'Unit of force per unit length based on the Anglo-American system of\n'
+         '            units.'),
+ 'N34': ('poundal second per square foot',
+         'Non SI-conforming unit of viscosity.'),
+ 'N35': ('poise per pascal',
+         'CGS (Centimetre-Gram-Second system) unit poise divided by the '
+         'derived SI unit\n'
+         '            pascal.'),
+ 'N36': ('newton second per square metre',
+         'Unit of the dynamic viscosity as a product of unit of the pressure '
+         '(newton by\n'
+         '            square metre) multiplied with the SI base unit second.'),
+ 'N37': ('kilogram per metre second',
+         'Unit of the dynamic viscosity as a quotient SI base unit kilogram '
+         'divided by\n'
+         '            the SI base unit metre and by the SI base unit second.'),
+ 'N38': ('kilogram per metre minute',
+         'Unit of the dynamic viscosity as a quotient SI base unit kilogram '
+         'divided by\n'
+         '            the SI base unit metre and by the unit minute.'),
+ 'N39': ('kilogram per metre day',
+         'Unit of the dynamic viscosity as a quotient SI base unit kilogram '
+         'divided by\n'
+         '            the SI base unit metre and by the unit day.'),
+ 'N40': ('kilogram per metre hour',
+         'Unit of the dynamic viscosity as a quotient SI base unit kilogram '
+         'divided by\n'
+         '            the SI base unit metre and by the unit hour.'),
+ 'N41': ('gram per centimetre second',
+         'Unit of the dynamic viscosity as a quotient of the 0,001-fold of the '
+         'SI base\n'
+         '            unit kilogram divided by the 0,01-fold of the SI base '
+         'unit metre and SI base unit\n'
+         '            second.'),
+ 'N42': ('poundal second per square inch',
+         'Non SI-conforming unit of dynamic viscosity according to the '
+         'Imperial system of\n'
+         '            units as product unit of the pressure (poundal by square '
+         'inch) multiplied by the SI base\n'
+         '            unit second.'),
+ 'N43': ('pound per foot minute',
+         'Unit of the dynamic viscosity according to the Anglo-American unit\n'
+         '            system.'),
+ 'N44': ('pound per foot day',
+         'Unit of the dynamic viscosity according to the Anglo-American unit\n'
+         '            system.'),
+ 'N45': ('cubic metre per second pascal',
+         'Power of the SI base unit meter by exponent 3 divided by the product '
+         'of the SI\n'
+         '            base unit second and the derived SI base unit pascal.'),
+ 'N46': ('foot poundal', 'Unit of the work (force-path).'),
+ 'N47': ('inch poundal',
+         'Unit of work (force multiplied by path) according to the Imperial '
+         'system of\n'
+         '            units as a product unit inch multiplied by poundal.'),
+ 'N48': ('watt per square centimetre',
+         'Derived SI unit watt divided by the power of the 0,01-fold the SI '
+         'base unit\n'
+         '            metre by exponent 2.'),
+ 'N49': ('watt per square inch',
+         'Derived SI unit watt divided by the power of the unit inch according '
+         'to the\n'
+         '            Anglo-American and Imperial system of units by exponent '
+         '2.'),
+ 'N50': ('British thermal unit (international table) per square foot hour',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N51': ('British thermal unit (thermochemical) per square foot hour',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N52': ('British thermal unit (thermochemical) per square foot minute',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N53': ('British thermal unit (international table) per square foot second',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N54': ('British thermal unit (thermochemical) per square foot second',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N55': ('British thermal unit (international table) per square inch second',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N56': ('calorie (thermochemical) per square centimetre minute',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N57': ('calorie (thermochemical) per square centimetre second',
+         'Unit of the surface heat flux according to the Imperial system of\n'
+         '            units.'),
+ 'N58': ('British thermal unit (international table) per cubic foot',
+         'Unit of the energy density according to the Imperial system of\n'
+         '            units.'),
+ 'N59': ('British thermal unit (thermochemical) per cubic foot',
+         'Unit of the energy density according to the Imperial system of\n'
+         '            units.'),
+ 'N60': ('British thermal unit (international table) per degree Fahrenheit',
+         'Unit of the heat capacity according to the Imperial system of\n'
+         '            units.'),
+ 'N61': ('British thermal unit (thermochemical) per degree Fahrenheit',
+         'Unit of the heat capacity according to the Imperial system of\n'
+         '            units.'),
+ 'N62': ('British thermal unit (international table) per degree Rankine',
+         'Unit of the heat capacity according to the Imperial system of\n'
+         '            units.'),
+ 'N63': ('British thermal unit (thermochemical) per degree Rankine',
+         'Unit of the heat capacity according to the Imperial system of\n'
+         '            units.'),
+ 'N64': ('British thermal unit (thermochemical) per pound degree Rankine',
+         'Unit of the heat capacity (British thermal unit according to the '
+         'international\n'
+         '            table according to the Rankine degree) according to the '
+         'Imperial system of units divided\n'
+         '            by the unit avoirdupois pound according to the '
+         'avoirdupois system of\n'
+         '            units.'),
+ 'N65': ('kilocalorie (international table) per gram kelvin',
+         'Unit of the mass-related heat capacity as quotient 1000-fold of the '
+         'calorie\n'
+         '            (international table) divided by the product of the '
+         '0,001-fold of the SI base units\n'
+         '            kilogram and kelvin.'),
+ 'N66': ('British thermal unit (39 ºF)',
+         'Unit of heat energy according to the Imperial system of units in a '
+         'reference\n'
+         '            temperature of 39 °F.'),
+ 'N67': ('British thermal unit (59 ºF)',
+         'Unit of heat energy according to the Imperial system of units in a '
+         'reference\n'
+         '            temperature of 59 °F.'),
+ 'N68': ('British thermal unit (60 ºF)',
+         'Unit of head energy according to the Imperial system of units at a '
+         'reference\n'
+         '            temperature of 60 °F.'),
+ 'N69': ('calorie (20 ºC)',
+         'Unit for quantity of heat, which is to be required for 1 g air free '
+         'water at a\n'
+         '            constant pressure from 101,325 kPa, to warm up the '
+         'pressure of standard atmosphere at\n'
+         '            sea level, from 19,5 °C on 20,5 °C.'),
+ 'N70': ('quad (1015 BtuIT)',
+         'Unit of heat energy according to the imperial system of units.'),
+ 'N71': ('therm (EC)',
+         'Unit of heat energy in commercial use, within the EU defined: 1 thm '
+         '(EC) = 100\n'
+         '            000 BtuIT.'),
+ 'N72': ('therm (U.S.)', 'Unit of heat energy in commercial use.'),
+ 'N73': ('British thermal unit (thermochemical) per pound',
+         'Unit of the heat energy according to the Imperial system of units '
+         'divided the\n'
+         '            unit avoirdupois pound according to the avoirdupois '
+         'system of units.'),
+ 'N74': ('British thermal unit (international table) per hour square foot '
+         'degree\n'
+         '            Fahrenheit',
+         'Unit of the heat transition coefficient according to the Imperial '
+         'system of\n'
+         '            units.'),
+ 'N75': ('British thermal unit (thermochemical) per hour square foot degree '
+         'Fahrenheit',
+         'Unit of the heat transition coefficient according to the imperial '
+         'system of\n'
+         '            units.'),
+ 'N76': ('British thermal unit (international table) per second square foot '
+         'degree\n'
+         '            Fahrenheit',
+         'Unit of the heat transition coefficient according to the imperial '
+         'system of\n'
+         '            units.'),
+ 'N77': ('British thermal unit (thermochemical) per second square foot degree '
+         'Fahrenheit',
+         'Unit of the heat transition coefficient according to the imperial '
+         'system of\n'
+         '            units.'),
+ 'N78': ('kilowatt per square metre kelvin',
+         '1000-fold of the derived SI unit watt divided by the product of the '
+         'power of\n'
+         '            the SI base unit metre by exponent 2 and the SI base '
+         'unit kelvin.'),
+ 'N79': ('kelvin per pascal',
+         'SI base unit kelvin divided by the derived SI unit pascal.'),
+ 'N80': ('watt per metre degree Celsius',
+         'Derived SI unit watt divided by the product of the SI base unit '
+         'metre and the\n'
+         '            unit for temperature degree Celsius.'),
+ 'N81': ('kilowatt per metre kelvin',
+         '1000-fold of the derived SI unit watt divided by the product of the '
+         'SI base\n'
+         '            unit metre and the SI base unit kelvin.'),
+ 'N82': ('kilowatt per metre degree Celsius',
+         '1000-fold of the derived SI unit watt divided by the product of the '
+         'SI base\n'
+         '            unit metre and the unit for temperature degree Celsius.'),
+ 'N83': ('metre per degree Celcius metre',
+         'SI base unit metre divided by the product of the unit degree Celsius '
+         'and the SI\n'
+         '            base unit metre.'),
+ 'N84': ('degree Fahrenheit hour per British thermal unit (international '
+         'table)',
+         'Non SI-conforming unit of the thermal resistance according to the '
+         'Imperial\n'
+         '            system of units.'),
+ 'N85': ('degree Fahrenheit hour per British thermal unit (thermochemical)',
+         'Non SI-conforming unit of the thermal resistance according to the '
+         'Imperial\n'
+         '            system of units.'),
+ 'N86': ('degree Fahrenheit second per British thermal unit (international '
+         'table)',
+         'Non SI-conforming unit of the thermal resistance according to the '
+         'Imperial\n'
+         '            system of units.'),
+ 'N87': ('degree Fahrenheit second per British thermal unit (thermochemical)',
+         'Non SI-conforming unit of the thermal resistance according to the '
+         'Imperial\n'
+         '            system of units.'),
+ 'N88': ('degree Fahrenheit hour square foot per British thermal unit '
+         '(international table)\n'
+         '            inch',
+         'Unit of specific thermal resistance according to the Imperial system '
+         'of\n'
+         '            units.'),
+ 'N89': ('degree Fahrenheit hour square foot per British thermal unit '
+         '(thermochemical)\n'
+         '            inch',
+         'Unit of specific thermal resistance according to the Imperial system '
+         'of\n'
+         '            units.'),
+ 'N90': ('kilofarad', '1000-fold of the derived SI unit farad.'),
+ 'N91': ('reciprocal joule', 'Reciprocal of the derived SI unit joule.'),
+ 'N92': ('picosiemens',
+         '0,000 000 000 001-fold of the derived SI unit siemens.'),
+ 'N93': ('ampere per pascal',
+         'SI base unit ampere divided by the derived SI unit pascal.'),
+ 'N94': ('franklin',
+         'CGS (Centimetre-Gram-Second system) unit of the electrical charge, '
+         'where the\n'
+         '            charge amounts to exactly 1 Fr where the force of 1 dyn '
+         'on an equal load is performed at\n'
+         '            a distance of 1 cm.'),
+ 'N95': ('ampere minute',
+         'A unit of electric charge defining the amount of charge accumulated '
+         'by a steady\n'
+         '            flow of one ampere for one minute..'),
+ 'N96': ('biot',
+         'CGS (Centimetre-Gram-Second system) unit of the electric power which '
+         'is defined\n'
+         '            by a force of 2 dyn per cm between two parallel '
+         'conductors of infinite length with\n'
+         '            negligible cross-section in the distance of 1 cm.'),
+ 'N97': ('gilbert',
+         'CGS (Centimetre-Gram-Second system) unit of the magnetomotive force, '
+         'which is\n'
+         '            defined by the work to increase the magnetic potential '
+         'of a positive common pol with 1\n'
+         '            erg.'),
+ 'N98': ('volt per pascal',
+         'Derived SI unit volt divided by the derived SI unit pascal.'),
+ 'N99': ('picovolt', '0,000 000 000 001-fold of the derived SI unit volt.'),
+ 'NA': ('milligram per kilogram', None),
+ 'NAR': ('number of articles',
+         'A unit of count defining the number of articles (article: item).'),
+ 'NCL': ('number of cells',
+         'A unit of count defining the number of cells (cell: an enclosed or\n'
+         '            circumscribed space, cavity, or volume).'),
+ 'NEW': ('newton', None),
+ 'NF': ('message', 'A unit of count defining the number of messages.'),
+ 'NIL': ('nil', 'A unit of count defining the number of instances of nothing.'),
+ 'NIU': ('number of international units',
+         'A unit of count defining the number of international units.'),
+ 'NL': ('load',
+        'A unit of volume defining the number of loads (load: a quantity of '
+        'items\n'
+        '            carried or processed at one time).'),
+ 'NM3': ('Normalised cubic metre',
+         'Normalised cubic metre (temperature 0°C and pressure 101325 '
+         'millibars\n'
+         '            )'),
+ 'NMI': ('nautical mile', None),
+ 'NMP': ('number of packs',
+         'A unit of count defining the number of packs (pack: a collection of '
+         'objects\n'
+         '            packaged together).'),
+ 'NPT': ('number of parts',
+         'A unit of count defining the number of parts (part: component of a '
+         'larger\n'
+         '            entity).'),
+ 'NT': ('net ton',
+        'A unit of mass equal to 2000 pounds, see ton (US). Refer '
+        'International\n'
+        '            Convention on tonnage measurement of Ships.'),
+ 'NTU': ('Nephelometric turbidity unit', None),
+ 'NU': ('newton metre', None),
+ 'NX': ('part per thousand',
+        'A unit of proportion equal to 10⁻³. Synonym: per mille'),
+ 'OA': ('panel',
+        'A unit of count defining the number of panels (panel: a distinct, '
+        'usually\n'
+        '            rectangular, section of a surface).'),
+ 'ODE': ('ozone depletion equivalent',
+         'A unit of mass defining the ozone depletion potential in kilograms '
+         'of a product\n'
+         '            relative to the calculated depletion for the reference '
+         'substance, Trichlorofluoromethane\n'
+         '            (CFC-11).'),
+ 'ODG': ('ODS Grams', None),
+ 'ODK': ('ODS Kilograms', None),
+ 'ODM': ('ODS Milligrams', None),
+ 'OHM': ('ohm', None),
+ 'ON': ('ounce per square yard', None),
+ 'ONZ': ('ounce (avoirdupois)', None),
+ 'OPM': ('oscillations per minute', 'The number of oscillations per minute.'),
+ 'OT': ('overtime hour',
+        'A unit of time defining the number of overtime hours.'),
+ 'OZA': ('fluid ounce (US)', None),
+ 'OZI': ('fluid ounce (UK)', None),
+ 'P1': ('percent', 'A unit of proportion equal to 0.01.'),
+ 'P10': ('coulomb per metre',
+         'Derived SI unit coulomb divided by the SI base unit metre.'),
+ 'P11': ('kiloweber', '1000 fold of the derived SI unit weber.'),
+ 'P12': ('gamma', 'Unit of magnetic flow density.'),
+ 'P13': ('kilotesla', '1000-fold of the derived SI unit tesla.'),
+ 'P14': ('joule per second',
+         'Quotient of the derived SI unit joule divided by the SI base unit\n'
+         '            second.'),
+ 'P15': ('joule per minute',
+         'Quotient from the derived SI unit joule divided by the unit\n'
+         '            minute.'),
+ 'P16': ('joule per hour',
+         'Quotient from the derived SI unit joule divided by the unit hour.'),
+ 'P17': ('joule per day',
+         'Quotient from the derived SI unit joule divided by the unit day.'),
+ 'P18': ('kilojoule per second',
+         'Quotient from the 1000-fold of the derived SI unit joule divided by '
+         'the SI base\n'
+         '            unit second.'),
+ 'P19': ('kilojoule per minute',
+         'Quotient from the 1000-fold of the derived SI unit joule divided by '
+         'the unit\n'
+         '            minute.'),
+ 'P2': ('pound per foot', None),
+ 'P20': ('kilojoule per hour',
+         'Quotient from the 1000-fold of the derived SI unit joule divided by '
+         'the unit\n'
+         '            hour.'),
+ 'P21': ('kilojoule per day',
+         'Quotient from the 1000-fold of the derived SI unit joule divided by '
+         'the unit\n'
+         '            day.'),
+ 'P22': ('nanoohm', '0,000 000 001-fold of the derived SI unit ohm.'),
+ 'P23': ('ohm circular-mil per foot', 'Unit of resistivity.'),
+ 'P24': ('kilohenry', '1000-fold of the derived SI unit henry.'),
+ 'P25': ('lumen per square foot',
+         'Derived SI unit lumen divided by the power of the unit foot '
+         'according to the\n'
+         '            Anglo-American and Imperial system of units by exponent '
+         '2.'),
+ 'P26': ('phot',
+         'CGS (Centimetre-Gram-Second system) unit of luminance, defined as '
+         'lumen by\n'
+         '            square centimetre.'),
+ 'P27': ('footcandle',
+         'Non SI conform traditional unit, defined as density of light which '
+         'impinges on\n'
+         '            a surface which has a distance of one foot from a light '
+         'source, which shines with an\n'
+         '            intensity of an international candle.'),
+ 'P28': ('candela per square inch',
+         'SI base unit candela divided by the power of unit inch according to '
+         'the\n'
+         '            Anglo-American and Imperial system of units by exponent '
+         '2.'),
+ 'P29': ('footlambert',
+         'Unit of the luminance according to the Anglo-American system of '
+         'units, defined\n'
+         '            as emitted or reflected luminance of a lm/ft².'),
+ 'P30': ('lambert',
+         'CGS (Centimetre-Gram-Second system) unit of luminance, defined as '
+         'the emitted\n'
+         '            or reflected luminance by one lumen per square '
+         'centimetre.'),
+ 'P31': ('stilb',
+         'CGS (Centimetre-Gram-Second system) unit of luminance, defined as '
+         'emitted or\n'
+         '            reflected luminance by one lumen per square centimetre.'),
+ 'P32': ('candela per square foot',
+         'Base unit SI candela divided by the power of the unit foot according '
+         'to the\n'
+         '            Anglo-American and Imperial system of units by exponent '
+         '2.'),
+ 'P33': ('kilocandela', '1000-fold of the SI base unit candela.'),
+ 'P34': ('millicandela', '0,001-fold of the SI base unit candela.'),
+ 'P35': ('Hefner-Kerze',
+         'Obsolete, non-legal unit of the power in Germany relating to DIN '
+         '1301-3:1979: 1\n'
+         '            HK = 0,903 cd.'),
+ 'P36': ('international candle',
+         'Obsolete, non-legal unit of the power in Germany relating to DIN '
+         '1301-3:1979: 1\n'
+         '            HK = 1,019 cd.'),
+ 'P37': ('British thermal unit (international table) per square foot',
+         'Unit of the areal-related energy transmission according to the '
+         'Imperial system\n'
+         '            of units.'),
+ 'P38': ('British thermal unit (thermochemical) per square foot',
+         'Unit of the areal-related energy transmission according to the '
+         'Imperial system\n'
+         '            of units.'),
+ 'P39': ('calorie (thermochemical) per square centimetre',
+         'Unit of the areal-related energy transmission according to the '
+         'Imperial system\n'
+         '            of units.'),
+ 'P40': ('langley',
+         'CGS (Centimetre-Gram-Second system) unit of the areal-related '
+         'energy\n'
+         '            transmission (as a measure of the incident quantity of '
+         'heat of solar radiation on the\n'
+         "            earth's surface)."),
+ 'P41': ('decade (logarithmic)',
+         '1 Dec := log2 10 ˜ 3,32 according to the logarithm for frequency '
+         'range between\n'
+         '            f1 and f2, when f2/f1 = 10.'),
+ 'P42': ('pascal squared second',
+         'Unit of the set as a product of the power of derived SI unit pascal '
+         'with\n'
+         '            exponent 2 and the SI base unit second.'),
+ 'P43': ('bel per metre', 'Unit bel divided by the SI base unit metre.'),
+ 'P44': ('pound mole',
+         'Non SI-conforming unit of quantity of a substance relating that one '
+         'pound mole\n'
+         '            of a chemical composition corresponds to the same number '
+         'of pounds as the molecular\n'
+         '            weight of one molecule of this composition in atomic '
+         'mass units.'),
+ 'P45': ('pound mole per second',
+         'Non SI-conforming unit of the power of the amount of substance '
+         'non-SI compliant\n'
+         '            unit of the molar flux relating that a pound mole of a '
+         'chemical composition the same\n'
+         '            number of pound corresponds like the molecular weight of '
+         'a molecule of this composition\n'
+         '            in atomic mass units.'),
+ 'P46': ('pound mole per minute',
+         'Non SI-conforming unit of the power of the amount of substance '
+         'non-SI compliant\n'
+         '            unit of the molar flux relating that a pound mole of a '
+         'chemical composition the same\n'
+         '            number of pound corresponds like the molecular weight of '
+         'a molecule of this composition\n'
+         '            in atomic mass units.'),
+ 'P47': ('kilomole per kilogram',
+         '1000-fold of the SI base unit mol divided by the SI base unit\n'
+         '            kilogram.'),
+ 'P48': ('pound mole per pound',
+         'Non SI-conforming unit of the material molar flux divided by the '
+         'avoirdupois\n'
+         '            pound for mass according to the avoirdupois unit '
+         'system.'),
+ 'P49': ('newton square metre per ampere',
+         'Product of the derived SI unit newton and the power of SI base unit '
+         'metre with\n'
+         '            exponent 2 divided by the SI base unit ampere.'),
+ 'P5': ('five pack',
+        'A unit of count defining the number of five-packs (five-pack: set of '
+        'five items\n'
+        '            packaged together).'),
+ 'P50': ('weber metre',
+         'Product of the derived SI unit weber and SI base unit metre.'),
+ 'P51': ('mol per kilogram pascal',
+         'SI base unit mol divided by the product of the SI base unit kilogram '
+         'and the\n'
+         '            derived SI unit pascal.'),
+ 'P52': ('mol per cubic metre pascal',
+         'SI base unit mol divided by the product of the power from the SI '
+         'base unit\n'
+         '            metre with exponent 3 and the derived SI unit pascal.'),
+ 'P53': ('unit pole',
+         'CGS (Centimetre-Gram-Second system) unit for magnetic flux of a '
+         'magnetic pole\n'
+         '            (according to the interaction of identical poles of 1 '
+         'dyn at a distance of a\n'
+         '            cm).'),
+ 'P54': ('milligray per second',
+         '0,001-fold of the derived SI unit gray divided by the SI base unit\n'
+         '            second.'),
+ 'P55': ('microgray per second',
+         '0,000 001-fold of the derived SI unit gray divided by the SI base '
+         'unit\n'
+         '            second.'),
+ 'P56': ('nanogray per second',
+         '0,000 000 001-fold of the derived SI unit gray divided by the SI '
+         'base unit\n'
+         '            second.'),
+ 'P57': ('gray per minute', 'SI derived unit gray divided by the unit minute.'),
+ 'P58': ('milligray per minute',
+         '0,001-fold of the derived SI unit gray divided by the unit\n'
+         '            minute.'),
+ 'P59': ('microgray per minute',
+         '0,000 001-fold of the derived SI unit gray divided by the unit\n'
+         '            minute.'),
+ 'P60': ('nanogray per minute',
+         '0,000 000 001-fold of the derived SI unit gray divided by the unit\n'
+         '            minute.'),
+ 'P61': ('gray per hour', 'SI derived unit gray divided by the unit hour.'),
+ 'P62': ('milligray per hour',
+         '0,001-fold of the derived SI unit gray divided by the unit hour.'),
+ 'P63': ('microgray per hour',
+         '0,000 001-fold of the derived SI unit gray divided by the unit\n'
+         '            hour.'),
+ 'P64': ('nanogray per hour',
+         '0,000 000 001-fold of the derived SI unit gray divided by the unit\n'
+         '            hour.'),
+ 'P65': ('sievert per second',
+         'Derived SI unit sievert divided by the SI base unit second.'),
+ 'P66': ('millisievert per second',
+         '0,001-fold of the derived SI unit sievert divided by the SI base '
+         'unit\n'
+         '            second.'),
+ 'P67': ('microsievert per second',
+         '0,000 001-fold of the derived SI unit sievert divided by the SI base '
+         'unit\n'
+         '            second.'),
+ 'P68': ('nanosievert per second',
+         '0,000 000 001-fold of the derived SI unit sievert divided by the SI '
+         'base unit\n'
+         '            second.'),
+ 'P69': ('rem per second',
+         'Unit for the equivalent tin rate relating to DIN 1301-3:1979: 1 '
+         'rem/s = 0,01\n'
+         '            J/(kg·s) = 1 Sv/s.'),
+ 'P70': ('sievert per hour',
+         'Derived SI unit sievert divided by the unit hour.'),
+ 'P71': ('millisievert per hour',
+         '0,001-fold of the derived SI unit sievert divided by the unit\n'
+         '            hour.'),
+ 'P72': ('microsievert per hour',
+         '0,000 001-fold of the derived SI unit sievert divided by the unit\n'
+         '            hour.'),
+ 'P73': ('nanosievert per hour',
+         '0,000 000 001-fold of the derived SI unit sievert divided by the '
+         'unit\n'
+         '            hour.'),
+ 'P74': ('sievert per minute',
+         'Derived SI unit sievert divided by the unit minute.'),
+ 'P75': ('millisievert per minute',
+         '0,001-fold of the derived SI unit sievert divided by the unit\n'
+         '            minute.'),
+ 'P76': ('microsievert per minute',
+         '0,000 001-fold of the derived SI unit sievert divided by the unit\n'
+         '            minute.'),
+ 'P77': ('nanosievert per minute',
+         '0,000 000 001-fold of the derived SI unit sievert divided by the '
+         'unit\n'
+         '            minute.'),
+ 'P78': ('reciprocal square inch',
+         'Complement of the power of the unit inch according to the '
+         'Anglo-American and\n'
+         '            Imperial system of units by exponent 2.'),
+ 'P79': ('pascal square metre per kilogram',
+         'Unit of the burst index as derived unit for pressure pascal related '
+         'to the\n'
+         '            substance, represented as a quotient from the SI base '
+         'unit kilogram divided by the power\n'
+         '            of the SI base unit metre by exponent 2.'),
+ 'P80': ('millipascal per metre',
+         '0,001-fold of the derived SI unit pascal divided by the SI base '
+         'unit\n'
+         '            metre.'),
+ 'P81': ('kilopascal per metre',
+         '1000-fold of the derived SI unit pascal divided by the SI base unit\n'
+         '            metre.'),
+ 'P82': ('hectopascal per metre',
+         '100-fold of the derived SI unit pascal divided by the SI base unit\n'
+         '            metre.'),
+ 'P83': ('standard atmosphere per metre',
+         'Outdated unit of the pressure divided by the SI base unit metre.'),
+ 'P84': ('technical atmosphere per metre',
+         'Obsolete and non-legal unit of the pressure which is generated by a '
+         '10 metre\n'
+         '            water column divided by the SI base unit metre.'),
+ 'P85': ('torr per metre',
+         'CGS (Centimetre-Gram-Second system) unit of the pressure divided by '
+         'the SI base\n'
+         '            unit metre.'),
+ 'P86': ('psi per inch',
+         'Compound unit for pressure (pound-force according to the '
+         'Anglo-American unit\n'
+         '            system divided by the power of the unit inch according '
+         'to the Anglo-American and\n'
+         '            Imperial system of units with the exponent 2) divided by '
+         'the unit inch according to the\n'
+         '            Anglo-American and Imperial system of units .'),
+ 'P87': ('cubic metre per second square metre',
+         'Unit of volume flow cubic meters by second related to the '
+         'transmission surface\n'
+         '            in square metres.'),
+ 'P88': ('rhe', 'Non SI-conforming unit of fluidity of dynamic viscosity.'),
+ 'P89': ('pound-force foot per inch',
+         'Unit for length-related rotational moment according to the '
+         'Anglo-American and\n'
+         '            Imperial system of units.'),
+ 'P90': ('pound-force inch per inch',
+         'Unit for length-related rotational moment according to the '
+         'Anglo-American and\n'
+         '            Imperial system of units.'),
+ 'P91': ('perm (0 ºC)',
+         'Traditional unit for the ability of a material to allow the '
+         'transition of the\n'
+         '            steam, defined at a temperature of 0 °C as steam '
+         'transmittance, where the mass of one\n'
+         '            grain steam penetrates an area of one foot squared at a '
+         'pressure from one inch mercury\n'
+         '            per hour.'),
+ 'P92': ('perm (23 ºC)',
+         'Traditional unit for the ability of a material to allow the '
+         'transition of the\n'
+         '            steam, defined at a temperature of 23 °C as steam '
+         'transmittance at which the mass of one\n'
+         '            grain of steam penetrates an area of one square foot at '
+         'a pressure of one inch mercury\n'
+         '            per hour.'),
+ 'P93': ('byte per second', 'Unit byte divided by the SI base unit second.'),
+ 'P94': ('kilobyte per second',
+         '1000-fold of the unit byte divided by the SI base unit second.'),
+ 'P95': ('megabyte per second',
+         '1 000 000-fold of the unit byte divided by the SI base unit\n'
+         '            second.'),
+ 'P96': ('reciprocal volt', 'Reciprocal of the derived SI unit volt.'),
+ 'P97': ('reciprocal radian', 'Reciprocal of the unit radian.'),
+ 'P98': ('pascal to the power sum of stoichiometric numbers',
+         'Unit of the equilibrium constant on the basis of the pressure(ISO '
+         '80000-9:2009,\n'
+         '            9-35.a).'),
+ 'P99': ('mole per cubiv metre to the power sum of stoichiometric numbers',
+         'Unit of the equilibrium constant on the basis of the concentration '
+         '(ISO\n'
+         '            80000-9:2009, 9-36.a).'),
+ 'PAL': ('pascal', None),
+ 'PD': ('pad',
+        'A unit of count defining the number of pads (pad: block of paper '
+        'sheets\n'
+        '            fastened together at one end).'),
+ 'PFL': ('proof litre',
+         'A unit of volume equal to one litre of proof spirits, or the alcohol '
+         'equivalent\n'
+         '            thereof. Used for measuring the strength of distilled '
+         'alcoholic liquors, expressed as a\n'
+         '            percentage of the alcohol content of a standard mixture '
+         'at a specific\n'
+         '            temperature.'),
+ 'PGL': ('proof gallon',
+         'A unit of volume equal to one gallon of proof spirits, or the '
+         'alcohol\n'
+         '            equivalent thereof. Used for measuring the strength of '
+         'distilled alcoholic liquors,\n'
+         '            expressed as a percentage of the alcohol content of a '
+         'standard mixture at a specific\n'
+         '            temperature.'),
+ 'PI': ('pitch',
+        'A unit of count defining the number of characters that fit in a '
+        'horizontal\n'
+        '            inch.'),
+ 'PLA': ('degree Plato',
+         'A unit of proportion defining the sugar content of a product, '
+         'especially in\n'
+         '            relation to beer.'),
+ 'PO': ('pound per inch of length', None),
+ 'PQ': ('page per inch',
+        'A unit of quantity defining the degree of thickness of a bound '
+        'publication,\n'
+        '            expressed as the number of pages per inch of thickness.'),
+ 'PR': ('pair',
+        'A unit of count defining the number of pairs (pair: item described '
+        'by\n'
+        "            two's)."),
+ 'PS': ('pound-force per square inch', None),
+ 'PTD': ('dry pint (US)', None),
+ 'PTI': ('pint (UK)', None),
+ 'PTL': ('liquid pint (US)', None),
+ 'PTN': ('portion',
+         'A quantity of allowance of food allotted to, or enough for, one\n'
+         '            person.'),
+ 'Q10': ('joule per tesla',
+         'Unit of the magnetic dipole moment of the molecule as derived SI '
+         'unit joule\n'
+         '            divided by the derived SI unit tesla.'),
+ 'Q11': ('erlang',
+         'Unit of the market value according to the feature of a single '
+         'feature as a\n'
+         '            statistical measurement of the existing utilization.'),
+ 'Q12': ('octet', 'Synonym for byte: 1 octet = 8 bit = 1 byte.'),
+ 'Q13': ('octet per second', 'Unit octet divided by the SI base unit second.'),
+ 'Q14': ('shannon',
+         'Logarithmic unit for information equal to the content of decision of '
+         'a sentence\n'
+         '            of two mutually exclusive events, expressed as a '
+         'logarithm to base 2.'),
+ 'Q15': ('hartley',
+         'Logarithmic unit for information equal to the content of decision of '
+         'a sentence\n'
+         '            of ten mutually exclusive events, expressed as a '
+         'logarithm to base 10.'),
+ 'Q16': ('natural unit of information',
+         'Logarithmic unit for information equal to the content of decision of '
+         'a sentence\n'
+         '            of ,718 281 828 459 mutually exclusive events, expressed '
+         'as a logarithm to base Euler\n'
+         '            value e.'),
+ 'Q17': ('shannon per second',
+         'Time related logarithmic unit for information equal to the content '
+         'of decision\n'
+         '            of a sentence of two mutually exclusive events, '
+         'expressed as a logarithm to base\n'
+         '            2.'),
+ 'Q18': ('hartley per second',
+         'Time related logarithmic unit for information equal to the content '
+         'of decision\n'
+         '            of a sentence of ten mutually exclusive events, '
+         'expressed as a logarithm to base\n'
+         '            10.'),
+ 'Q19': ('natural unit of information per second',
+         'Time related logarithmic unit for information equal to the content '
+         'of decision\n'
+         '            of a sentence of 2,718 281 828 459 mutually exclusive '
+         'events, expressed as a logarithm\n'
+         '            to base of the Euler value e.'),
+ 'Q20': ('second per kilogramm',
+         'Unit of the Einstein transition probability for spontaneous or '
+         'inducing\n'
+         '            emissions and absorption according to ISO 80000-7:2008, '
+         'expressed as SI base unit second\n'
+         '            divided by the SI base unit kilogram.'),
+ 'Q21': ('watt square metre',
+         'Unit of the first radiation constants c1 = 2·p·h·c0², the value of '
+         'which is\n'
+         '            3,741 771 18·10?¹6-fold that of the comparative value of '
+         'the product of the derived SI\n'
+         '            unit watt multiplied with the power of the SI base unit '
+         'metre with the exponent\n'
+         '            2.'),
+ 'Q22': ('second per radian cubic metre',
+         'Unit of the density of states as an expression of angular frequency '
+         'as\n'
+         '            complement of the product of hertz and radiant and the '
+         'power of SI base unit metre by\n'
+         '            exponent 3 .'),
+ 'Q23': ('weber to the power minus one',
+         'Complement of the derived SI unit weber as unit of the Josephson '
+         'constant,\n'
+         '            which value is equal to the 384 597,891-fold of the '
+         'reference value gigahertz divided by\n'
+         '            volt.'),
+ 'Q24': ('reciprocal inch',
+         'Complement of the unit inch according to the Anglo-American and '
+         'Imperial system\n'
+         '            of units.'),
+ 'Q25': ('dioptre',
+         'Unit used at the statement of relative refractive indexes of optical '
+         'systems as\n'
+         '            complement of the focal length with correspondence to: 1 '
+         'dpt = 1/m.'),
+ 'Q26': ('one per one',
+         'Value of the quotient from two physical units of the same kind as a '
+         'numerator\n'
+         '            and denominator whereas the units are shortened '
+         'mutually.'),
+ 'Q27': ('newton metre per metre',
+         'Unit for length-related rotational moment as product of the derived '
+         'SI unit\n'
+         '            newton and the SI base unit metre divided by the SI base '
+         'unit metre.'),
+ 'Q28': ('kilogram per square metre pascal second',
+         'Unit for the ability of a material to allow the transition of\n'
+         '            steam.'),
+ 'Q29': ('microgram per hectogram', 'Microgram per hectogram.'),
+ 'Q3': ('meal',
+        'A unit of count defining the number of meals (meal: an amount of food '
+        'to be\n'
+        '            eaten on a single occasion).'),
+ 'Q30': ('pH (potential of Hydrogen)',
+         'The activity of the (solvated) hydrogen ion (a logarithmic measure '
+         'used to\n'
+         '            state the acidity or alkalinity of a chemical '
+         'solution).'),
+ 'Q31': ('kilojoule per gram', None),
+ 'Q32': ('femtolitre', None),
+ 'Q33': ('picolitre', None),
+ 'Q34': ('nanolitre', None),
+ 'Q35': ('megawatts per minute',
+         'A unit of power defining the total amount of bulk energy transferred '
+         'or\n'
+         '            consumer per minute.'),
+ 'Q36': ('square metre per cubic metre',
+         'A unit of the amount of surface area per unit volume of an object or '
+         'collection\n'
+         '            of objects.'),
+ 'Q37': ('Standard cubic metre per day',
+         'Standard cubic metre (temperature 15°C and pressure 101325 millibars '
+         ') per\n'
+         '            day'),
+ 'Q38': ('Standard cubic metre per hour',
+         'Standard cubic metre (temperature 15°C and pressure 101325 millibars '
+         ') per\n'
+         '            hour'),
+ 'Q39': ('Normalized cubic metre per day',
+         'Normalized cubic metre (temperature 0°C and pressure 101325 '
+         'millibars ) per\n'
+         '            day'),
+ 'Q40': ('Normalized cubic metre per hour',
+         'Normalized cubic metre (temperature 0°C and pressure 101325 '
+         'millibars ) per\n'
+         '            hour'),
+ 'Q41': ('Joule per normalised cubic metre', None),
+ 'Q42': ('Joule per standard cubic metre', None),
+ 'QA': ('page - facsimile',
+        'A unit of count defining the number of facsimile pages.'),
+ 'QAN': ('quarter (of a year)',
+         'A unit of time defining the number of quarters (3 months).'),
+ 'QB': ('page - hardcopy',
+        'A unit of count defining the number of hardcopy pages (hardcopy page: '
+        'a page\n'
+        '            rendered as printed or written output on paper, film, or '
+        'other permanent\n'
+        '            medium).'),
+ 'QR': ('quire',
+        'A unit of count for paper, expressed as the number of quires (quire: '
+        'a number\n'
+        '            of paper sheets, typically 25).'),
+ 'QTD': ('dry quart (US)', None),
+ 'QTI': ('quart (UK)', None),
+ 'QTL': ('liquid quart (US)', None),
+ 'QTR': ('quarter (UK)',
+         'A traditional unit of weight equal to 1/4 hundredweight. In the '
+         'United Kingdom,\n'
+         '            one quarter equals 28 pounds.'),
+ 'R1': ('pica',
+        'A unit of count defining the number of picas. (pica: typographical '
+        'length equal\n'
+        '            to 12 points or 4.22 mm (approx.)).'),
+ 'R9': ('thousand cubic metre',
+        'A unit of volume equal to one thousand cubic metres.'),
+ 'RH': ('running or operating hour',
+        'A unit of time defining the number of hours of operation.'),
+ 'RM': ('ream',
+        'A unit of count for paper, expressed as the number of reams (ream: a '
+        'large\n'
+        '            quantity of paper sheets, typically 500).'),
+ 'ROM': ('room', 'A unit of count defining the number of rooms.'),
+ 'RP': ('pound per ream',
+        'A unit of mass for paper, expressed as pounds per ream. (ream: a '
+        'large quantity\n'
+        '            of paper, typically 500 sheets).'),
+ 'RPM': ('revolutions per minute', 'Refer ISO/TC12 SI Guide'),
+ 'RPS': ('revolutions per second', 'Refer ISO/TC12 SI Guide'),
+ 'RT': ('revenue ton mile',
+        'A unit of information typically used for billing purposes, expressed '
+        'as the\n'
+        '            number of revenue tons (revenue ton: either a metric ton '
+        'or a cubic metres, whichever is\n'
+        '            the larger), moved over a distance of one mile.'),
+ 'S3': ('square foot per second', 'Synonym: foot squared per second'),
+ 'S4': ('square metre per second',
+        'Synonym: metre squared per second (square metres/second US)'),
+ 'SAN': ('half year (6 months)',
+         'A unit of time defining the number of half years (6 months).'),
+ 'SCO': ('score',
+         'A unit of count defining the number of units in multiples of 20.'),
+ 'SCR': ('scruple', None),
+ 'SEC': ('second [unit of time]', None),
+ 'SET': ('set',
+         'A unit of count defining the number of sets (set: a number of '
+         'objects grouped\n'
+         '            together).'),
+ 'SG': ('segment', 'A unit of information equal to 64000 bytes.'),
+ 'SIE': ('siemens', None),
+ 'SM3': ('Standard cubic metre',
+         'Standard cubic metre (temperature 15°C and pressure 101325 '
+         'millibars\n'
+         '            )'),
+ 'SMI': ('mile (statute mile)', None),
+ 'SQ': ('square',
+        'A unit of count defining the number of squares (square: rectangular\n'
+        '            shape).'),
+ 'SQR': ('square, roofing',
+         'A unit of count defining the number of squares of roofing materials, '
+         'measured\n'
+         '            in multiples of 100 square feet.'),
+ 'SR': ('strip',
+        'A unit of count defining the number of strips (strip: long narrow '
+        'piece of an\n'
+        '            object).'),
+ 'STC': ('stick',
+         'A unit of count defining the number of sticks (stick: slender and '
+         'often\n'
+         '            cylindrical piece of a substance).'),
+ 'STI': ('stone (UK)', None),
+ 'STK': ('stick, cigarette',
+         'A unit of count defining the number of cigarettes in the smallest '
+         'unit for\n'
+         '            stock-taking and/or duty computation.'),
+ 'STL': ('standard litre',
+         'A unit of volume defining the number of litres of a product at a '
+         'temperature of\n'
+         '            15 degrees Celsius, especially in relation to '
+         'hydrocarbon oils.'),
+ 'STN': ('ton (US) or short ton (UK/US)', 'Synonym: net ton (2000 lb)'),
+ 'STW': ('straw',
+         'A unit of count defining the number of straws (straw: a slender tube '
+         'used for\n'
+         '            sucking up liquids).'),
+ 'SW': ('skein',
+        'A unit of count defining the number of skeins (skein: a '
+        'loosely-coiled bundle\n'
+        '            of yarn or thread).'),
+ 'SX': ('shipment',
+        'A unit of count defining the number of shipments (shipment: an amount '
+        'of goods\n'
+        '            shipped or transported).'),
+ 'SYR': ('syringe',
+         'A unit of count defining the number of syringes (syringe: a small '
+         'device for\n'
+         '            pumping, spraying and/or injecting liquids through a '
+         'small aperture).'),
+ 'T0': ('telecommunication line in service',
+        'A unit of count defining the number of lines in service.'),
+ 'T3': ('thousand piece',
+        'A unit of count defining the number of pieces in multiples of 1000 '
+        '(piece: a\n'
+        '            single item, article or exemplar).'),
+ 'TAH': ('kiloampere hour (thousand ampere hour)', None),
+ 'TAN': ('total acid number',
+         'A unit of chemistry defining the amount of potassium hydroxide (KOH) '
+         'in\n'
+         '            milligrams that is needed to neutralize the acids in one '
+         'gram of oil. It is an important\n'
+         '            quality measurement of crude oil.'),
+ 'TI': ('thousand square inch', None),
+ 'TIC': ('metric ton, including container',
+         'A unit of mass defining the number of metric tons of a product, '
+         'including its\n'
+         '            container.'),
+ 'TIP': ('metric ton, including inner packaging',
+         'A unit of mass defining the number of metric tons of a product, '
+         'including its\n'
+         '            inner packaging materials.'),
+ 'TKM': ('tonne kilometre',
+         'A unit of information typically used for billing purposes, expressed '
+         'as the\n'
+         '            number of tonnes (metric tons) moved over a distance of '
+         'one kilometre.'),
+ 'TMS': ('kilogram of imported meat, less offal',
+         'A unit of mass equal to one thousand grams of imported meat, '
+         'disregarding less\n'
+         '            valuable by-products such as the entrails.'),
+ 'TNE': ('tonne (metric ton)', 'Synonym: metric ton'),
+ 'TP': ('ten pack',
+        'A unit of count defining the number of items in multiples of 10.'),
+ 'TPI': ('teeth per inch', 'The number of teeth per inch.'),
+ 'TPR': ('ten pair',
+         'A unit of count defining the number of pairs in multiples of 10 '
+         '(pair: item\n'
+         "            described by two's)."),
+ 'TQD': ('thousand cubic metre per day',
+         'A unit of volume equal to one thousand cubic metres per day.'),
+ 'TRL': ('trillion (EUR)', None),
+ 'TST': ('ten set',
+         'A unit of count defining the number of sets in multiples of 10 (set: '
+         'a number\n'
+         '            of objects grouped together).'),
+ 'TTS': ('ten thousand sticks',
+         'A unit of count defining the number of sticks in multiples of 10000 '
+         '(stick:\n'
+         '            slender and often cylindrical piece of a substance).'),
+ 'U1': ('treatment',
+        'A unit of count defining the number of treatments (treatment: '
+        'subjection to the\n'
+        '            action of a chemical, physical or biological agent).'),
+ 'U2': ('tablet',
+        'A unit of count defining the number of tablets (tablet: a small flat '
+        'or\n'
+        '            compressed solid object).'),
+ 'UB': ('telecommunication line in service average',
+        'A unit of count defining the average number of lines in service.'),
+ 'UC': ('telecommunication port',
+        'A unit of count defining the number of network access ports.'),
+ 'VA': ('volt - ampere per kilogram', None),
+ 'VLT': ('volt', None),
+ 'VP': ('percent volume',
+        'A measure of concentration, typically expressed as the percentage '
+        'volume of a\n'
+        '            solute in a solution.'),
+ 'W2': ('wet kilo',
+        'A unit of mass defining the number of kilograms of a product, '
+        'including the\n'
+        '            water content of the product.'),
+ 'WA': ('watt per kilogram', None),
+ 'WB': ('wet pound',
+        'A unit of mass defining the number of pounds of a material, including '
+        'the water\n'
+        '            content of the material.'),
+ 'WCD': ('cord',
+         'A unit of volume used for measuring lumber. One board foot equals '
+         '1/12 of a\n'
+         '            cubic foot.'),
+ 'WE': ('wet ton',
+        'A unit of mass defining the number of tons of a material, including '
+        'the water\n'
+        '            content of the material.'),
+ 'WEB': ('weber', None),
+ 'WEE': ('week', None),
+ 'WG': ('wine gallon', 'A unit of volume equal to 231 cubic inches.'),
+ 'WHR': ('watt hour', None),
+ 'WM': ('working month',
+        'A unit of time defining the number of working months.'),
+ 'WSD': ('standard',
+         'A unit of volume of finished lumber equal to 165 cubic feet. '
+         'Synonym: standard\n'
+         '            cubic foot'),
+ 'WTT': ('watt', None),
+ 'X1': ("Gunter's chain",
+        'A unit of distance used or formerly used by\xa0British surveyors.'),
+ 'X1A': ('Drum, steel', None),
+ 'X1B': ('Drum, aluminium', None),
+ 'X1D': ('Drum, plywood', None),
+ 'X1F': ('Container, flexible',
+         'A packaging container of flexible construction.'),
+ 'X1G': ('Drum, fibre', None),
+ 'X1W': ('Drum, wooden', None),
+ 'X2C': ('Barrel, wooden', None),
+ 'X3A': ('Jerrican, steel', None),
+ 'X3H': ('Jerrican, plastic', None),
+ 'X43': ('Bag, super bulk',
+         'A cloth plastic or paper based bag having the dimensions of the '
+         'pallet on which\n'
+         '            it is constructed.'),
+ 'X44': ('Bag, polybag',
+         'A type of plastic bag, typically used to wrap promotional pieces, '
+         'publications,\n'
+         '            product samples, and/or catalogues.'),
+ 'X4A': ('Box, steel', None),
+ 'X4B': ('Box, aluminium', None),
+ 'X4C': ('Box, natural wood', None),
+ 'X4D': ('Box, plywood', None),
+ 'X4F': ('Box, reconstituted wood', None),
+ 'X4G': ('Box, fibreboard', None),
+ 'X4H': ('Box, plastic', None),
+ 'X5H': ('Bag, woven plastic', None),
+ 'X5L': ('Bag, textile', None),
+ 'X5M': ('Bag, paper', None),
+ 'X6H': ('Composite packaging, plastic receptacle', None),
+ 'X6P': ('Composite packaging, glass receptacle', None),
+ 'X7A': ('Case, car',
+         'A type of portable container designed to store equipment for '
+         'carriage in an\n'
+         '            automobile.'),
+ 'X7B': ('Case, wooden',
+         'A case made of wood for retaining substances or articles.'),
+ 'X8A': ('Pallet, wooden',
+         'A platform or open-ended box, made of wood, on which goods are '
+         'retained for\n'
+         '            ease of mechanical handling during transport and '
+         'storage.'),
+ 'X8B': ('Crate, wooden',
+         'A receptacle, made of wood, on which goods are retained for ease of '
+         'mechanical\n'
+         '            handling during transport and storage.'),
+ 'X8C': ('Bundle, wooden',
+         'Loose or unpacked pieces of wood tied or wrapped together.'),
+ 'XAA': ('Intermediate bulk container, rigid plastic', None),
+ 'XAB': ('Receptacle, fibre',
+         'Containment vessel made of fibre used for retaining substances or\n'
+         '            articles.'),
+ 'XAC': ('Receptacle, paper',
+         'Containment vessel made of paper for retaining substances or\n'
+         '            articles.'),
+ 'XAD': ('Receptacle, wooden',
+         'Containment vessel made of wood for retaining substances or\n'
+         '            articles.'),
+ 'XAE': ('Aerosol', None),
+ 'XAF': ('Pallet, modular, collars 80cms * 60cms',
+         'Standard sized pallet of dimensions 80 centimeters by 60 '
+         'centimeters\n'
+         '            (cms).'),
+ 'XAG': ('Pallet, shrinkwrapped',
+         'Pallet load secured with transparent plastic film that has been '
+         'wrapped around\n'
+         '            and then shrunk tightly.'),
+ 'XAH': ('Pallet, 100cms * 110cms',
+         'Standard sized pallet of dimensions 100centimeters by 110 '
+         'centimeters\n'
+         '            (cms).'),
+ 'XAI': ('Clamshell', None),
+ 'XAJ': ('Cone',
+         'Container used in the transport of linear material such as yarn.'),
+ 'XAL': ('Ball',
+         'A spherical containment vessel for retaining substances or\n'
+         '            articles.'),
+ 'XAM': ('Ampoule, non-protected', None),
+ 'XAP': ('Ampoule, protected', None),
+ 'XAT': ('Atomizer', None),
+ 'XAV': ('Capsule', None),
+ 'XB4': ('Belt', 'A band use to retain multiple articles together.'),
+ 'XBA': ('Barrel', None),
+ 'XBB': ('Bobbin', None),
+ 'XBC': ('Bottlecrate / bottlerack', None),
+ 'XBD': ('Board', None),
+ 'XBE': ('Bundle', None),
+ 'XBF': ('Balloon, non-protected', None),
+ 'XBG': ('Bag',
+         'A receptacle made of flexible material with an open or closed\n'
+         '            top.'),
+ 'XBH': ('Bunch', None),
+ 'XBI': ('Bin', None),
+ 'XBJ': ('Bucket', None),
+ 'XBK': ('Basket', None),
+ 'XBL': ('Bale, compressed', None),
+ 'XBM': ('Basin', None),
+ 'XBN': ('Bale, non-compressed', None),
+ 'XBO': ('Bottle, non-protected, cylindrical',
+         'A narrow-necked cylindrical shaped vessel without external '
+         'protective packing\n'
+         '            material.'),
+ 'XBP': ('Balloon, protected', None),
+ 'XBQ': ('Bottle, protected cylindrical',
+         'A narrow-necked cylindrical shaped vessel with external protective '
+         'packing\n'
+         '            material.'),
+ 'XBR': ('Bar', None),
+ 'XBS': ('Bottle, non-protected, bulbous',
+         'A narrow-necked bulb shaped vessel without external protective '
+         'packing\n'
+         '            material.'),
+ 'XBT': ('Bolt', None),
+ 'XBU': ('Butt', None),
+ 'XBV': ('Bottle, protected bulbous',
+         'A narrow-necked bulb shaped vessel with external protective packing\n'
+         '            material.'),
+ 'XBW': ('Box, for liquids', None),
+ 'XBX': ('Box', None),
+ 'XBY': ('Board, in bundle/bunch/truss', None),
+ 'XBZ': ('Bars, in bundle/bunch/truss', None),
+ 'XCA': ('Can, rectangular', None),
+ 'XCB': ('Crate, beer', None),
+ 'XCC': ('Churn', None),
+ 'XCD': ('Can, with handle and spout', None),
+ 'XCE': ('Creel', None),
+ 'XCF': ('Coffer', None),
+ 'XCG': ('Cage', None),
+ 'XCH': ('Chest', None),
+ 'XCI': ('Canister', None),
+ 'XCJ': ('Coffin', None),
+ 'XCK': ('Cask', None),
+ 'XCL': ('Coil', None),
+ 'XCM': ('Card',
+         'A flat package usually made of fibreboard from/to which product is '
+         'often hung\n'
+         '            or attached.'),
+ 'XCN': ('Container, not otherwise specified as transport equipment', None),
+ 'XCO': ('Carboy, non-protected', None),
+ 'XCP': ('Carboy, protected', None),
+ 'XCQ': ('Cartridge',
+         'Package containing a charge such as propelling explosive for '
+         'firearms or ink\n'
+         '            toner for a printer.'),
+ 'XCR': ('Crate', None),
+ 'XCS': ('Case', None),
+ 'XCT': ('Carton', None),
+ 'XCU': ('Cup', None),
+ 'XCV': ('Cover', None),
+ 'XCW': ('Cage, roll', None),
+ 'XCX': ('Can, cylindrical', None),
+ 'XCY': ('Cylinder', None),
+ 'XCZ': ('Canvas', None),
+ 'XDA': ('Crate, multiple layer, plastic', None),
+ 'XDB': ('Crate, multiple layer, wooden', None),
+ 'XDC': ('Crate, multiple layer, cardboard', None),
+ 'XDG': ('Cage, Commonwealth Handling Equipment Pool (CHEP)', None),
+ 'XDH': ('Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox',
+         'A box mounted on a pallet base under the control of CHEP.'),
+ 'XDI': ('Drum, iron', None),
+ 'XDJ': ('Demijohn, non-protected', None),
+ 'XDK': ('Crate, bulk, cardboard', None),
+ 'XDL': ('Crate, bulk, plastic', None),
+ 'XDM': ('Crate, bulk, wooden', None),
+ 'XDN': ('Dispenser', None),
+ 'XDP': ('Demijohn, protected', None),
+ 'XDR': ('Drum', None),
+ 'XDS': ('Tray, one layer no cover, plastic', None),
+ 'XDT': ('Tray, one layer no cover, wooden', None),
+ 'XDU': ('Tray, one layer no cover, polystyrene', None),
+ 'XDV': ('Tray, one layer no cover, cardboard', None),
+ 'XDW': ('Tray, two layers no cover, plastic tray', None),
+ 'XDX': ('Tray, two layers no cover, wooden', None),
+ 'XDY': ('Tray, two layers no cover, cardboard', None),
+ 'XEC': ('Bag, plastic', None),
+ 'XED': ('Case, with pallet base', None),
+ 'XEE': ('Case, with pallet base, wooden', None),
+ 'XEF': ('Case, with pallet base, cardboard', None),
+ 'XEG': ('Case, with pallet base, plastic', None),
+ 'XEH': ('Case, with pallet base, metal', None),
+ 'XEI': ('Case, isothermic', None),
+ 'XEN': ('Envelope', None),
+ 'XFB': ('Flexibag',
+         'A flexible containment bag made of plastic, typically for the '
+         'transportation\n'
+         '            bulk non-hazardous cargoes using standard size shipping '
+         'containers.'),
+ 'XFC': ('Crate, fruit', None),
+ 'XFD': ('Crate, framed', None),
+ 'XFE': ('Flexitank',
+         'A flexible containment tank made of plastic, typically for the '
+         'transportation\n'
+         '            bulk non-hazardous cargoes using standard size shipping '
+         'containers.'),
+ 'XFI': ('Firkin', None),
+ 'XFL': ('Flask', None),
+ 'XFO': ('Footlocker', None),
+ 'XFP': ('Filmpack', None),
+ 'XFR': ('Frame', None),
+ 'XFT': ('Foodtainer', None),
+ 'XFW': ('Cart, flatbed',
+         'Wheeled flat bedded device on which trays or other regular shaped '
+         'items are\n'
+         '            packed for transportation purposes.'),
+ 'XFX': ('Bag, flexible container', None),
+ 'XGB': ('Bottle, gas',
+         'A narrow-necked metal cylinder for retention of liquefied or '
+         'compressed\n'
+         '            gas.'),
+ 'XGI': ('Girder', None),
+ 'XGL': ('Container, gallon', 'A container with a capacity of one gallon.'),
+ 'XGR': ('Receptacle, glass',
+         'Containment vessel made of glass for retaining substances or\n'
+         '            articles.'),
+ 'XGU': ('Tray, containing horizontally stacked flat items',
+         'Tray containing flat items stacked on top of one another.'),
+ 'XGY': ('Bag, gunny',
+         'A sack made of gunny or burlap, used for transporting coarse '
+         'commodities, such\n'
+         '            as grains, potatoes, and other agricultural products.'),
+ 'XGZ': ('Girders, in bundle/bunch/truss', None),
+ 'XHA': ('Basket, with handle, plastic', None),
+ 'XHB': ('Basket, with handle, wooden', None),
+ 'XHC': ('Basket, with handle, cardboard', None),
+ 'XHG': ('Hogshead', None),
+ 'XHN': ('Hanger',
+         'A purpose shaped device with a hook at the top for hanging items '
+         'from a\n'
+         '            rail.'),
+ 'XHR': ('Hamper', None),
+ 'XIA': ('Package, display, wooden', None),
+ 'XIB': ('Package, display, cardboard', None),
+ 'XIC': ('Package, display, plastic', None),
+ 'XID': ('Package, display, metal', None),
+ 'XIE': ('Package, show', None),
+ 'XIF': ('Package, flow',
+         'A flexible tubular package or skin, possibly transparent, often used '
+         'for\n'
+         '            containment of foodstuffs (e.g. salami sausage).'),
+ 'XIG': ('Package, paper wrapped', None),
+ 'XIH': ('Drum, plastic', None),
+ 'XIK': ('Package, cardboard, with bottle grip-holes',
+         'Packaging material made out of cardboard that facilitates the '
+         'separation of\n'
+         '            individual glass or plastic bottles.'),
+ 'XIL': ('Tray, rigid, lidded stackable (CEN TS 14482:2002)',
+         'Lidded stackable rigid tray compliant with CEN TS 14482:2002.'),
+ 'XIN': ('Ingot', None),
+ 'XIZ': ('Ingots, in bundle/bunch/truss', None),
+ 'XJB': ('Bag, jumbo',
+         'A flexible containment bag, widely used for storage, transportation '
+         'and\n'
+         '            handling of powder, flake or granular materials. '
+         'Typically constructed from woven\n'
+         '            polypropylene (PP) fabric in the form of cubic bags.'),
+ 'XJC': ('Jerrican, rectangular', None),
+ 'XJG': ('Jug', None),
+ 'XJR': ('Jar', None),
+ 'XJT': ('Jutebag', None),
+ 'XJY': ('Jerrican, cylindrical', None),
+ 'XKG': ('Keg', None),
+ 'XKI': ('Kit', 'A set of articles or implements used for a specific purpose.'),
+ 'XLE': ('Luggage',
+         'A collection of bags, cases and/or containers which hold personal '
+         'belongings\n'
+         '            for a journey.'),
+ 'XLG': ('Log', None),
+ 'XLT': ('Lot', None),
+ 'XLU': ('Lug',
+         'A wooden box for the transportation and storage of fruit or\n'
+         '            vegetables.'),
+ 'XLV': ('Liftvan',
+         'A wooden or metal container used for packing household goods and '
+         'personal\n'
+         '            effects.'),
+ 'XLZ': ('Logs, in bundle/bunch/truss', None),
+ 'XMA': ('Crate, metal',
+         'Containment box made of metal for retaining substances or\n'
+         '            articles.'),
+ 'XMB': ('Bag, multiply', None),
+ 'XMC': ('Crate, milk', None),
+ 'XME': ('Container, metal',
+         'A type of containment box made of metal for retaining substances or '
+         'articles,\n'
+         '            not otherwise specified as transport equipment.'),
+ 'XMR': ('Receptacle, metal',
+         'Containment vessel made of metal for retaining substances or\n'
+         '            articles.'),
+ 'XMS': ('Sack, multi-wall', None),
+ 'XMT': ('Mat', None),
+ 'XMW': ('Receptacle, plastic wrapped',
+         'Containment vessel wrapped with plastic for retaining substances or\n'
+         '            articles.'),
+ 'XMX': ('Matchbox', None),
+ 'XNA': ('Not available', None),
+ 'XNE': ('Unpacked or unpackaged', None),
+ 'XNF': ('Unpacked or unpackaged, single unit', None),
+ 'XNG': ('Unpacked or unpackaged, multiple units', None),
+ 'XNS': ('Nest', None),
+ 'XNT': ('Net', None),
+ 'XNU': ('Net, tube, plastic', None),
+ 'XNV': ('Net, tube, textile', None),
+ 'XO1': ('Two sided cage on wheels with fixing strap', None),
+ 'XO2': ('Trolley', None),
+ 'XO3': ('Oneway pallet ISO 0 - 1/2 EURO Pallet', None),
+ 'XO4': ('Oneway pallet ISO 1 - 1/1 EURO Pallet', None),
+ 'XO5': ('Oneway pallet ISO 2 - 2/1 EURO Pallet', None),
+ 'XO6': ('Pallet with exceptional dimensions', None),
+ 'XO7': ('Wooden pallet 40 cm x 80 cm', None),
+ 'XO8': ('Plastic pallet SRS 60 cm x 80 cm', None),
+ 'XO9': ('Plastic pallet SRS 80 cm x 120 cm', None),
+ 'XOA': ('Pallet, CHEP 40 cm x 60 cm',
+         'Commonwealth Handling Equipment Pool (CHEP) standard pallet of '
+         'dimensions 40\n'
+         '            centimeters x 60 centimeters.'),
+ 'XOB': ('Pallet, CHEP 80 cm x 120 cm',
+         'Commonwealth Handling Equipment Pool (CHEP) standard pallet of '
+         'dimensions 80\n'
+         '            centimeters x 120 centimeters.'),
+ 'XOC': ('Pallet, CHEP 100 cm x 120 cm',
+         'Commonwealth Handling Equipment Pool (CHEP) standard pallet of '
+         'dimensions 100\n'
+         '            centimeters x 120 centimeters.'),
+ 'XOD': ('Pallet, AS 4068-1993',
+         'Australian standard pallet of dimensions 115.5 centimeters x 116.5\n'
+         '            centimeters.'),
+ 'XOE': ('Pallet, ISO T11',
+         'ISO standard pallet of dimensions 110 centimeters x 110 centimeters, '
+         'prevalent\n'
+         '            in Asia - Pacific region.'),
+ 'XOF': ('Platform, unspecified weight or dimension',
+         'A pallet equivalent shipping platform of unknown dimensions or '
+         'unknown\n'
+         '            weight.'),
+ 'XOG': ('Pallet ISO 0 - 1/2 EURO Pallet', None),
+ 'XOH': ('Pallet ISO 1 - 1/1 EURO Pallet', None),
+ 'XOI': ('Pallet ISO 2 – 2/1 EURO Pallet', None),
+ 'XOJ': ('1/4 EURO Pallet', None),
+ 'XOK': ('Block',
+         'A solid piece of a hard substance, such as granite, having one or '
+         'more flat\n'
+         '            sides.'),
+ 'XOL': ('1/8 EURO Pallet', None),
+ 'XOM': ('Synthetic pallet ISO 1', None),
+ 'XON': ('Synthetic pallet ISO 2', None),
+ 'XOP': ('Wholesaler pallet', None),
+ 'XOQ': ('Pallet 80 X 100 cm', None),
+ 'XOR': ('Pallet 60 X 100 cm', None),
+ 'XOS': ('Oneway pallet', None),
+ 'XOT': ('Octabin',
+         'A standard cardboard container of large dimensions for storing for '
+         'example\n'
+         '            vegetables, granules of plastics or other dry products.'),
+ 'XOU': ('Container, outer',
+         'A type of containment box that serves as the outer shipping '
+         'container, not\n'
+         '            otherwise specified as transport equipment.'),
+ 'XOV': ('Returnable pallet', None),
+ 'XOW': ('Large bag, pallet sized', None),
+ 'XOX': ('A wheeled pallet with raised rim (81 x 67 x 135)', None),
+ 'XOY': ('A Wheeled pallet with raised rim (81 x 72 x 135)', None),
+ 'XOZ': ('Wheeled pallet with raised rim ( 81 x 60 x 16)', None),
+ 'XP1': ('CHEP pallet 60 cm x 80 cm ', None),
+ 'XP2': ('Pan', 'A shallow, wide, open container, usually of metal.'),
+ 'XP3': ('LPR pallet 60 cm x 80 cm', None),
+ 'XP4': ('LPR pallet 80 cm x 120 cm', None),
+ 'XPA': ('Packet', 'Small package.'),
+ 'XPB': ('Pallet, box Combined open-ended box and pallet', None),
+ 'XPC': ('Parcel', None),
+ 'XPD': ('Pallet, modular, collars 80cms * 100cms',
+         'Standard sized pallet of dimensions 80 centimeters by 100 '
+         'centimeters\n'
+         '            (cms).'),
+ 'XPE': ('Pallet, modular, collars 80cms * 120cms',
+         'Standard sized pallet of dimensions 80 centimeters by 120 '
+         'centimeters\n'
+         '            (cms).'),
+ 'XPF': ('Pen', 'A small open top enclosure for retaining animals.'),
+ 'XPG': ('Plate', None),
+ 'XPH': ('Pitcher', None),
+ 'XPI': ('Pipe', None),
+ 'XPJ': ('Punnet', None),
+ 'XPK': ('Package', 'Standard packaging unit.'),
+ 'XPL': ('Pail', None),
+ 'XPN': ('Plank', None),
+ 'XPO': ('Pouch', None),
+ 'XPP': ('Piece', 'A loose or unpacked article.'),
+ 'XPR': ('Receptacle, plastic',
+         'Containment vessel made of plastic for retaining substances or\n'
+         '            articles.'),
+ 'XPT': ('Pot', None),
+ 'XPU': ('Tray', None),
+ 'XPV': ('Pipes, in bundle/bunch/truss', None),
+ 'XPX': ('Pallet',
+         'Platform or open-ended box, usually made of wood, on which goods are '
+         'retained\n'
+         '            for ease of mechanical handling during transport and '
+         'storage.'),
+ 'XPY': ('Plates, in bundle/bunch/truss', None),
+ 'XPZ': ('Planks, in bundle/bunch/truss', None),
+ 'XQA': ('Drum, steel, non-removable head', None),
+ 'XQB': ('Drum, steel, removable head', None),
+ 'XQC': ('Drum, aluminium, non-removable head', None),
+ 'XQD': ('Drum, aluminium, removable head', None),
+ 'XQF': ('Drum, plastic, non-removable head', None),
+ 'XQG': ('Drum, plastic, removable head', None),
+ 'XQH': ('Barrel, wooden, bung type', None),
+ 'XQJ': ('Barrel, wooden, removable head', None),
+ 'XQK': ('Jerrican, steel, non-removable head', None),
+ 'XQL': ('Jerrican, steel, removable head', None),
+ 'XQM': ('Jerrican, plastic, non-removable head', None),
+ 'XQN': ('Jerrican, plastic, removable head', None),
+ 'XQP': ('Box, wooden, natural wood, ordinary', None),
+ 'XQQ': ('Box, wooden, natural wood, with sift proof walls', None),
+ 'XQR': ('Box, plastic, expanded', None),
+ 'XQS': ('Box, plastic, solid', None),
+ 'XRD': ('Rod', None),
+ 'XRG': ('Ring', None),
+ 'XRJ': ('Rack, clothing hanger', None),
+ 'XRK': ('Rack', None),
+ 'XRL': ('Reel',
+         'Cylindrical rotatory device with a rim at each end on which '
+         'materials are\n'
+         '            wound.'),
+ 'XRO': ('Roll', None),
+ 'XRT': ('Rednet',
+         'Containment material made of red mesh netting for retaining articles '
+         '(e.g.\n'
+         '            trees).'),
+ 'XRZ': ('Rods, in bundle/bunch/truss', None),
+ 'XSA': ('Sack', None),
+ 'XSB': ('Slab', None),
+ 'XSC': ('Crate, shallow', None),
+ 'XSD': ('Spindle', None),
+ 'XSE': ('Sea-chest', None),
+ 'XSH': ('Sachet', None),
+ 'XSI': ('Skid',
+         'A low movable platform or pallet to facilitate the handling and '
+         'transport of\n'
+         '            goods.'),
+ 'XSK': ('Case, skeleton', None),
+ 'XSL': ('Slipsheet',
+         'Hard plastic sheeting primarily used as the base on which to stack '
+         'goods to\n'
+         '            optimise the space within a container. May be used as an '
+         'alternative to a palletized\n'
+         '            packaging.'),
+ 'XSM': ('Sheetmetal', None),
+ 'XSO': ('Spool',
+         'A packaging container used in the transport of such items as wire, '
+         'cable, tape\n'
+         '            and yarn.'),
+ 'XSP': ('Sheet, plastic wrapping', None),
+ 'XSS': ('Case, steel', None),
+ 'XST': ('Sheet', None),
+ 'XSU': ('Suitcase', None),
+ 'XSV': ('Envelope, steel', None),
+ 'XSW': ('Shrinkwrapped',
+         'Goods retained in a transparent plastic film that has been wrapped '
+         'around and\n'
+         '            then shrunk tightly on to the goods.'),
+ 'XSX': ('Set', None),
+ 'XSY': ('Sleeve', None),
+ 'XSZ': ('Sheets, in bundle/bunch/truss', None),
+ 'XT1': ('Tablet',
+         'A loose or unpacked article in the form of a bar, block or piece.'),
+ 'XTB': ('Tub', None),
+ 'XTC': ('Tea-chest', None),
+ 'XTD': ('Tube, collapsible', None),
+ 'XTE': ('Tyre', 'A ring made of rubber and/or metal surrounding a wheel.'),
+ 'XTG': ('Tank container, generic',
+         'A specially constructed container for transporting liquids and gases '
+         'in\n'
+         '            bulk.'),
+ 'XTI': ('Tierce', None),
+ 'XTK': ('Tank, rectangular', None),
+ 'XTL': ('Tub, with lid', None),
+ 'XTN': ('Tin', None),
+ 'XTO': ('Tun', None),
+ 'XTR': ('Trunk', None),
+ 'XTS': ('Truss', None),
+ 'XTT': ('Bag, tote', 'A capacious bag or basket.'),
+ 'XTU': ('Tube', None),
+ 'XTV': ('Tube, with nozzle',
+         'A tube made of plastic, metal or cardboard fitted with a nozzle, '
+         'containing a\n'
+         '            liquid or semi-liquid product, e.g. silicon.'),
+ 'XTW': ('Pallet, triwall',
+         'A lightweight pallet made from heavy duty corrugated board.'),
+ 'XTY': ('Tank, cylindrical', None),
+ 'XTZ': ('Tubes, in bundle/bunch/truss', None),
+ 'XUC': ('Uncaged', None),
+ 'XUN': ('Unit',
+         'A type of package composed of a single item or object, not otherwise '
+         'specified\n'
+         '            as a unit of transport equipment.'),
+ 'XVA': ('Vat', None),
+ 'XVG': ('Bulk, gas (at 1031 mbar and 15°C)', None),
+ 'XVI': ('Vial', None),
+ 'XVK': ('Vanpack', 'A type of wooden crate.'),
+ 'XVL': ('Bulk, liquid', None),
+ 'XVN': ('Vehicle', 'A self-propelled means of conveyance.'),
+ 'XVO': ('Bulk, solid, large particles (“nodules”)', None),
+ 'XVP': ('Vacuum-packed', None),
+ 'XVQ': ('Bulk, liquefied gas (at abnormal temperature/pressure)', None),
+ 'XVR': ('Bulk, solid, granular particles (“grains”)', None),
+ 'XVS': ('Bulk, scrap metal',
+         'Loose or unpacked scrap metal transported in bulk form.'),
+ 'XVY': ('Bulk, solid, fine particles (“powders”)', None),
+ 'XWA': ('Intermediate bulk container',
+         'A reusable container made of metal, plastic, textile, wood or '
+         'composite\n'
+         '            materials used to facilitate transportation of bulk '
+         'solids and liquids in manageable\n'
+         '            volumes.'),
+ 'XWB': ('Wickerbottle', None),
+ 'XWC': ('Intermediate bulk container, steel', None),
+ 'XWD': ('Intermediate bulk container, aluminium', None),
+ 'XWF': ('Intermediate bulk container, metal', None),
+ 'XWG': ('Intermediate bulk container, steel, pressurised > 10 kpa', None),
+ 'XWH': ('Intermediate bulk container, aluminium, pressurised > 10 kpa', None),
+ 'XWJ': ('Intermediate bulk container, metal, pressure 10 kpa', None),
+ 'XWK': ('Intermediate bulk container, steel, liquid', None),
+ 'XWL': ('Intermediate bulk container, aluminium, liquid', None),
+ 'XWM': ('Intermediate bulk container, metal, liquid', None),
+ 'XWN': ('Intermediate bulk container, woven plastic, without coat/liner',
+         None),
+ 'XWP': ('Intermediate bulk container, woven plastic, coated', None),
+ 'XWQ': ('Intermediate bulk container, woven plastic, with liner', None),
+ 'XWR': ('Intermediate bulk container, woven plastic, coated and liner', None),
+ 'XWS': ('Intermediate bulk container, plastic film', None),
+ 'XWT': ('Intermediate bulk container, textile with out coat/liner', None),
+ 'XWU': ('Intermediate bulk container, natural wood, with inner liner', None),
+ 'XWV': ('Intermediate bulk container, textile, coated', None),
+ 'XWW': ('Intermediate bulk container, textile, with liner', None),
+ 'XWX': ('Intermediate bulk container, textile, coated and liner', None),
+ 'XWY': ('Intermediate bulk container, plywood, with inner liner', None),
+ 'XWZ': ('Intermediate bulk container, reconstituted wood, with inner liner',
+         None),
+ 'XXA': ('Bag, woven plastic, without inner coat/liner', None),
+ 'XXB': ('Bag, woven plastic, sift proof', None),
+ 'XXC': ('Bag, woven plastic, water resistant', None),
+ 'XXD': ('Bag, plastics film', None),
+ 'XXF': ('Bag, textile, without inner coat/liner', None),
+ 'XXG': ('Bag, textile, sift proof', None),
+ 'XXH': ('Bag, textile, water resistant', None),
+ 'XXJ': ('Bag, paper, multi-wall', None),
+ 'XXK': ('Bag, paper, multi-wall, water resistant', None),
+ 'XYA': ('Composite packaging, plastic receptacle in steel drum', None),
+ 'XYB': ('Composite packaging, plastic receptacle in steel crate box', None),
+ 'XYC': ('Composite packaging, plastic receptacle in aluminium drum', None),
+ 'XYD': ('Composite packaging, plastic receptacle in aluminium crate', None),
+ 'XYF': ('Composite packaging, plastic receptacle in wooden box', None),
+ 'XYG': ('Composite packaging, plastic receptacle in plywood drum', None),
+ 'XYH': ('Composite packaging, plastic receptacle in plywood box', None),
+ 'XYJ': ('Composite packaging, plastic receptacle in fibre drum', None),
+ 'XYK': ('Composite packaging, plastic receptacle in fibreboard box', None),
+ 'XYL': ('Composite packaging, plastic receptacle in plastic drum', None),
+ 'XYM': ('Composite packaging, plastic receptacle in solid plastic box', None),
+ 'XYN': ('Composite packaging, glass receptacle in steel drum', None),
+ 'XYP': ('Composite packaging, glass receptacle in steel crate box', None),
+ 'XYQ': ('Composite packaging, glass receptacle in aluminium drum', None),
+ 'XYR': ('Composite packaging, glass receptacle in aluminium crate', None),
+ 'XYS': ('Composite packaging, glass receptacle in wooden box', None),
+ 'XYT': ('Composite packaging, glass receptacle in plywood drum', None),
+ 'XYV': ('Composite packaging, glass receptacle in wickerwork hamper', None),
+ 'XYW': ('Composite packaging, glass receptacle in fibre drum', None),
+ 'XYX': ('Composite packaging, glass receptacle in fibreboard box', None),
+ 'XYY': ('Composite packaging, glass receptacle in expandable plastic pack',
+         None),
+ 'XYZ': ('Composite packaging, glass receptacle in solid plastic pack', None),
+ 'XZA': ('Intermediate bulk container, paper, multi-wall', None),
+ 'XZB': ('Bag, large', None),
+ 'XZC': ('Intermediate bulk container, paper, multi-wall, water resistant',
+         None),
+ 'XZD': ('Intermediate bulk container, rigid plastic, with structural '
+         'equipment, solids',
+         None),
+ 'XZF': ('Intermediate bulk container, rigid plastic, freestanding, solids',
+         None),
+ 'XZG': ('Intermediate bulk container, rigid plastic, with structural '
+         'equipment,\n'
+         '            pressurised',
+         None),
+ 'XZH': ('Intermediate bulk container, rigid plastic, freestanding, '
+         'pressurised',
+         None),
+ 'XZJ': ('Intermediate bulk container, rigid plastic, with structural '
+         'equipment, liquids',
+         None),
+ 'XZK': ('Intermediate bulk container, rigid plastic, freestanding, liquids',
+         None),
+ 'XZL': ('Intermediate bulk container, composite, rigid plastic, solids', None),
+ 'XZM': ('Intermediate bulk container, composite, flexible plastic, solids',
+         None),
+ 'XZN': ('Intermediate bulk container, composite, rigid plastic, pressurised',
+         None),
+ 'XZP': ('Intermediate bulk container, composite, flexible plastic, '
+         'pressurised',
+         None),
+ 'XZQ': ('Intermediate bulk container, composite, rigid plastic, liquids',
+         None),
+ 'XZR': ('Intermediate bulk container, composite, flexible plastic, liquids',
+         None),
+ 'XZS': ('Intermediate bulk container, composite', None),
+ 'XZT': ('Intermediate bulk container, fibreboard', None),
+ 'XZU': ('Intermediate bulk container, flexible', None),
+ 'XZV': ('Intermediate bulk container, metal, other than steel', None),
+ 'XZW': ('Intermediate bulk container, natural wood', None),
+ 'XZX': ('Intermediate bulk container, plywood', None),
+ 'XZY': ('Intermediate bulk container, reconstituted wood', None),
+ 'XZZ': ('Mutually defined ', None),
+ 'YDK': ('square yard', None),
+ 'YDQ': ('cubic yard', None),
+ 'YRD': ('yard', None),
+ 'Z11': ('hanging container',
+         'A unit of count defining the number of hanging containers.'),
+ 'Z9': ('nanomole', None),
+ 'ZP': ('page', 'A unit of count defining the number of pages.'),
+ 'ZZ': ('mutually defined',
+        'A unit of measure as agreed in common between two or more\n'
+        '            parties.')}
+
 # end of generated code

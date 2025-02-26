@@ -12,6 +12,7 @@ import datetime
 import importlib.metadata
 import requests
 import click
+from bs4 import BeautifulSoup
 
 dt = datetime.datetime
 
@@ -479,6 +480,21 @@ ISO2ENTITY = {iso2entity}
 
 def peppolcodes():
 
+    DELIVERY_UNITS = dict()
+    url = "https://github.com/OpenPEPPOL/peppol-bis-invoice-3/raw/refs/heads/master/structure/codelist/UNECERec20-11e.xml"
+    res = requests.get(url)
+    assert res.status_code == 200
+    soup = BeautifulSoup(res.text, "xml")
+    # print(soup.contents)
+    codelist = soup.find("CodeList")
+    for ci in codelist.find_all("Code"):
+        # print(ci)
+        # print(ci.id.string, ci.find("name").string, ci.description)
+        u = (ci.Name.string, ci.Description.string if ci.Description else None)
+        DELIVERY_UNITS[ci.Id.string] = u
+
+    # EAS schemes:
+
     url = "https://docs.peppol.eu/edelivery/codelists/v9.0/Peppol%20Code%20Lists%20-%20Participant%20identifier%20schemes%20v9.0.json"
     res = requests.get(url).json()
 
@@ -487,13 +503,15 @@ def peppolcodes():
     #     if scheme['state'] == "active":
     #         print("{iso6523} {schemeid} {scheme-name}".format(**scheme))
 
-    C2S = dict()
+    COUNTRY2SCHEME = dict()
     for scheme in res['values']:
         if scheme['schemeid'].endswith(":VAT"):
-           C2S[scheme['country']] = scheme['iso6523']
+           COUNTRY2SCHEME[scheme['country']] = scheme['iso6523']
 
     return f"""
-COUNTRY2SCHEME = {pformat(C2S)}
+COUNTRY2SCHEME = {pformat(COUNTRY2SCHEME)}
+
+DELIVERY_UNITS = {pformat(DELIVERY_UNITS)}
 """
 
 
@@ -513,6 +531,7 @@ def main(batch):
     # _query_subdivisions(country_lookup('ee'), query_by='admin_entity')
 
     write_code_file(FILE_DIR / "commondata/peppolcodes.py", peppolcodes, batch)
+    # write_code_file(FILE_DIR / "commondata/peppolunits.py", peppolunitcodes, batch)
 
 if __name__ == '__main__':
     main()

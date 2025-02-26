@@ -82,12 +82,26 @@ Peppol codes
 
 The `commondata.peppol
 <https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
-module defines a dict ``COUNTRY2SCHEME``, which maps country codes to the EAS
-number of their *VAT office*.
+module defines two dicts:
 
-This module has been generated from https://docs.peppol.eu/edelivery/codelists
+- ``COUNTRY2SCHEME`` maps country codes to the
+  *Participant Identifier Scheme* of their respective *VAT office*.
+  This data has been generated from https://docs.peppol.eu/edelivery/codelists
 
->>> from commondata.peppolcodes import COUNTRY2SCHEME
+- ``DELIVERY_UNITS``
+  contains the codes that are allowed in the
+  `unitCode<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/unitCode/>`__
+  attribute of a  `InvoicedQuantity
+  <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/>`__
+  element.
+  These codes are specified by  `UNECERec20
+  <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/codelist/UNECERec20/>`_,
+  which we download from the  `OpenPEPPOL
+  <https://github.com/OpenPEPPOL/peppol-bis-invoice-3/raw/refs/heads/master/structure/codelist/UNECERec20-11e.xml>`__
+  repository.
+
+
+>>> from commondata.peppolcodes import COUNTRY2SCHEME, DELIVERY_UNITS
 
 >>> COUNTRY2SCHEME['BE']
 '9925'
@@ -108,6 +122,40 @@ Here is a list of the Peppol countries:
 
 This is used by Lino, see
 https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
+
+The :data:`DELIVERY_UNITS` dict contains *many* codes, and some of them are funny:
+
+>>> len(DELIVERY_UNITS)
+2162
+>>> DELIVERY_UNITS['14']
+('shot', 'A unit of liquid measure, especially related to spirits.')
+
+What's the code for "hour"?
+
+>>> for k, v in DELIVERY_UNITS.items():
+...     if v[0].lower() == "hour":
+...         print(k)
+HUR
+
+Here are some of the more commonly used units:
+
+>>> for i in "HUR MIN MON LTR CLT DLT KGM XPP XPK XBX MTR MTK MTQ B68".split():
+...     print(i, DELIVERY_UNITS[i][0])
+HUR hour
+MIN minute [unit of time]
+MON month
+LTR litre
+CLT centilitre
+DLT decilitre
+KGM kilogram
+XPP Piece
+XPK Package
+XBX Box
+MTR metre
+MTK square metre
+MTQ cubic metre
+B68 gigabit
+
 
 
 Place names in Estonia
