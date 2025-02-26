@@ -83,8 +83,9 @@ Peppol Participant Identifier Schemes
 The ``COUNTRY2SCHEME`` dict in the `commondata.peppol
 <https://github.com/lsaffre/commondata/blob/master/commondata/peppolcodes.py>`_
 module  maps country codes to the *Participant Identifier Scheme* of their
-respective *VAT office*. This data has been generated from
-https://docs.peppol.eu/edelivery/codelists
+respective *VAT office*.
+The `make_code.py <https://github.com/lsaffre/commondata/blob/master/make_code.py>`_ gets this data
+from https://docs.peppol.eu/edelivery/codelists
 
 >>> from commondata.peppolcodes import COUNTRY2SCHEME
 
@@ -120,8 +121,11 @@ module contains the codes that are allowed in the
 attribute of a  `InvoicedQuantity
 <https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/syntax/ubl-invoice/cac-InvoiceLine/cbc-InvoicedQuantity/>`__
 element. These codes are specified by `UNECERec20
-<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/codelist/UNECERec20/>`_. We
-download them from the  `OpenPEPPOL
+<https://docs.peppol.eu/poacc/billing/3.0/2024-Q2/codelist/UNECERec20/>`_.
+
+The `make_code.py
+<https://github.com/lsaffre/commondata/blob/master/make_code.py>`_ gets this
+data from the  `OpenPEPPOL
 <https://github.com/OpenPEPPOL/peppol-bis-invoice-3/raw/refs/heads/master/structure/codelist/UNECERec20-11e.xml>`__
 repository.
 
