@@ -109,6 +109,52 @@ Here is a list of the Peppol countries:
 This is used by Lino, see
 https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
 
+The following snippet was used to generate the :file:`NAT2EAS.DBC` file used by
+TIM:
+
+>>> for k in sorted(COUNTRY2SCHEME.keys()):
+...     print(f"{COUNTRY2SCHEME[k]}|{k}")
+9922|AD
+9923|AL
+9914|AT
+9924|BA
+9925|BE
+9926|BG
+9927|CH
+9928|CY
+9929|CZ
+9930|DE
+9931|EE
+9920|ES
+0213|FI
+9957|FR
+9932|GB
+9933|GR
+9934|HR
+9910|HU
+9935|IE
+9906|IT
+9936|LI
+9937|LT
+9938|LU
+9939|LV
+9940|MC
+9941|ME
+9942|MK
+9943|MT
+9944|NL
+9909|NO
+9945|PL
+9946|PT
+9947|RO
+9948|RS
+9955|SE
+9949|SI
+9950|SK
+9951|SM
+9952|TR
+9953|VA
+9912|international
 
 
 Peppol delivery units
