@@ -259,6 +259,40 @@ plan to maintain it in collaboration with
 https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister
 
 
+Place names in Bangladesh
+=========================
+
+>>> from commondata.places.bangladesh import PLACES, DIVISIONS
+>>> len(PLACES)
+5776
+>>> len(DIVISIONS)
+8
+
+>>> for div in DIVISIONS:
+...    print(div.name, ":", ", ".join([p.name for p in div.children]))
+Chittagong : Bandarban, Brahamanbaria, Chandpur, Chittagong, Comilla, Cox's Bazar, Feni, Khagrachhari, Lakshmipur, Noakhali, Rangamati
+Dhaka : Dhaka, Faridpur, Gazipur, Gopalganj, Kishoreganj, Madaripur, Manikganj, Munshiganj, Narayanganj, Narsingdi, Rajbari, Shariatpur, Tangail
+Mymensingh : Jamalpur, Mymensingh, Netrakona, Sherpur
+Rajshani : Bogra, Joypurhat, Naogaon, Natore, Nawabganj, Pabna, Rajshahi, Sirajganj
+Rangpur : Dinajpur, Gaibandha, Kurigram, Lalmonirhat, Nilphamari, Panchagarh, Rangpur, Thakurgaon
+Sylhet : Habiganj, Maulvibazar, Sunamganj, Sylhet
+Khulna : Bagerhat, Chuadanga, Jessore, Jhenaidah, Khulna, Kushtia, Magura, Meherpur, Narail, Satkhira
+Barisal : Barguna, Barisal, Bhola, Jhalokati, Patuakhali, Pirojpur
+
+
+>>> for div in DIVISIONS:
+...    print(div.name_bn, ":", ", ".join([p.name_bn for p in div.children]))
+চট্টগ্রাম : বান্দরবান, ব্রাহ্মণবাড়িয়া, চাঁদপুর, চট্টগ্রাম, কুমিল্লা, কক্সবাজার, ফেনী, খাগড়াছড়ি, লক্ষ্মীপুর, নোয়াখালী, রাঙ্গামাটি
+ঢাকা : ঢাকা, ফরিদপুর, গাজীপুর, গোপালগঞ্জ, কিশোরগঞ্জ, মাদারীপুর, মানিকগঞ্জ, মুন্সিগঞ্জ, নারায়ণগঞ্জ, নরসিংদী, রাজবাড়ী, শরীয়তপুর, টাঙ্গাইল
+ময়মনসিংহ : জামালপুর, ময়মনসিংহ, নেত্রকোণা, শেরপুর
+রাজশাহী : বগুড়া, জয়পুরহাট, নওগাঁ, নাটোর, নবাবগঞ্জ, পাবনা, রাজশাহী, সিরাজগঞ্জ
+রংপুর : দিনাজপুর, গাইবান্ধা, কুড়িগ্রাম, লালমনিরহাট, নীলফামারী, পঞ্চগড়, রংপুর, ঠাকুরগাঁও
+সিলেট : হবিগঞ্জ, মৌলভীবাজার, সুনামগঞ্জ, সিলেট
+খুলনা : বাগেরহাট, চুয়াডাঙ্গা, যশোর, ঝিনাইদহ, খুলনা, কুষ্টিয়া, মাগুরা, মেহেরপুর, নড়াইল, সাতক্ষীরা
+বরিশাল : বরগুনা, বরিশাল, ভোলা, ঝালকাঠি, পটুয়াখালী, পিরোজপুর
+
+
+
 Historic note
 =============
 
@@ -275,6 +309,42 @@ contained in individual subpackages. The following packages are now obsolete
 How to uninstall the old commondata packages: find your `site-packages`
 directory (e.g. `~/env/lib/python3.10/site-packages`) and manually remove
 all files `commondata*-nspkg.pth`
+
+Multilingual place names
+-------------------------
+
+You use the `commondata.utils.PlaceGenerator.set_args()` method to
+specify the names of the fields of subsequent places.
+
+>>> pg = PlaceGenerator()
+>>> pg.install(Kingdom, County, Borough, Village)
+>>> pg.set_args('name name_ar')
+>>> root = pg.kingdom("Egypt", u'مصر')
+>>> print(root.name_ar)
+مصر
+
+
+Changelog
+=========
+
+2025-06-13
+----------
+
+I wondered why Kosovo (XK) is not in our list. Seems that it is not
+marked as a sovereign_state in Wikidata. But after running `make_docs.py` I
+noticed that Bangladesh (BD) has vanished from the list. I ignore why. I don't
+plan to dig deeper into this because I believe we should rather deprecate this
+project and start using pycountries. En passant I fixed a broken link for Peppol
+in `make_docs.py`.
+
+
+2026-04-04
+----------
+
+Added the places for Bangladesh.
+
+
+
 
 Don't read this
 ===============
@@ -327,29 +397,3 @@ Part 3 : using the data
 >>> kwargia = root.children[0]
 >>> [str(x) for x in kwargia.children]
 ['Kwargia', 'Virts', 'Vinks']
-
-
-Multilingual place names
--------------------------
-
-You use the `commondata.utils.PlaceGenerator.set_args()` method to
-specify the names of the fields of subsequent places.
-
->>> pg = PlaceGenerator()
->>> pg.install(Kingdom, County, Borough, Village)
->>> pg.set_args('name name_ar')
->>> root = pg.kingdom("Egypt", u'مصر')
->>> print(root.name_ar)
-مصر
-
-
-Changelog
-=========
-
-2025-06-13 I wondered why Kosovo (XK) is not in our list. Seems that it is not
-marked as a sovereign_state in Wikidata. But after running `make_docs.py` I
-noticed that Bangladesh (BD) has vanished from the list. I ignore why. I don't
-plan to dig deeper into this because I believe we should rather deprecate this
-project and start using pycountries.
-
-En passant I fixed a broken link for Peppol in `make_docs.py`.
