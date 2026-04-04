@@ -310,20 +310,6 @@ How to uninstall the old commondata packages: find your `site-packages`
 directory (e.g. `~/env/lib/python3.10/site-packages`) and manually remove
 all files `commondata*-nspkg.pth`
 
-Multilingual place names
--------------------------
-
-You use the `commondata.utils.PlaceGenerator.set_args()` method to
-specify the names of the fields of subsequent places.
-
->>> pg = PlaceGenerator()
->>> pg.install(Kingdom, County, Borough, Village)
->>> pg.set_args('name name_ar')
->>> root = pg.kingdom("Egypt", u'مصر')
->>> print(root.name_ar)
-مصر
-
-
 Changelog
 =========
 
@@ -355,7 +341,7 @@ How to use the Place and PlaceGenerator classes.
 
 You define a subclass of Place for each "type" of place:
 
->>> from commondata.utils import Place, PlaceGenerator
+>>> from commondata.utils import Place
 >>> class PlaceInFoo(Place):
 ...     def __str__(self):
 ...        return self.name
@@ -372,6 +358,7 @@ The PlaceGenerator is used to instantiate to populate
 
 Part 1 : configuration:
 
+>>> from commondata.utils import PlaceGenerator
 >>> pg = PlaceGenerator()
 >>> pg.install(Kingdom, County, Borough, Village)
 >>> pg.set_args('name')
@@ -397,3 +384,16 @@ Part 3 : using the data
 >>> kwargia = root.children[0]
 >>> [str(x) for x in kwargia.children]
 ['Kwargia', 'Virts', 'Vinks']
+
+Multilingual place names
+-------------------------
+
+You use the `commondata.utils.PlaceGenerator.set_args()` method to
+specify the names of the fields of subsequent places.
+
+>>> pg = PlaceGenerator()
+>>> pg.install(Kingdom, County, Borough, Village)
+>>> pg.set_args('name name_ar')
+>>> root = pg.kingdom("Egypt", u'مصر')
+>>> print(root.name_ar)
+مصر
