@@ -77,7 +77,7 @@ Vincent and the Grenadines (VC), Venezuela (VE), Vietnam (VN), Vanuatu (VU),
 Samoa (WS), Yemen (YE), South Africa (ZA), Zambia (ZM), Zimbabwe (ZW)
 
 
-This is what we know about each country_
+This is what we know about each country:
 
 >>> FIELDS
 ('entity', 'name', 'isoCode2', 'isoCode3', 'zipCode', 'population')
@@ -120,8 +120,7 @@ Here is a list of the Peppol countries:
 This is used by Lino, see
 https://dev.lino-framework.org/topics/peppol.html#electronic-address-scheme
 
-The following snippet was used to generate the :file:`NAT2EAS.DBC` file used by
-TIM:
+The following snippet was used to generate the `NAT2EAS.DBC` file used by TIM:
 
 >>> for k in sorted(COUNTRY2SCHEME.keys()):
 ...     print(f"{COUNTRY2SCHEME[k]}|{k}")
