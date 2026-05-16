@@ -37,3 +37,10 @@ Repository = "https://github.com/lsaffre/commondata"
 
 [tool.hatch.version]
 path = "commondata/__init__.py"
+
+
+[project.optional-dependencies]
+
+testing = [
+  "pytest", "pytest-html", "pytest-forked", "pytest-env"
+]
